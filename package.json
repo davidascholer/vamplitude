@@ -1,0 +1,12 @@
+{
+  "name": "com.vamplitude.vamplitude",
+  "version": "1.0.0",
+  "description": "Vamplitude Main Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch assets/styles"
+  },
+  "author": "David A Scholer",
+  "license": "ISC"
+}

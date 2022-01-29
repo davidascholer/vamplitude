@@ -1,0 +1,37 @@
+@font-face {
+  font-family: antiqua;
+  src: url("/assets/fonts/ModernAntiqua-Regular.ttf");
+}
+@font-face {
+  font-family: wind;
+  src: url("/assets/fonts/wind_sans_serif.ttf");
+}
+body {
+  background: black;
+  width: 100vw;
+  margin: 0;
+}
+
+.transition {
+  margin: 0;
+  padding: 0;
+}
+
+.hide-element {
+  animation: hideElement 2s ease forwards;
+}
+
+@keyframes hideElement {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

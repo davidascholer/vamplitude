@@ -1,0 +1,60 @@
+#space-container {
+    background-color: black;
+    border: 0;
+    height: 11000px;
+    margin-top: max(600px, 100vh);
+    padding: 0;
+    position: relative;
+
+    .earth {
+        width: 0%;
+        border-radius: 50%;
+        background-color: skyblue;
+        box-shadow: 0 0 50px 25px skyblue;
+        /* Add the blur effect */
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+    }
+    .earth-container{
+        position: sticky;
+        top: 80vh;
+        display:flex;
+        justify-content: center;
+        width:100vw;
+    }
+    .star {
+        width: 1px;
+        height: 1px;
+        position: sticky;
+        border-radius: 50vw;
+        background-color: gold;
+        animation: glow 5s ease infinite;
+    }
+    .star-container {
+        height: 100%;
+        position: static;
+    }
+ 
+    @keyframes glow {
+        0% {
+            box-shadow: 0 0 20px 5px gold;
+        }
+        50% {
+            box-shadow: 0 0 20px 10px gold;
+        }
+        100% {
+            box-shadow: 0 0 20px 5px gold;
+        }
+    }
+}
+
+.space-to-earth{
+    height:3000px;
+    background-color: black;
+}
+
+.black-to-sky-blue {
+    height: 1000px;
+    background-color: skyblue; 
+    background-image: linear-gradient(black, skyblue);
+}
