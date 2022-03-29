@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/oscillate-anim.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/logo.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/smoke-anim.css" rel="stylesheet" />
+    <link href="./assets/styles/swiss-army-knife.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/sky.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/space.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/sunset.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/end.css" rel="stylesheet" type="text/css" />
+    <title>Vamplitude</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/icon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/icon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/img/icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./assets/img/icon/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Vamplitude">
+    <meta name="application-name" content="Vamplitude">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./assets/img/icon/browserconfig.xml">
+    <meta name="theme-color" content="#d5d5d5">
+</head>
+
+<body>
+    <script src="https://unpkg.com/@google/model-viewer@1.10.1/dist/model-viewer.js" type="module"></script>
+    <!-- section-logo continues to the end of the body -->
+    <div id='section-logo'>
+        <section id='video-container'>
+            <video id='smoke-video' src="assets/video/smoke.mp4" muted></video>
+        </section>
+        <h1 class='logo-title'>
+            <span>V</span><span>a</span><span>m</span><span>p</span><span>l</span><span>i</span><span>t</span><span>u</span><span>d</span><span>e</span>
+        </h1>
+        <!-- <div class='logo-image-container'>
+            <svg class="vamplitude_image no_teeth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.25 40.75">
+                <path class="oscillate"
+                    d="M75.87,17C75.24,6.1,74.5.56,73.67.56h0c-1,0-1.78,9.25-2.22,17v-.06c-.43,7.74-1.21,17-2.21,17h0c-.82,0-1.61-6.58-2.25-17.46S65.61.56,64.78.56h0c-1,0-1.78,9.25-2.2,17v-.06c-.43,7.74-1.16,17-2.21,17h0c-.83,0-1.57-5.5-2.2-16.44v0C57.54,7.14,56.52.46,55.69.46h0c-1,0-1.78,9.25-2.22,17-.63,10.94-1.37,17-2.2,17h0c-1.05,0-1.78-9.24-2.21-17v.06c-.42-7.73-1.16-17-2.2-17h0C46,.56,45.29,6.1,44.65,17S43.22,34.44,42.4,34.44h0c-1,0-1.78-9.25-2.21-17v.06C39.75,9.81,39,.58,38,.56h0C37.14.56,36.4,6.1,35.77,17s-1.37,17.48-2.2,17.48h0c-1,0-1.78-9.24-2.21-17v.06c-.42-7.73-1.16-17-2.2-17h0C28.33.56,27.59,6.1,27,17S25.52,34.44,24.7,34.44h0c-1,0-1.78-9.19-2.21-16.93h0c-.44-7.7-1.17-16.93-2.22-17h0C19.44.56,18.7,6.1,18.07,17s-1.37,17.48-2.2,17.48h0c-1,0-1.78-9.18-2.21-16.92h0c-.42-7.73-1.16-17-2.2-17h0C10.63.56,9.89,6.1,9.25,17S7.82,34.44,7,34.44H7c-1,0-1.78-9.19-2.21-16.93h0C4.35,9.81,3.62.58,2.57.56h0C1.74.56,1,6.1.37,17" />
+            </svg>
+            <svg class="vamplitude_image teeth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.25 40.75">
+                <path class="oscillate red"
+                    d="M75.87,17C75.24,6,74.5.47,73.67.47h0c-1,0-1.78,9.29-2.22,17v-.06c-.43,7.77-1.21,17.05-2.21,17.05h0c-.82,0-1.61-6.6-2.25-17.53S65.61.47,64.78.47h0c-1,0-1.78,9.29-2.2,17.06v-.06c-.43,7.77-1.16,17.05-2.21,17.05h0c-.83,0-1.57-5.52-2.2-16.51v.17l-.05-.65C57.69,9.76,57,.49,55.91.47h0c-.82,0-1.56,6-2.19,17a30.69,30.69,0,0,1-.92,6.1c-.19,1-.44,2-.65,3a49.29,49.29,0,0,1-1.57,6c-.57,1.61-1.2,3.16-1.81,4.73-.4,1-.82,2.07-1.23,3.09h0a1.81,1.81,0,0,0,.09-.31c.28-1.08.62-2.14.82-3.25a56.26,56.26,0,0,0,.78-9.16V17.5c-.4-7.74-1.13-17-2.18-17h0c-.83,0-1.63,6.75-2.26,17.71V18c-.63,11-1.37,16.51-2.2,16.51h0c-1,0-1.78-9.28-2.21-17.05v.06c-.42-7.77-1.16-17-2.2-17.06h0C37.3.47,36.56,6,35.92,17s-1.43,17.53-2.25,17.53h0c-1,0-1.78-9.28-2.21-17v.06C31,9.76,30.29.49,29.24.47h0C28.41.47,27.67,6,27,17V27.65a57.41,57.41,0,0,0,.79,9.16c.19,1.11.53,2.17.81,3.25l.09.32h-.05l-1.21-3c-.61-1.57-1.24-3.12-1.85-4.73a51.15,51.15,0,0,1-1.56-6c-.22-1-.46-2-.66-3a32.21,32.21,0,0,1-.91-6.1v.06C22.1,9.76,21.37.49,20.32.47h0C19.49.47,18.75,6,18.12,17l-.05,1.12v-.17c-.63,11-1.37,16.51-2.2,16.51h0c-1,0-1.78-9.28-2.21-17v.06c-.42-7.77-1.16-17-2.2-17h0c-.83,0-1.57,5.55-2.21,16.48S7.82,34.39,7,34.39H7c-1,0-1.78-9.28-2.21-17v.06C4.35,9.66,3.62.39,2.57.38h0C1.74.38,1,5.93.37,16.86" />
+            </svg>
+        </div> -->
+        <div class='logo-loading-container'>
+            <div class='logo-symbols'>
+                <span class='circle small-circle'></span><span class='circle small-circle'></span><span
+                    class='circle small-circle'></span><span class='circle small-circle'></span><span
+                    class='circle big-circle'></span><span class='circle small-circle'></span><span
+                    class='circle small-circle'></span><span class='circle small-circle'></span><span
+                    class='circle small-circle'></span>
+            </div>
+            <h2 class='logo-loading'>
+                <span></span><span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span><span></span>
+            </h2>
+        </div>
+    </div>
+
+    <!--Start space to sky-->
+    <div id='section-space-container'>
+        <div class='star-container'>
+            <!-- 1 px stars -->
+            <span class='star star1' style='top:20vh;left:10vw;'></span>
+            <span class='star star1' style='top:90vh;left:10vw;'></span>
+            <span class='star star1' style='top:45vh;left:20vw;'></span>
+            <span class='star star1' style='top:60vh;left:20vw;'></span>
+            <span class='star star1' style='top:30vh;left:30vw;'></span>
+            <span class='star star1' style='top:50vh;left:30vw;'></span>
+            <span class='star star1' style='top:35vh;left:40vw;'></span>
+            <span class='star star1' style='top:65vh;left:40vw;'></span>
+            <span class='star star1' style='top:10vh;left:50vw;'></span>
+            <span class='star star1' style='top:60vh;left:50vw;'></span>
+            <span class='star star1' style='top:30vh;left:60vw;'></span>
+            <span class='star star1' style='top:40vh;left:60vw;'></span>
+            <span class='star star1' style='top:30vh;left:70vw;'></span>
+            <span class='star star1' style='top:80vh;left:70vw;'></span>
+            <span class='star star1' style='top:75vh;left:80vw;'></span>
+            <span class='star star1' style='top:60vh;left:80vw;'></span>
+            <span class='star star1' style='top:90vh;left:90vw;'></span>
+            <span class='star star1' style='top:30vh;left:90vw;'></span>
+            <!-- 3 px stars -->
+            <span class='star star3' style='top:10vh;left:10vw;'></span>
+            <span class='star star3' style='top:65vh;left:10vw;'></span>
+            <span class='star star3' style='top:45vh;left:20vw;'></span>
+            <span class='star star3' style='top:20vh;left:20vw;'></span>
+            <span class='star star3' style='top:55vh;left:30vw;'></span>
+            <span class='star star3' style='top:85vh;left:30vw;'></span>
+            <span class='star star3' style='top:15vh;left:40vw;'></span>
+            <span class='star star3' style='top:20vh;left:50vw;'></span>
+            <span class='star star3' style='top:50vh;left:50vw;'></span>
+            <span class='star star3' style='top:95vh;left:50vw;'></span>
+            <span class='star star3' style='top:05vh;left:60vw;'></span>
+            <span class='star star3' style='top:65vh;left:60vw;'></span>
+            <span class='star star3' style='top:75vh;left:70vw;'></span>
+            <span class='star star3' style='top:50vh;left:70vw;'></span>
+            <span class='star star3' style='top:10vh;left:80vw;'></span>
+            <span class='star star3' style='top:60vh;left:80vw;'></span>
+            <span class='star star3' style='top:70vh;left:90vw;'></span>
+            <span class='star star3' style='top:30vh;left:90vw;'></span>
+
+            <div class='earth-container'>
+                <div class='aurora'></div>
+                <!-- <img class='earth' src='./assets/img/_earth.png' /> -->
+                <!-- <iframe src='https://solarsystem.nasa.gov/gltf_embed/2393' scrolling='no' class='earth' frameborder='0'></iframe> -->
+                <canvas class='webgl'></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!--End space to sky-->
+
+    <div id='section-sky-container'>
+
+        <div class='black-to-blue'></div>
+
+        <!-- <div>
+            <button id='anim'>anim</button>
+            <button id='unanim'>unanim</button>
+        </div> -->
+
+        <!-- <div id='swiss-army-knife-container'>
+            <img class='swiss-army-knife swiss-9' src='./assets/img/swiss-army-knife/swiss-9.png' />
+            <img class='swiss-army-knife swiss-8' src='./assets/img/swiss-army-knife/swiss-8.png' />
+            <img class='swiss-army-knife swiss-7' src='./assets/img/swiss-army-knife/swiss-7.png' />
+            <img class='swiss-army-knife swiss-5' src='./assets/img/swiss-army-knife/swiss-5.png' />
+            <img class='swiss-army-knife swiss-6' src='./assets/img/swiss-army-knife/swiss-6.png' />
+            <img class='swiss-army-knife swiss-handle swiss-inner-3' src='./assets/img/swiss-army-knife/inner.png' />
+            <img class='swiss-army-knife swiss-2' src='./assets/img/swiss-army-knife/swiss-2.png' />
+            <img class='swiss-army-knife swiss-handle swiss-inner-2' src='./assets/img/swiss-army-knife/inner.png' />
+            <img class='swiss-army-knife swiss-3' src='./assets/img/swiss-army-knife/swiss-3.png' />
+            <img class='swiss-army-knife swiss-handle swiss-inner-1' src='./assets/img/swiss-army-knife/inner.png' />
+            <img class='swiss-army-knife swiss-1' src='./assets/img/swiss-army-knife/swiss-1.png' />
+            <img class='swiss-army-knife swiss-4' src='./assets/img/swiss-army-knife/swiss-4.png' />
+            <img class='swiss-army-knife swiss-handle swiss-front'
+                src='./assets/img/swiss-army-knife/swiss-front.png' />
+        </div> -->
+        <div class='cloud-cluster'>
+            <img class='cloud' src='./assets/img/cloud_256x256.png'/>
+            <img class='cloud' src='./assets/img/cloud_256x256.png'/>
+            <img class='cloud' src='./assets/img/cloud_256x256.png'/>
+            <img class='cloud' src='./assets/img/cloud_256x256.png'/>
+            <img class='cloud' src='./assets/img/cloud_256x256.png'/>
+            <img class='cloud' src='./assets/img/cloud_256x256.png'/>
+        </div>
+    </div>
+
+    <div id='sunset-wrapper'>
+        <div id='sunset-container'>
+            <div id="sun"></div>
+            <div id="sunDay"></div>
+            <div id="sunSet"></div>
+            <div id="sky"></div>
+            <div id="horizon"></div>
+            <div id="horizonNight"></div>
+            <div id="moon"></div>
+            <div id="division"></div>
+            <div id="water"></div>
+            <div id="waterReflectionContainer">
+                <div id="waterReflectionMiddle"></div>
+            </div>
+            <div id="waterDistance"></div>
+            <div id="darknessOverlaySky"></div>
+            <div id="darknessOverlay"></div>
+            <div id="oceanRippleContainer"></div>
+            <div id="oceanRipple"></div>
+        </div>
+    </div>
+
+    <div id='section-end'></div>
+    
+    <!-- <div id=buffer style='height:5000px;background-color: black;'></div> -->
+    <!-- Scripts -->
+    <script src='./assets/js/end.js'></script>
+    <script src='./assets/js/sunset.js'></script>
+    <script src='./assets/js/logoAnim.js'></script>
+    <script type="module" src='./assets/js/3d.js'></script>
+    <script src='./assets/js/space.js'></script>
+    <script src='./assets/js/swiss-army-knife.js'></script>
+    <!-- mainScript Must Go Last-->
+    <script src='./assets/js/mainScript.js'></script>
+</body>
+
+</html>

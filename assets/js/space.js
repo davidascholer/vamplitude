@@ -1,84 +1,92 @@
-/*
-initSpaceTheme will animate for 11000px.
-initSpaceToEarthTransition for 1400px.
-*/
-const SPACE_THEME_SCROLL_LENGTH = 11000;
-const SPACE_TO_EARTH_SCROLL_LENGTH = 1400;
-const earth = document.querySelector('.earth');
+const earth3D = document.querySelector('.webgl');
 const earthContainer = document.querySelector('.earth-container');
 const stars = document.querySelectorAll('.star');
-let earthReset = true;
+let earthInitialStyles = true;
+let prevPos = 0;
 
 for (let star of stars)
     star.style.animationDelay = Math.random() * 5 + 's';
 
-const initSpaceTheme = pos => {
+const initSpaceTheme = (pos, height) => {
 
-    if (!earthReset) {
-        earthContainer.style.position = 'sticky';
-        earthContainer.style.top = '80vh';
-        // earthContainer.style.marginTop = 0;
-        earthReset = true;
-    }
-
-    //Change star styles
-    if (pos < SPACE_THEME_SCROLL_LENGTH - 2000) {
-        for (let star of stars) {
-            star.style.opacity = 1;
-        }
-    } else if (pos < SPACE_THEME_SCROLL_LENGTH - 1000) {
-        const newOpacity = 1 - ((pos - 9000) / 10 * .01);
-        for (let star of stars) {
-            star.style.opacity = newOpacity;
-        }
+    //Init star effect
+    if (pos < height - 3000) {
+        showStars();
+    } else if (pos < height - 2000) {
+        fadeStars(pos - (height - 3000));
     } else {
-        for (let star of stars) {
-            star.style.opacity = 0;
-        }
-    }
-    //go from blur 5 to blur zero and width 0% to 50%
-    //these animations will be done from 0px-2000px
-    //blur
-    //10000/5 = 2000 so every 2000 pixels we'll drop a blur pixel
-    const newBlur = 5 - pos / 2000;
-    earth.style.filter = `blur(${newBlur}px)`;
-
-    changeEarthSize(pos);
-
-    if (earthContainer.getBoundingClientRect().top <= 0) {
-        earthReset = false;
-        earthContainer.style.position = 'fixed';
-        earthContainer.style.top = 0;
-    }
-}
-
-const initSpaceToEarthTransition = pos => {
-
-    // Increase the earth's size at a faster rate
-    changeEarthSize(pos*10,SPACE_THEME_SCROLL_LENGTH);
-
-    if (earthReset) {
-        earthReset = false;
-        earthContainer.style.position = 'fixed';
-        earthContainer.style.top = 0;
-        // earthContainer.style.marginTop = '-300px';
+        animateEarthDown(pos, (pos - (height - 2000)));
+        hideStars();
+        return;//don't changeEarthSize
     }
 
-    // 9/10 of the scroll will animate the earth down
-    const animateRatio = SPACE_TO_EARTH_SCROLL_LENGTH * .9;
-    const onePercent = animateRatio / 100;
-    const delayFactor = pos / onePercent;
-    earthContainer.style.top = `${delayFactor}vh`;
-    //Make sure earth is out of view
-    if (pos > animateRatio)
-        earthContainer.style.top = '125%';
+    changeEarthSize(pos, height);
+    if (pos < prevPos)
+        resetEarthStyles(pos);
 
 }
 
-const changeEarthSize = (pos, appendedPos = 0) => {
-    //width
-    //10000/50 = 200 so every 200 pixels we'll increase the percentage
-    const newWidth = (pos+appendedPos) / 200;
-    earth.style.width = `${newWidth}%`;
+//change earth size
+//10000/50 = 200 so every 200 pixels we'll increase the percentage
+const changeEarthSize = (pos, height) => {
+    //width from 0% to 50%
+    //10000/100 = 100 so every 100 pixels we'll increase the percentage
+    const maxWidthPercentage = height / 100 * 2
+    const newWidth = pos / maxWidthPercentage;
+    earthContainer.style.width = `${newWidth}vw`;
+    earthContainer.style.height = `${newWidth}vw`;
+    earthContainer.style.top = '60vh';
+    console.log('earthContainer top:'+earthContainer.style.top)
 
+}
+
+// Scrolling down. Begin drop down animation.
+const animateEarthDown = (pos, relativePos) => {
+
+    const realPos = pos - height;
+    earthInitialStyles = false;
+    prevPos = pos;
+    earthContainer.style.position = 'fixed';
+    // earthContainer.style.top = '60vh';
+    console.log('animearthdown'+earthContainer.style.top)
+
+    // Going from 60vh to 110vh for 1000px
+    // 1000px/50(difference vh) = 20(px)(vh)
+    // 1vh = 20px
+    const newEarthTop = 60 + relativePos / 20;
+    earthContainer.style.top = newEarthTop + 'vh';
+}
+
+// Scrolling up. Set earth to init styles.
+const resetEarthStyles = () => {
+
+    prevPos = 0;
+    earthInitialStyles = true;
+    earthContainer.style.position = 'sticky';
+    earthContainer.style.top = '60vh';
+}
+
+// Fade stars w respect to scroll position
+const fadeStars = (relativePos) => {
+
+    const newOpacity = 1 - (relativePos / 10 * .01);
+    for (let star of stars) {
+        star.style.opacity = newOpacity;
+    }
+}
+
+// Ensure stars are fully opaque
+const hideStars = () => {
+
+    for (let star of stars) {
+        star.style.opacity = 0;
+    }
+}
+
+// Ensure shows are fully visible
+const showStars = () => {
+
+    for (let star of stars) {
+        star.style.opacity = 1;
+    }
 }

@@ -1,222 +1,233 @@
-#section-swiss-army-knife {
-  background-color: skyblue;
-  height: 5000px;
-  width: 100%;
-}
 @media only screen and (max-width: 640px) {
-  #section-swiss-army-knife #swiss-army-knife-container {
+  #swiss-army-knife-container {
     width: 320px;
     height: 500px;
     margin: auto;
     position: relative;
   }
-  #section-swiss-army-knife .swiss-army-knife {
+  #swiss-army-knife-container .swiss-army-knife {
     position: absolute;
   }
-  #section-swiss-army-knife .swiss-handle {
+  #swiss-army-knife-container .swiss-handle {
     width: 230px;
   }
-  #section-swiss-army-knife .swiss-front {
+  #swiss-army-knife-container .swiss-front {
     top: 200px;
     left: 50px;
   }
-  #section-swiss-army-knife .swiss-inner-1 {
+  #swiss-army-knife-container .swiss-inner-1 {
     top: 198px;
     left: 52px;
   }
-  #section-swiss-army-knife .swiss-inner-2 {
+  #swiss-army-knife-container .swiss-inner-2 {
     top: 196px;
     left: 54px;
   }
-  #section-swiss-army-knife .swiss-inner-3 {
+  #swiss-army-knife-container .swiss-inner-3 {
     top: 194px;
     left: 56px;
   }
-  #section-swiss-army-knife .swiss-1 {
+  #swiss-army-knife-container .swiss-1 {
     width: 70px;
     top: 141px;
     left: 250px;
     transform-origin: 0% 100%;
   }
-  #section-swiss-army-knife .swiss-2 {
+  #swiss-army-knife-container .swiss-2 {
     width: 130px;
     top: 150px;
     left: 100px;
     transform-origin: 100% 50%;
   }
-  #section-swiss-army-knife .swiss-3 {
+  #swiss-army-knife-container .swiss-3 {
     width: 100px;
     top: 107px;
     left: 105px;
     transform-origin: 0% 100%;
   }
-  #section-swiss-army-knife .swiss-4 {
+  #swiss-army-knife-container .swiss-4 {
     width: 19px;
     top: 100px;
     left: 80px;
     transform-origin: 0% 100%;
   }
-  #section-swiss-army-knife .swiss-5 {
+  #swiss-army-knife-container .swiss-5 {
     width: 50px;
     top: 115px;
     left: 205px;
     transform-origin: 100% 100%;
   }
-  #section-swiss-army-knife .swiss-6 {
+  #swiss-army-knife-container .swiss-6 {
     width: 70px;
     top: 120px;
     left: 15px;
     transform-origin: 100% 100%;
   }
-  #section-swiss-army-knife .swiss-7 {
+  #swiss-army-knife-container .swiss-7 {
     width: 100px;
     top: 245px;
     left: 80px;
     transform-origin: 0% 0%;
   }
-  #section-swiss-army-knife .swiss-8 {
+  #swiss-army-knife-container .swiss-8 {
     width: 50px;
     top: 225px;
     left: 210px;
     transform-origin: 50% 0%;
   }
-  #section-swiss-army-knife .swiss-9 {
+  #swiss-army-knife-container .swiss-9 {
     width: 80px;
     top: 235px;
     left: 17px;
   }
 }
 @media only screen and (min-width: 641px) {
-  #section-swiss-army-knife #swiss-army-knife-container {
+  #swiss-army-knife-container {
     width: 640px;
     height: 500px;
     margin: auto;
     position: relative;
   }
-  #section-swiss-army-knife .swiss-army-knife {
+  #swiss-army-knife-container .swiss-army-knife {
     position: absolute;
   }
-  #section-swiss-army-knife .swiss-handle {
+  #swiss-army-knife-container .swiss-handle {
     width: 460px;
   }
-  #section-swiss-army-knife .swiss-front {
+  #swiss-army-knife-container .swiss-front {
     top: 200px;
     left: 50px;
   }
-  #section-swiss-army-knife .swiss-inner-1 {
+  #swiss-army-knife-container .swiss-inner-1 {
     top: 198px;
     left: 52px;
   }
-  #section-swiss-army-knife .swiss-inner-2 {
+  #swiss-army-knife-container .swiss-inner-2 {
     top: 196px;
     left: 54px;
   }
-  #section-swiss-army-knife .swiss-inner-3 {
+  #swiss-army-knife-container .swiss-inner-3 {
     top: 194px;
     left: 56px;
   }
-  #section-swiss-army-knife .swiss-1 {
+  #swiss-army-knife-container .swiss-1 {
     width: 140px;
     top: 81px;
     left: 450px;
     transform-origin: 0% 100%;
   }
-  #section-swiss-army-knife .swiss-2 {
+  #swiss-army-knife-container .swiss-2 {
     width: 260px;
     top: 100px;
     left: 105px;
     transform-origin: 100% 50%;
   }
-  #section-swiss-army-knife .swiss-3 {
+  #swiss-army-knife-container .swiss-3 {
     width: 200px;
     top: 18px;
     left: 205px;
     transform-origin: 0% 100%;
   }
-  #section-swiss-army-knife .swiss-4 {
+  #swiss-army-knife-container .swiss-4 {
     width: 38px;
     top: 0;
     left: 160px;
     transform-origin: 0% 100%;
   }
-  #section-swiss-army-knife .swiss-5 {
+  #swiss-army-knife-container .swiss-5 {
     width: 80px;
     top: 75px;
     left: 370px;
     transform-origin: 100% 100%;
   }
-  #section-swiss-army-knife .swiss-6 {
+  #swiss-army-knife-container .swiss-6 {
     width: 120px;
     top: 65px;
     left: 0;
     transform-origin: 100% 100%;
   }
-  #section-swiss-army-knife .swiss-7 {
+  #swiss-army-knife-container .swiss-7 {
     width: 220px;
     top: 285px;
     left: 85px;
     transform-origin: 0% 0%;
   }
-  #section-swiss-army-knife .swiss-8 {
+  #swiss-army-knife-container .swiss-8 {
     width: 100px;
     top: 250px;
     left: 370px;
     transform-origin: 50% 0%;
   }
-  #section-swiss-army-knife .swiss-9 {
+  #swiss-army-knife-container .swiss-9 {
     width: 80px;
     top: 235px;
     left: 17px;
   }
 }
-#section-swiss-army-knife .swiss-1-anim-forwards {
+.swiss-1-anim-forwards {
   animation: swiss1AnimForwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-1-anim-backwards {
+
+.swiss-1-anim-backwards {
   animation: swiss1AnimBackwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-2-anim-forwards {
+
+.swiss-2-anim-forwards {
   animation: swiss2AnimForwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-2-anim-backwards {
+
+.swiss-2-anim-backwards {
   animation: swiss2AnimBackwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-3-anim-forwards {
+
+.swiss-3-anim-forwards {
   animation: swiss3AnimForwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-3-anim-backwards {
+
+.swiss-3-anim-backwards {
   animation: swiss3AnimBackwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-4-anim-forwards {
+
+.swiss-4-anim-forwards {
   animation: swiss4AnimForwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-4-anim-backwards {
+
+.swiss-4-anim-backwards {
   animation: swiss4AnimBackwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-5-anim-forwards {
+
+.swiss-5-anim-forwards {
   animation: swiss5AnimForwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-5-anim-backwards {
+
+.swiss-5-anim-backwards {
   animation: swiss5AnimBackwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-6-anim-forwards {
+
+.swiss-6-anim-forwards {
   animation: swiss6AnimForwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-6-anim-backwards {
+
+.swiss-6-anim-backwards {
   animation: swiss6AnimBackwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-7-anim-forwards {
+
+.swiss-7-anim-forwards {
   animation: swiss7AnimForwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-7-anim-backwards {
+
+.swiss-7-anim-backwards {
   animation: swiss7AnimBackwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-8-anim-forwards {
+
+.swiss-8-anim-forwards {
   animation: swiss8AnimForwards 0.5s linear forwards;
 }
-#section-swiss-army-knife .swiss-8-anim-backwards {
+
+.swiss-8-anim-backwards {
   animation: swiss8AnimBackwards 0.5s linear forwards;
 }
+
 @keyframes swiss1AnimForwards {
   from {
     transform: rotate(0deg);

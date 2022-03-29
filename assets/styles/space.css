@@ -1,60 +1,67 @@
-#space-container {
+#section-space-container {
   background-color: black;
   border: 0;
-  height: 11000px;
-  margin-top: max(600px, 100vh);
+  height: 13000px;
+  margin-top: 1000px;
   padding: 0;
   position: relative;
 }
-#space-container .earth {
-  width: 0%;
-  border-radius: 50%;
-  background-color: skyblue;
-  box-shadow: 0 0 50px 25px skyblue;
-  /* Add the blur effect */
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
+#section-space-container .webgl {
+  outline: none;
+  width: 100%;
+  aspect-ratio: 1;
+  position: absolute;
 }
-#space-container .earth-container {
-  position: sticky;
-  top: 80vh;
+#section-space-container .aurora {
+  width: 74%;
+  top: 13%;
+  aspect-ratio: 1;
+  border-radius: 50vw;
+  box-shadow: 0 0 100px 1px #09076F;
+  position: absolute;
+}
+#section-space-container .earth-container {
   display: flex;
   justify-content: center;
-  width: 100vw;
-}
-#space-container .star {
-  width: 1px;
-  height: 1px;
   position: sticky;
-  border-radius: 50vw;
-  background-color: gold;
-  animation: glow 5s ease infinite;
+  width: 0vw;
+  top: 60vw;
+  left: 50vw;
+  transform: translateX(-50%);
 }
-#space-container .star-container {
+#section-space-container .star {
+  animation: glow 5s ease infinite;
+  border-radius: 50%;
+  background-color: white;
+  display: inline-block;
+  position: sticky;
+}
+#section-space-container .star1 {
+  height: 1px;
+  width: 1px;
+}
+#section-space-container .star2 {
+  height: 2px;
+  width: 2px;
+}
+#section-space-container .star3 {
+  height: 3px;
+  width: 3px;
+}
+#section-space-container .star-container {
   height: 100%;
   position: static;
 }
 @keyframes glow {
   0% {
-    box-shadow: 0 0 20px 5px gold;
+    box-shadow: 0 0 10px 2px white;
   }
   50% {
-    box-shadow: 0 0 20px 10px gold;
+    box-shadow: 0 0 10px 4px white;
   }
   100% {
-    box-shadow: 0 0 20px 5px gold;
+    box-shadow: 0 0 10px 2px white;
   }
-}
-
-.space-to-earth {
-  height: 3000px;
-  background-color: black;
-}
-
-.black-to-sky-blue {
-  height: 1000px;
-  background-color: skyblue;
-  background-image: linear-gradient(black, skyblue);
 }
 
 /*# sourceMappingURL=space.css.map */

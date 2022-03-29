@@ -1,0 +1,38 @@
+#section-sky-container {
+    //vars
+    $animDuration: 0.5s;
+    height:20000px;
+
+    //container styles
+    background-image: linear-gradient(#09076F,skyblue);
+    background-color: #000;
+    position: relative;
+    width: 100%;
+
+    .cloud-cluster{
+        height:1000px;
+        width:100%;
+        background-image:linear-gradient(skyblue,rgb(223, 246, 255));
+        position:absolute;
+        bottom:0;
+
+        .cloud{
+            position:absolute;
+            bottom:-128px;
+            width:256px;
+            height:256px;
+            z-index: 100;
+        }
+
+        :nth-child(1){
+            right:0;
+        }
+    }
+
+    .black-to-blue {
+        height: 1000px;
+        background-image: linear-gradient(black, #09076F);
+        background-size: 1000px;
+    }
+    
+}

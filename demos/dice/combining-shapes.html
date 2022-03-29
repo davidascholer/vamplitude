@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        canvas {
+            width: 50%;
+            height: 50%
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script>
+
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+        document.body.appendChild(renderer.domElement);
+
+        //cylinder
+        const geometry1 = new THREE.CylinderGeometry(10, 10, 10, 5, 1);
+        const loader1 = new THREE.TextureLoader();
+        const materials1 = [
+        new THREE.MeshBasicMaterial({ map: loader1.load('./colors.png') }),
+        ];
+
+        const cylinder = new THREE.Mesh(geometry1, materials1);
+        cylinder.position.set(0, 0);
+
+        //cone1
+        const geometry2 = new THREE.CylinderGeometry(10, 0, 5, 5, 1);
+        const loader2 = new THREE.TextureLoader();
+        const materials2 = [
+            new THREE.MeshBasicMaterial({ color: 0xfff000 }),
+        ];
+
+        const cone1 = new THREE.Mesh(geometry2, materials2);
+        cone1.position.set(0, -7.5);
+
+        //cone2
+        const geometry3 = new THREE.CylinderGeometry(0, 10, 5, 5, 1);
+        const loader3 = new THREE.TextureLoader();
+        const materials3 = [
+            new THREE.MeshBasicMaterial({ color: 0xff0f00 }),
+        ];
+
+        const cone2 = new THREE.Mesh(geometry3, materials3);
+        cone2.position.set(0, 7.5);
+
+        //group the objects
+        const group = new THREE.Group();
+        group.add(cylinder);
+        group.add(cone1);
+        group.add(cone2);
+
+        scene.add(group);
+
+        camera.position.z = 50;
+        camera.fov *= 100;
+        camera.updateProjectionMatrix();
+
+        var animate = function () {
+            requestAnimationFrame(animate);
+
+            // cube.rotation.x += 0.01;
+            // cube.rotation.y += 0.01;
+            group.rotation.x += 0.01;
+            group.rotation.y += 0.01;
+
+            renderer.render(scene, camera);
+        };
+
+        animate();
+    </script>
+</body>
+
+</html>

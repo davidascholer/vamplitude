@@ -1,0 +1,31 @@
+#section-sky-container {
+  height: 20000px;
+  background-image: linear-gradient(#09076F, skyblue);
+  background-color: #000;
+  position: relative;
+  width: 100%;
+}
+#section-sky-container .cloud-cluster {
+  height: 1000px;
+  width: 100%;
+  background-image: linear-gradient(skyblue, #dff6ff);
+  position: absolute;
+  bottom: 0;
+}
+#section-sky-container .cloud-cluster .cloud {
+  position: absolute;
+  bottom: -128px;
+  width: 256px;
+  height: 256px;
+  z-index: 100;
+}
+#section-sky-container .cloud-cluster :nth-child(1) {
+  right: 0;
+}
+#section-sky-container .black-to-blue {
+  height: 1000px;
+  background-image: linear-gradient(black, #09076F);
+  background-size: 1000px;
+}
+
+/*# sourceMappingURL=sky.css.map */

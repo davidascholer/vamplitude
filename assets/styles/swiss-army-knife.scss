@@ -1,19 +1,12 @@
-#section-swiss-army-knife {
-    //vars
-    $animDuration: 0.5s;
+$animDuration: 0.5s;
 
-    //container styles
-    background-color: skyblue;
-    height: 5000px;
-    width: 100%;
+@media only screen and (max-width: 640px) {
+    #swiss-army-knife-container {
 
-    @media only screen and (max-width: 640px) {
-        #swiss-army-knife-container {
-            width: 320px;
-            height: 500px;
-            margin: auto;
-            position: relative;
-        }
+        width: 320px;
+        height: 500px;
+        margin: auto;
+        position: relative;
 
         .swiss-army-knife {
             position: absolute;
@@ -92,15 +85,16 @@
             left: 17px;
         }
     }
-    @media only screen and (min-width: 641px) {
-        //general styles
-        #swiss-army-knife-container {
-            width: 640px;
-            height: 500px;
-            margin: auto;
-            position: relative;
-        }
-    
+}
+@media only screen and (min-width: 641px) {
+    //general styles
+    #swiss-army-knife-container {
+
+        width: 640px;
+        height: 500px;
+        margin: auto;
+        position: relative;
+
         .swiss-army-knife {
             position: absolute;
         }
@@ -177,183 +171,183 @@
             left: 17px;
         }
     }
-    //animation classes
-    .swiss-1-anim-forwards {
-        animation: swiss1AnimForwards $animDuration linear forwards;
-    }
-    .swiss-1-anim-backwards {
-        animation: swiss1AnimBackwards $animDuration linear forwards;
-    }
-    .swiss-2-anim-forwards {
-        animation: swiss2AnimForwards $animDuration linear forwards;
-    }
-    .swiss-2-anim-backwards {
-        animation: swiss2AnimBackwards $animDuration linear forwards;
-    }
-    .swiss-3-anim-forwards {
-        animation: swiss3AnimForwards $animDuration linear forwards;
-    }
-    .swiss-3-anim-backwards {
-        animation: swiss3AnimBackwards $animDuration linear forwards;
-    }
-    .swiss-4-anim-forwards {
-        animation: swiss4AnimForwards $animDuration linear forwards;
-    }
-    .swiss-4-anim-backwards {
-        animation: swiss4AnimBackwards $animDuration linear forwards;
-    }
-    .swiss-5-anim-forwards {
-        animation: swiss5AnimForwards $animDuration linear forwards;
-    }
-    .swiss-5-anim-backwards {
-        animation: swiss5AnimBackwards $animDuration linear forwards;
-    }
-    .swiss-6-anim-forwards {
-        animation: swiss6AnimForwards $animDuration linear forwards;
-    }
-    .swiss-6-anim-backwards {
-        animation: swiss6AnimBackwards $animDuration linear forwards;
-    }
-    .swiss-7-anim-forwards {
-        animation: swiss7AnimForwards $animDuration linear forwards;
-    }
-    .swiss-7-anim-backwards {
-        animation: swiss7AnimBackwards $animDuration linear forwards;
-    }
-    .swiss-8-anim-forwards {
-        animation: swiss8AnimForwards $animDuration linear forwards;
-    }
-    .swiss-8-anim-backwards {
-        animation: swiss8AnimBackwards $animDuration linear forwards;
-    }
+}
+//animation classes
+.swiss-1-anim-forwards {
+    animation: swiss1AnimForwards $animDuration linear forwards;
+}
+.swiss-1-anim-backwards {
+    animation: swiss1AnimBackwards $animDuration linear forwards;
+}
+.swiss-2-anim-forwards {
+    animation: swiss2AnimForwards $animDuration linear forwards;
+}
+.swiss-2-anim-backwards {
+    animation: swiss2AnimBackwards $animDuration linear forwards;
+}
+.swiss-3-anim-forwards {
+    animation: swiss3AnimForwards $animDuration linear forwards;
+}
+.swiss-3-anim-backwards {
+    animation: swiss3AnimBackwards $animDuration linear forwards;
+}
+.swiss-4-anim-forwards {
+    animation: swiss4AnimForwards $animDuration linear forwards;
+}
+.swiss-4-anim-backwards {
+    animation: swiss4AnimBackwards $animDuration linear forwards;
+}
+.swiss-5-anim-forwards {
+    animation: swiss5AnimForwards $animDuration linear forwards;
+}
+.swiss-5-anim-backwards {
+    animation: swiss5AnimBackwards $animDuration linear forwards;
+}
+.swiss-6-anim-forwards {
+    animation: swiss6AnimForwards $animDuration linear forwards;
+}
+.swiss-6-anim-backwards {
+    animation: swiss6AnimBackwards $animDuration linear forwards;
+}
+.swiss-7-anim-forwards {
+    animation: swiss7AnimForwards $animDuration linear forwards;
+}
+.swiss-7-anim-backwards {
+    animation: swiss7AnimBackwards $animDuration linear forwards;
+}
+.swiss-8-anim-forwards {
+    animation: swiss8AnimForwards $animDuration linear forwards;
+}
+.swiss-8-anim-backwards {
+    animation: swiss8AnimBackwards $animDuration linear forwards;
+}
 
-    //animations
-    @keyframes swiss1AnimForwards {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(-130deg);
-        }
+//animations
+@keyframes swiss1AnimForwards {
+    from {
+        transform: rotate(0deg);
     }
-    @keyframes swiss1AnimBackwards {
-        from {
-            transform: rotate(-130deg);
-        }
-        to {
-            transform: rotate(0deg);
-        }
+    to {
+        transform: rotate(-130deg);
     }
-    @keyframes swiss2AnimForwards {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(-22deg);
-        }
+}
+@keyframes swiss1AnimBackwards {
+    from {
+        transform: rotate(-130deg);
     }
-    @keyframes swiss2AnimBackwards {
-        from {
-            transform: rotate(-22deg);
-        }
-        to {
-            transform: rotate(0deg);
-        }
+    to {
+        transform: rotate(0deg);
     }
-    @keyframes swiss3AnimForwards {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(45deg);
-        }
+}
+@keyframes swiss2AnimForwards {
+    from {
+        transform: rotate(0deg);
     }
-    @keyframes swiss3AnimBackwards {
-        from {
-            transform: rotate(45deg);
-        }
-        to {
-            transform: rotate(0deg);
-        }
+    to {
+        transform: rotate(-22deg);
     }
-    @keyframes swiss4AnimForwards {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(90deg);
-        }
+}
+@keyframes swiss2AnimBackwards {
+    from {
+        transform: rotate(-22deg);
     }
-    @keyframes swiss4AnimBackwards {
-        from {
-            transform: rotate(90deg);
-        }
-        to {
-            transform: rotate(0deg);
-        }
+    to {
+        transform: rotate(0deg);
     }
-    @keyframes swiss5AnimForwards {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(-70deg);
-        }
+}
+@keyframes swiss3AnimForwards {
+    from {
+        transform: rotate(0deg);
     }
-    @keyframes swiss5AnimBackwards {
-        from {
-            transform: rotate(-70deg);
-        }
-        to {
-            transform: rotate(0deg);
-        }
+    to {
+        transform: rotate(45deg);
     }
-    @keyframes swiss6AnimForwards {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(120deg);
-        }
+}
+@keyframes swiss3AnimBackwards {
+    from {
+        transform: rotate(45deg);
     }
-    @keyframes swiss6AnimBackwards {
-        from {
-            transform: rotate(120deg);
-        }
-        to {
-            transform: rotate(0deg);
-        }
+    to {
+        transform: rotate(0deg);
     }
-    @keyframes swiss7AnimForwards {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(-45deg);
-        }
+}
+@keyframes swiss4AnimForwards {
+    from {
+        transform: rotate(0deg);
     }
-    @keyframes swiss7AnimBackwards {
-        from {
-            transform: rotate(-45deg);
-        }
-        to {
-            transform: rotate(0deg);
-        }
+    to {
+        transform: rotate(90deg);
     }
-    @keyframes swiss8AnimForwards {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(70deg);
-        }
+}
+@keyframes swiss4AnimBackwards {
+    from {
+        transform: rotate(90deg);
     }
-    @keyframes swiss8AnimBackwards {
-        from {
-            transform: rotate(70deg);
-        }
-        to {
-            transform: rotate(0deg);
-        }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@keyframes swiss5AnimForwards {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-70deg);
+    }
+}
+@keyframes swiss5AnimBackwards {
+    from {
+        transform: rotate(-70deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@keyframes swiss6AnimForwards {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(120deg);
+    }
+}
+@keyframes swiss6AnimBackwards {
+    from {
+        transform: rotate(120deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@keyframes swiss7AnimForwards {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-45deg);
+    }
+}
+@keyframes swiss7AnimBackwards {
+    from {
+        transform: rotate(-45deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@keyframes swiss8AnimForwards {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(70deg);
+    }
+}
+@keyframes swiss8AnimBackwards {
+    from {
+        transform: rotate(70deg);
+    }
+    to {
+        transform: rotate(0deg);
     }
 }

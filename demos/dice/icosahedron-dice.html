@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            background-color:#111;
+        }
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+        #container {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script>
+        var container = document.getElementById('container');
+        var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        var camera = new THREE.PerspectiveCamera(80, 1, 0.1, 100);
+        var scene = new THREE.Scene();
+        
+        scene.add(camera);
+        renderer.setSize(320, 320);
+        renderer.setClearColor( 0x000000,0 ); // second param is opacity, 0 => transparent
+        container.append(renderer.domElement);
+
+        // Camera
+        camera.position.z = 20;
+
+        const loader = new THREE.TextureLoader();
+        const texture = new THREE.TextureLoader().load( "./Icosahedron_20_dice.png" );
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.magFilter = THREE.LinearFilter;
+        texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
+        const materials = new THREE.MeshPhongMaterial({ map: texture });
+
+        const Ico = new THREE.Mesh(new THREE.IcosahedronGeometry(10, 0), materials);
+        console.log("Ico: " + JSON.stringify(Ico.geometry));
+        Ico.receiveShadow = true;
+        scene.add(Ico);
+
+        var L1 = new THREE.PointLight(0xffffff, 1);
+        L1.position.z = 100;
+        L1.position.y = 100;
+        L1.position.x = 100;
+        scene.add(L1);
+
+        var L2 = new THREE.PointLight(0xffffff, 0.8);
+        L2.position.z = 100;
+        L2.position.y = 50;
+        L2.position.x = -100;
+        scene.add(L2);
+
+        function update() {
+            Ico.rotation.x += .005;
+            Ico.rotation.y += .005;
+        }
+
+        // Render
+        function render() {
+            requestAnimationFrame(render);
+            renderer.render(scene, camera);
+            update();
+        }
+
+        render();
+    </script>
+</body>
+
+</html>
