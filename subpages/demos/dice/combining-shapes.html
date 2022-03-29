@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="./assets/styles/resume.css" rel="stylesheet">
+<title>David Scholer - Demos - combining-shapes</title>
+<link rel="apple-touch-icon" sizes="180x180" href="../../../assets/img/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../assets/img/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/icon/favicon-16x16.png">
+<link rel="manifest" href="../../../assets/img/icon/site.webmanifest">
+<link rel="mask-icon" href="../../../assets/img/icon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="../../../assets/img/icon/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="Vamplitude">
+<meta name="application-name" content="Vamplitude">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="../../../assets/img/icon/browserconfig.xml">
+<meta name="theme-color" content="#d5d5d5">
 
 <head>
     <meta charset="UTF-8">
@@ -33,7 +49,8 @@
         const geometry1 = new THREE.CylinderGeometry(10, 10, 10, 5, 1);
         const loader1 = new THREE.TextureLoader();
         const materials1 = [
-        new THREE.MeshBasicMaterial({ map: loader1.load('./colors.png') }),
+            // new THREE.MeshBasicMaterial({ map: loader1.load('./colors.png') }),
+            new THREE.MeshPhongMaterial({ color: 'blue' }),
         ];
 
         const cylinder = new THREE.Mesh(geometry1, materials1);
@@ -43,7 +60,7 @@
         const geometry2 = new THREE.CylinderGeometry(10, 0, 5, 5, 1);
         const loader2 = new THREE.TextureLoader();
         const materials2 = [
-            new THREE.MeshBasicMaterial({ color: 0xfff000 }),
+            new THREE.MeshPhongMaterial({ color: 0xfff000 }),
         ];
 
         const cone1 = new THREE.Mesh(geometry2, materials2);
@@ -52,9 +69,19 @@
         //cone2
         const geometry3 = new THREE.CylinderGeometry(0, 10, 5, 5, 1);
         const loader3 = new THREE.TextureLoader();
-        const materials3 = [
-            new THREE.MeshBasicMaterial({ color: 0xff0f00 }),
-        ];
+        const materials3 = new THREE.MeshPhongMaterial({ color: 0xff0f00 });
+
+        var L1 = new THREE.PointLight(0xffffff, 1);
+        L1.position.z = 100;
+        L1.position.y = 100;
+        L1.position.x = 100;
+        scene.add(L1);
+
+        var L2 = new THREE.PointLight(0xffffff, 0.8);
+        L2.position.z = 100;
+        L2.position.y = 50;
+        L2.position.x = -100;
+        scene.add(L2);
 
         const cone2 = new THREE.Mesh(geometry3, materials3);
         cone2.position.set(0, 7.5);
