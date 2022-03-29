@@ -438,8 +438,8 @@ body .skills-container .skills ul .measure {
   max-height: 4px;
 }
 body .skills-container .skills ul .node {
-  width: 65%;
-  background-image: linear-gradient(to left, #000b18, #00172d, #00264d, #02386e);
+  width: 75%;
+  background-image: linear-gradient(to left, #000b18, #00172d, #00264d, #02386e), #00498d;
 }
 body .skills-container .skills ul .sql {
   width: 55%;

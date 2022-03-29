@@ -486,8 +486,8 @@ body {
                     max-height: 4px;
                 }
                 .node {
-                    width: 65%;
-                    background-image: linear-gradient(to left, $blue1, $blue2, $blue3, $blue4);
+                    width: 75%;
+                    background-image: linear-gradient(to left, $blue1, $blue2, $blue3, $blue4),$blue5;
                 }
                 .sql {
                     width: 55%;
