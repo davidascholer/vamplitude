@@ -152,7 +152,7 @@ body .resume-page-1 .top-section .left .line-across {
     top: 60%;
   }
 }
-@media only screen and (min-width: 666px) {
+@media only screen and (min-width: 702px) {
   body .resume-page-1 .top-section .middle {
     position: relative;
     grid-column: 3/5;
@@ -168,14 +168,14 @@ body .resume-page-1 .top-section .left .line-across {
     z-index: -1;
   }
 }
-@media only screen and (min-width: 666px) and (min-width: 1000px) {
+@media only screen and (min-width: 702px) and (min-width: 1000px) {
   body .resume-page-1 .top-section .middle .line-down {
     height: 40%;
     top: 60%;
     width: 7.5px;
   }
 }
-@media only screen and (min-width: 666px) {
+@media only screen and (min-width: 702px) {
   body .resume-page-1 .top-section .middle .line-across {
     width: 100%;
     height: 0.5vw;
@@ -186,13 +186,13 @@ body .resume-page-1 .top-section .left .line-across {
     position: absolute;
   }
 }
-@media only screen and (min-width: 666px) and (min-width: 1000px) {
+@media only screen and (min-width: 702px) and (min-width: 1000px) {
   body .resume-page-1 .top-section .middle .line-across {
     height: 7.5px;
     top: 60%;
   }
 }
-@media only screen and (max-width: 666px) {
+@media only screen and (max-width: 701px) {
   body .resume-page-1 .top-section .middle {
     position: relative;
     grid-column: 3/5;
