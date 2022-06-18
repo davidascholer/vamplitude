@@ -1,32 +1,73 @@
-#section-logo {
-  background: #000;
+@font-face {
+  font-family: antiqua;
+  src: url("../fonts/ModernAntiqua-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: wind;
+  src: url("../fonts/wind_sans_serif.ttf") format("truetype");
+}
+@font-face {
+  font-family: roboto-light;
+  src: url("../fonts/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: roboto-medium;
+  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: carme;
+  src: url("../fonts/Carme-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: advent-medium;
+  src: url("../fonts/AdventPro-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: advent-light;
+  src: url("../fonts/AdventPro-Light.ttf") format("truetype");
+}
+#logo-container {
+  background-color: #000;
+  position: initial;
+  width: 100vw;
+  z-index: 1;
+}
+#logo-container .section-logo-background {
+  background-color: #000;
+  height: 120vh;
+  position: fixed;
+  top: -20vh;
+  user-select: none;
+  width: 100vw;
+  z-index: 1;
+}
+#logo-container .section-logo-background h2 {
+  bottom: 5%;
+  font-family: antiqua, wind, Helvetica, sans-serif;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+#logo-container #section-logo {
   left: 50%;
   font-size: 4vw;
   height: 15vw;
+  min-height: 50vw;
   position: relative;
   transform: translateX(-50%);
   width: 100vw;
+  z-index: 1;
 }
-#section-logo #video-container {
+#logo-container #section-logo #video-container {
   background: #000;
   position: absolute;
   top: 0;
   width: 100%;
 }
-#section-logo #video-container video {
+#logo-container #section-logo #video-container video {
   background: #000;
   object-fit: contain;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-#section-logo section:before {
-  content: "";
-  background-color: black;
-  height: 100%;
-  left: 0;
-  mix-blend-mode: color;
-  pointer-events: none;
   position: absolute;
   top: 0;
   width: 100%;
@@ -43,56 +84,59 @@
     filter: blur(0);
   }
 }
-#section-logo .logo-title {
-  color: white;
+#logo-container #section-logo .logo-title {
+  color: ivory;
   display: inline-block;
   font-family: antiqua, wind, Helvetica, sans-serif;
+  font-size: 10vw;
   position: absolute;
   text-align: center;
   top: 15vw;
-  width: 100%;
+  left: 50vw;
+  white-space: nowrap;
+  transform: translateX(-50%);
   z-index: 1;
 }
-#section-logo .logo-title span {
+#logo-container #section-logo .logo-title span {
   display: inline-block;
   opacity: 0;
 }
-#section-logo .logo-title .anim-title {
+#logo-container #section-logo .logo-title .anim-title {
   animation: animate 1s linear forwards;
 }
-#section-logo .logo-title :nth-child(1) {
+#logo-container #section-logo .logo-title :nth-child(1) {
   animation-delay: 1s;
   position: relative;
-  top: 4px;
+  top: 8px;
 }
-#section-logo .logo-title :nth-child(2) {
+#logo-container #section-logo .logo-title :nth-child(2) {
   animation-delay: 1.2s;
 }
-#section-logo .logo-title :nth-child(3) {
+#logo-container #section-logo .logo-title :nth-child(3) {
   animation-delay: 1.4s;
 }
-#section-logo .logo-title :nth-child(4) {
+#logo-container #section-logo .logo-title :nth-child(4) {
   animation-delay: 2s;
 }
-#section-logo .logo-title :nth-child(5) {
+#logo-container #section-logo .logo-title :nth-child(5) {
   animation-delay: 2.3s;
 }
-#section-logo .logo-title :nth-child(6) {
+#logo-container #section-logo .logo-title :nth-child(6) {
   animation-delay: 2.6s;
 }
-#section-logo .logo-title :nth-child(7) {
+#logo-container #section-logo .logo-title :nth-child(7) {
   animation-delay: 2.5s;
 }
-#section-logo .logo-title :nth-child(8) {
+#logo-container #section-logo .logo-title :nth-child(8) {
   animation-delay: 2.8s;
 }
-#section-logo .logo-title :nth-child(9) {
+#logo-container #section-logo .logo-title :nth-child(9) {
   animation-delay: 2.9s;
 }
-#section-logo .logo-title :nth-child(10) {
+#logo-container #section-logo .logo-title :nth-child(10) {
   animation-delay: 3.1s;
 }
-#section-logo .logo-loading-container {
+#logo-container #section-logo .logo-loading-container {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -103,70 +147,43 @@
   width: 300px;
   z-index: 1;
 }
-#section-logo .logo-loading-container .logo-loading {
-  align-items: center;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+#logo-container .animate-to-bottom {
+  cursor: pointer;
+  font-size: 1vw;
+  text-align: center;
   width: 100%;
 }
-#section-logo .logo-loading-container .logo-symbols {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1vh;
-  width: 100%;
+#logo-container .animate-to-bottom h3 {
+  font-family: antiqua, wind, Helvetica, sans-serif;
+  margin: 0;
 }
-#section-logo .logo-loading-container .logo-symbols .circle {
-  background-color: red;
-  border-radius: 50%;
-  display: inline-block;
+#logo-container .fade-out {
+  animation: fadeOut 6s forwards;
 }
-#section-logo .logo-loading-container .logo-symbols .big-circle {
-  background-color: white;
-  color: red;
-  height: 20px;
-  text-align: "center";
-  width: 20px;
-}
-#section-logo .logo-loading-container .logo-symbols .small-circle {
-  height: 10px;
-  width: 10px;
-  animation: redToWhite 1s ease forwards;
-}
-#section-logo .logo-loading-container .logo-symbols :nth-child(2) {
-  animation-delay: 1s;
-}
-#section-logo .logo-loading-container .logo-symbols :nth-child(8) {
-  animation-delay: 1s;
-}
-#section-logo .logo-loading-container .logo-symbols :nth-child(3) {
-  animation-delay: 2s;
-}
-#section-logo .logo-loading-container .logo-symbols :nth-child(7) {
-  animation-delay: 2s;
-}
-#section-logo .logo-loading-container .logo-symbols :nth-child(4) {
-  animation-delay: 3s;
-}
-#section-logo .logo-loading-container .logo-symbols :nth-child(6) {
-  animation-delay: 3s;
-}
-@keyframes redToWhite {
-  from {
-    background-color: red;
+@keyframes fadeOut {
+  0% {
+    opacity: 0.9;
   }
-  to {
-    background-color: white;
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
   }
 }
-@keyframes whiteToRed {
-  from {
-    background-color: white;
+#logo-container .fade-out-delay {
+  animation: fadeOutDelay 1s 5s forwards;
+}
+@keyframes fadeOutDelay {
+  0% {
+    opacity: 1;
   }
-  to {
-    background-color: red;
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
   }
 }
 

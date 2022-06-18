@@ -1,0 +1,60 @@
+@use "fonts";
+
+#footer {
+    align-items: center;
+    background-color: #000;
+    color: ivory;
+    display:flex;
+    flex-direction: column;
+    font-family: advent-light;
+    justify-content: center;
+    letter-spacing: 0.25vw;
+    margin-bottom: 10%;
+    padding-top: 50%;
+    height: 66.67vh;
+    width: 100vw;
+
+    .footer-content {
+        margin-bottom:20vh;
+        text-align: center;
+        width: 100%;
+
+        h1 {
+            display: inline-block;
+            font-family: antiqua, wind, Helvetica, sans-serif;
+            font-size: 5vw;
+            margin-right: -5vw;
+            margin-bottom: 0;
+            position: relative;
+
+            * {
+                position: absolute;
+            }
+
+            .letter-v {
+                top: 1vw;
+                left: -3.25vw;
+                font-size: 5vw;
+            }
+        }
+
+        .anim-container {
+            @import "oscillate-anim";
+            height:25vw;
+            margin: auto;
+            width: 40vw;
+        }
+        p {
+            background-color: #000;
+            font-size: 2vw;
+            position: relative;
+            width:100vw;
+            margin: 0;
+
+            .emoji {
+                background-color: #000;
+                font-size: 4vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,732 @@
+@use "fonts";
+
+#what-i-do {
+    $almostBlack: #030303;
+    $almostBlackOpaque: rgba(3, 3, 3, 0.1);
+    $backgroundColor: #110c1b;
+    $clear: rgba(0, 0, 0, 0);
+    $shadow: #2a3132;
+    $stone: #336b87;
+    $autumn: #763626;
+    $mist: #90afc5;
+    $purpleish: #6d466b;
+    $purplishTransparent: rgba(109, 70, 107, 0.7);
+    $orangish: #f87060;
+    $whatIDoAnimationHeight: 50px;
+    $lockFadeAnimDuration: 4s;
+
+    background-color: $purplishTransparent;
+    background-image: repeating-conic-gradient(from 3deg at 25% 25%, $purpleish 0deg 15deg, $stone 10deg 30deg);
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border-bottom: 20px solid $purpleish;
+    box-sizing: border-box;
+    font-family: carme, "roboto-medium", "Arial", sans-serif;
+    margin: auto;
+    min-height: 100vh;
+    padding-bottom: 3vw;
+    scroll-behavior: auto;
+    width: 100%;
+
+    @supports (-webkit-touch-callout: none) {
+        /* CSS specific to iOS devices */
+        background-position: center;
+        background-size: 320px 548px;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
+    .buffer {
+        display: block;
+        min-height: $whatIDoAnimationHeight;
+        width: 100%;
+    }
+
+    .content {
+        position: sticky;
+        top: 0;
+
+        .content-header-container {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            min-height: 100px;
+            padding-bottom: 10px;
+            padding-top: 10vh;
+            max-width: 1400px;
+            margin: auto;
+            width: 100vw;
+
+            .content-header {
+                align-items: center;
+                box-shadow: 0 0 5px 1px $shadow;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                max-width: 350px;
+                padding: 0;
+                text-align: center;
+                width: 40vw;
+
+                h2 {
+                    color: ivory;
+                    font-size: 3vw;
+                }
+                @media only screen and (min-width: 701px) {
+                    h2 {
+                        font-size: 25pt;
+                    }
+                }
+
+                .img-container {
+                    object-fit: contain;
+                    margin: auto;
+                    width: 45%;
+                }
+            }
+        }
+
+        .front-back-container {
+        }
+        .content-header.front-end {
+            background-color: $shadow;
+            border-left: 8px solid $stone;
+            border-top: 8px solid $stone;
+            border-bottom: 8px solid $stone;
+            border-right: 8px solid $shadow;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            margin-left: 5px;
+
+            img {
+                filter: invert(35%) sepia(23%) saturate(990%) hue-rotate(155deg) brightness(101%) contrast(94%); //black to stone
+                width: 90%;
+            }
+        }
+        .content-header.back-end {
+            background-color: $stone;
+            border-right: 8px solid $shadow;
+            border-top: 8px solid $shadow;
+            border-bottom: 8px solid $shadow;
+            border-left: 1px solid $shadow;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            margin-right: 5px;
+            position: relative;
+
+            .style-arrow {
+                border-top: 40px solid transparent;
+                border-left: 20px solid $shadow;
+                border-bottom: 40px solid transparent;
+                left: -1px;
+                position: absolute;
+                height: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 0;
+            }
+
+            img {
+                filter: invert(13%) sepia(18%) saturate(411%) hue-rotate(139deg) brightness(93%) contrast(84%); //black to shadow
+                width: 90%;
+            }
+        }
+
+        .content-items-container {
+            align-items: flex-start;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: auto;
+            max-width: 1400px;
+            width: 100%;
+
+            .content-item {
+                border-radius: 5px;
+                box-sizing: border-box;
+                box-shadow: 0 2px 8px black;
+                height: 100%;
+                margin: 10px;
+                padding: 10px;
+                padding-top: 20px;
+                text-align: center;
+                height: 320px;
+                width: 200px;
+
+                .title {
+                    display: block;
+                    margin-bottom: 10px;
+                    letter-spacing: 0.2vw;
+                    text-align: center;
+                }
+            }
+
+            .content-item-inner-content {
+                border: 8px solid $almostBlack;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+        }
+        .content-items-container.front-container {
+            .content-item {
+                background-color: $shadow;
+                border: 5px solid $stone;
+            }
+
+            .three-d {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin-top: $whatIDoAnimationHeight * 1;
+                width: 280px;
+
+                .three-d-dice-container {
+                    background: linear-gradient(180deg, $almostBlack 0%, $shadow 40%, $shadow 60%, $almostBlack 100%);
+                    border-color: $purpleish;
+                    box-shadow: 0 2px 8px black;
+                    width: 80%;
+                }
+
+                .three-d-earth-container {
+                    height: 100%;
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+                    top: 0;
+                }
+            }
+            .user-friendly-design {
+                min-height: 280px;
+                margin-top: $whatIDoAnimationHeight * 2;
+
+                .user-friendly-design-content {
+                    background-color: $shadow;
+                    border-color: $orangish;
+                    // border-radius: 3%;
+                    box-shadow: 0 2px 8px black;
+                    display: grid;
+                    grid-template-columns: 1fr 0.1fr 1fr 0.1fr 1fr 1fr 0.1fr 1fr;
+                    grid-template-rows: 1fr 0.1fr 2fr 0.1fr 1fr;
+                    grid-template-areas:
+                        "one one one . two two . three"
+                        ". . . . . . . three"
+                        "four-a . five five five five . three"
+                        "four-a . . . . . . three"
+                        "four-a four-b four-b . six six . three";
+                    height: 200px;
+                    justify-content: center;
+                    padding: 15px;
+                    width: 100%;
+
+                    :nth-child(1) {
+                        background-color: $stone;
+                        grid-area: one;
+                    }
+                    :nth-child(2) {
+                        background-color: $autumn;
+                        border-top-right-radius: 1vw;
+                        grid-area: two;
+                    }
+                    :nth-child(3) {
+                        background-color: $mist;
+                        border-top-right-radius: 1vw;
+                        border-bottom-right-radius: 5vw;
+                        grid-area: three;
+                    }
+                    :nth-child(4) {
+                        background-color: $orangish;
+                        border-top-right-radius: 5vw;
+                        grid-area: five;
+                    }
+                    :nth-child(5) {
+                        background-color: $stone;
+                        border-top-right-radius: 1vw;
+                        grid-area: six;
+                    }
+                    :nth-child(6) {
+                        background-color: $mist;
+                        border-bottom-left-radius: 1vw;
+                        grid-area: four-a;
+                    }
+                    :nth-child(7) {
+                        background-color: $mist;
+                        grid-area: four-b;
+                    }
+                }
+            }
+            .banner {
+                margin-top: $whatIDoAnimationHeight * 3;
+                min-width: 220px;
+
+                .content-item-inner-content {
+                    border: none;
+                    margin-top: 40%;
+                    width: 100%;
+                }
+            }
+        }
+        .content-items-container.back-container {
+            .content-item {
+                background-color: $stone;
+                border: 5px solid $shadow;
+            }
+            .lock {
+                margin-top: $whatIDoAnimationHeight * 2;
+                max-width: 200px;
+
+                .title {
+                }
+
+                .lock-content {
+                    aspect-ratio: 7/10;
+                    background-color: $orangish;
+                    border-color: $shadow;
+                    -webkit-box-shadow: 0 2px 8px black;
+                    box-shadow: 0 2px 8px black;
+                    height:100%;
+                    margin: auto;
+                    max-height: 250px;
+                    position: relative;
+                    width: 100%;
+
+                    .lock-content-image-container {
+                        img {
+                            aspect-ratio: 1;
+                            display: block;
+                            -webkit-filter: invert(13%) sepia(18%) saturate(411%) hue-rotate(139deg) brightness(93%)
+                                contrast(84%);//black to shadow
+                            filter: invert(13%) sepia(18%) saturate(411%) hue-rotate(139deg) brightness(93%)
+                                contrast(84%);//black to shadow
+                            left: 10%;
+                            -o-object-fit: contain;
+                            object-fit: contain;
+                            position: absolute;
+                            width: 80%;
+                        }
+                        .base {
+                            bottom: 0;
+                        }
+                        .hinge {
+                            top: 0;
+                        }
+                    }
+                }
+            }
+            .cloud-section {
+                background-color: $stone;
+                margin-top: $whatIDoAnimationHeight * 3;
+                max-width: 200px;
+
+                img {
+                    -webkit-filter: invert(35%) sepia(23%) saturate(990%) hue-rotate(155deg) brightness(101%) contrast(94%); 
+                    filter: invert(35%) sepia(23%) saturate(990%) hue-rotate(155deg) brightness(101%) contrast(94%); //black to stone
+                    -o-object-fit: contain;
+                    object-fit: contain;
+                    opacity: 0.9;
+                    width: 100%;
+                }
+
+                .cloud-container {
+                    background-color: $shadow;
+                    border-color: $mist;
+                    margin: auto;
+                    margin-top: 30%;
+                    max-height: 250px;
+                    overflow: hidden;
+                    position: relative;
+
+                    //clouds
+
+                    .cloud {
+                        position: absolute;
+
+                        * {
+                            background-color: $mist;
+                            position: absolute;
+                        }
+
+                        :nth-child(1) {
+                            border-radius: 20px;
+                            width: 55%;
+                            height: 20%;
+                            top: 50%;
+                            left: 5%;
+                        }
+
+                        :nth-child(2) {
+                            border-radius: 50%;
+                            width: 25%;
+                            height: 30%;
+                            top: 35%;
+                            left: 10%;
+                        }
+
+                        :nth-child(3) {
+                            border-radius: 50%;
+                            width: 30%;
+                            height: 40%;
+                            top: 30%;
+                            left: 25%;
+                        }
+                    }
+                    .cloud-1 {
+                        height:40%;
+                        left: 0;
+                        top: 0%;
+                        width: 40%;
+                    }
+                    .cloud-2 {
+                        height:50%;
+                        left: 0;
+                        top: 5%;
+                        -webkit-transform: rotateY(180deg);
+                        transform: rotateY(180deg);
+                        width: 50%;
+                    }
+                    .cloud-3 {
+                        left: 35%;
+                        height:60%;
+                        top: 15%;
+                        width: 60%;
+                    }
+                }
+            }
+
+            .databases {
+                margin-top: $whatIDoAnimationHeight;
+                min-width: 290px;
+                min-height: 220px;
+
+                .databases-container {
+                    background-color: $shadow;
+                    border-color: $purpleish;
+                    height: 200px;
+                    margin-left: -5px;
+                    margin-top: 10%;
+                    position: relative;
+                    width: 270px;
+
+                    .dash-content {
+                        position: absolute;
+                        left: 0%;
+                        top: 0%;
+                        stroke-linecap: round;
+                        stroke-dasharray: 125 8;
+                        stroke-dashoffset: 8;
+
+                        .dash {
+                            fill: none;
+                            stroke: $purpleish;
+                            stroke-miterlimit: 10;
+                            stroke-width: 3px;
+                            animation: dashAnim 4s linear infinite reverse;
+                        }
+                    }
+                    img {
+                        // background-color: $shadow;
+                        position: absolute;
+                        left: 0;
+                        filter: invert(35%) sepia(23%) saturate(990%) hue-rotate(155deg) brightness(101%) contrast(94%); //black to stone
+                    }
+                    :nth-child(1) {
+                        bottom: 2%;
+                        left: 5%;
+                        width: 33%;
+                    }
+                    :nth-child(2) {
+                        bottom: 2%;
+                        left: 60%;
+                        width: 30%;
+                    }
+                    :nth-child(3) {
+                        top: 2%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 45%;
+                    }
+                }
+            }
+        }
+    }
+
+    .p-container {
+        margin-top: 50px;
+        text-align: center;
+        width: 100vw;
+
+        p {
+            background: $shadow;
+            border-radius: 5px;
+            box-shadow: 5px 5px $purpleish, 5px -5px $purpleish, -5px 5px $purpleish, -5px -5px $purpleish,
+                10px 10px $stone, 10px -10px $stone, -10px 10px $stone, -10px -10px $stone, 15px 15px $shadow,
+                15px -15px $shadow, -15px 15px $shadow, -15px -15px $shadow;
+            display: inline-block;
+            font-size: 2vw;
+            font-weight: 500;
+            left: 0;
+            letter-spacing: 2px;
+            margin: auto;
+            max-width: 1400px;
+            padding: 10px;
+            text-align: center;
+            width: 50%;
+
+            // @media screen and (max-width: 400px) {
+            //     font-size: 1vw;
+            // }
+
+            @media screen and (min-width: 700px) {
+                font-size: 2.5vw;
+            }
+
+            @media screen and (min-width: 1200px) {
+                font-size: 12pt;
+            }
+        }
+    }
+    .lock-down-anim {
+        animation: lockDownAnim $lockFadeAnimDuration linear infinite;
+    }
+
+    @keyframes lockDownAnim {
+        0% {
+            top: 0;
+        }
+        40% {
+            top: 0;
+        }
+        50% {
+            top: 8%;
+        }
+        100% {
+            top: 8%;
+        }
+    }
+
+    .lock-up-anim {
+        animation: lockUpAnim $lockFadeAnimDuration linear infinite;
+    }
+
+    @keyframes lockUpAnim {
+        0% {
+            bottom: 0;
+        }
+        40% {
+            bottom: 0;
+        }
+        50% {
+            bottom: 8%;
+        }
+        100% {
+            bottom: 8%;
+        }
+    }
+
+    .lock-fade-anim {
+        -webkit-animation: lockFadeAnim $lockFadeAnimDuration linear infinite;
+        animation: lockFadeAnim $lockFadeAnimDuration linear infinite;
+    }
+    @-webkit-keyframes lockFadeAnim {
+        0% {
+            background-color: $shadow;
+        }
+        30% {
+            background-color: $orangish;
+        }
+        70% {
+            background-color: $orangish;
+        }
+        100% {
+            background-color: $shadow;
+        }
+    }
+    @keyframes lockFadeAnim {
+        0% {
+            background-color: $shadow;
+        }
+        30% {
+            background-color: $orangish;
+        }
+        70% {
+            background-color: $orangish;
+        }
+        100% {
+            background-color: $shadow;
+        }
+    }
+
+    .ui-anim {
+        animation: uiAnim 3s linear alternate infinite;
+    }
+
+    @keyframes uiAnim {
+        0% {
+            margin-left: 0;
+            height: 200px;
+            width: 100%;
+        }
+        65% {
+            height: 200px;
+            margin-left: 25%;
+            width: 50%;
+        }
+        100% {
+            grid-template-columns: 1fr 0.1fr 1fr 0.1fr 2fr;
+            grid-template-rows: 1fr 0.1fr 2fr 0.1fr 1fr 0.1fr 1fr;
+            grid-template-areas:
+                "one one one . two"
+                ". . . . ."
+                "four-a . five five five"
+                "four-a . . . ."
+                "four-a four-b four-b . six"
+                ". . . . ."
+                "three three three three three";
+            height: 125px;
+            margin-left: 25%;
+            width: 50%;
+        }
+    }
+    .cloud-anim-1 {
+        -webkit-animation: cloudAnim 100s linear infinite;
+        animation: cloudAnim 100s linear infinite;
+        opacity: 0.5;
+    }
+    .cloud-anim-2 {
+        -webkit-animation: cloudAnim 80s linear infinite;
+        animation: cloudAnim 80s linear infinite;
+        opacity: 0.55;
+    }
+    .cloud-anim-3 {
+        -webkit-animation: cloudAnim 40s linear infinite;
+        animation: cloudAnim 40s linear infinite;
+        opacity: 0.6;
+    }
+
+    @-webkit-keyframes cloudAnim {
+        0% {
+            left: 0%;
+        }
+        60% {
+            left: 100%;
+            opacity: initial;
+        }
+        61% {
+            left: 100%;
+            opacity: 0;
+        }
+        62% {
+            left: -50%;
+            opacity: 0;
+        }
+        63% {
+            left: -50%;
+            opacity: initial;
+        }
+        100% {
+            left: 0%;
+        }
+    }
+    @keyframes cloudAnim {
+        0% {
+            left: 0%;
+        }
+        60% {
+            left: 100%;
+            opacity: initial;
+        }
+        61% {
+            left: 100%;
+            opacity: 0;
+        }
+        62% {
+            left: -50%;
+            opacity: 0;
+        }
+        63% {
+            left: -50%;
+            opacity: initial;
+        }
+        100% {
+            left: 0%;
+        }
+    }
+
+    @keyframes dashAnim {
+        from {
+            stroke-dashoffset: 0;
+        }
+        to {
+            stroke-dashoffset: 620;
+        }
+    }
+    .grow {
+        animation: growAnim 1s ease-in forwards;
+    }
+    @keyframes growAnim {
+        from {
+            width: 200px;
+        }
+        to {
+            width: 300px;
+        }
+    }
+    .shrink {
+        animation: shrinkAnim 1s ease-in forwards;
+    }
+    @keyframes shrinkAnim {
+        from {
+            width: 300px;
+        }
+        to {
+            width: 200px;
+        }
+    }
+}
+
+// For side scrolling on devices <= 700;
+// Reverted but keep around in case the decision is made to go back.
+
+// @media only screen and (max-width: 700px) {
+//     #what-i-do {
+//         //     flex: 1;
+//         //     height:3500px;
+//         //     justify-content: space-evenly;
+//         //     margin: initial;
+//         //     width: 1220px;
+//         // }
+
+//         .content {
+//             .front-back-container {
+//                 //     align-items: center;
+//                 //     display: flex;
+//                 //     flex-wrap: nowrap;
+//                 //     justify-content: space-between;
+//                 //     margin-left: calc(50vw - 210px);
+//                 //     width: 1970px;
+//             }
+
+//             .content-items-container {
+//                 //     flex: 1;
+//                 //     justify-content: space-evenly;
+//                 //     margin: initial;
+//                 //     width: 1220px;
+
+//                 .content-item {
+//                     //     font-size:3vw;
+//                     //     width: 200px;
+//                 }
+//             }
+//             .content-items-container.front-container {
+//                 //     flex: 1;
+//             }
+//             .content-items-container.back-container {
+//                 //     // justify-content: space-between;
+//                 //     flex: 1;
+//             }
+//         }
+//     }
+// }

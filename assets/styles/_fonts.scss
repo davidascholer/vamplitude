@@ -1,8 +1,28 @@
 @font-face {
     font-family: antiqua;
-    src: url("/assets/fonts/ModernAntiqua-Regular.ttf");
+    src: url("../fonts/ModernAntiqua-Regular.ttf") format('truetype');
 }
 @font-face {
     font-family: wind;
-    src: url("/assets/fonts/wind_sans_serif.ttf");
+    src: url("../fonts/wind_sans_serif.ttf") format('truetype');
+}
+@font-face {
+    font-family: roboto-light;
+    src: url("../fonts/Roboto-Light.ttf") format('truetype');
+}
+@font-face {
+    font-family: roboto-medium;
+    src: url("../fonts/Roboto-Medium.ttf") format('truetype');
+}
+@font-face {
+    font-family: carme;
+    src: url("../fonts/Carme-Regular.ttf") format('truetype');
+}
+@font-face {
+    font-family: advent-medium;
+    src: url("../fonts/AdventPro-Medium.ttf") format('truetype');
+}
+@font-face {
+    font-family: advent-light;
+    src: url("../fonts/AdventPro-Light.ttf") format('truetype');
 }

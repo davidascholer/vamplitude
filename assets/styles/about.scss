@@ -1,0 +1,16 @@
+#about{
+    align-items: center;
+    background-color: black;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:100%;
+
+    iframe{
+        width:40vw;
+        height:calc(9/16 * 40vw);
+        min-width:300px;
+        min-height:calc(9/16 * 300px);
+        margin:2vw;
+    }
+}

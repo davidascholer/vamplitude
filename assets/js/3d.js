@@ -1,13 +1,11 @@
 import * as THREE from 'https://unpkg.com/three@0.108.0/build/three.module.js';
 
 
-const earthContainer = document.querySelector('.earth-container');
-
 // Loading
 const textureLoader = new THREE.TextureLoader();
 
 // Texture
-const normalTexture = textureLoader.load('../assets/img/nasamap.jpeg');
+const normalTexture = textureLoader.load('./assets/img/nasamap.jpeg');
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl'); 
@@ -33,41 +31,14 @@ pointLight.intensity = 2;
 scene.add( pointLight );
 
 /**
- * Sizes
- */
-// const sizes = {
-//     width: window.innerWidth*.5,
-//     height: window.innerWidth*.5
-// }
-
-// window.addEventListener('resize', () =>
-// {
-//     // Update sizes
-//     sizes.width = window.innerWidth*.5;
-//     sizes.height = window.innerWidth*.5;
-
-//     // Update camera
-//     camera.aspect = 1;
-//     camera.updateProjectionMatrix();
-
-//     // Update renderer
-//     renderer.setSize(sizes.width*.5, sizes.height*.5)
-//     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-// })
-
-/**
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(75, 1/1, 0.1, 100)
+const camera = new THREE.PerspectiveCamera(80, 1/1, 0.1, 100)
 camera.position.x = 0
 camera.position.y = 0
 camera.position.z = 2
 scene.add(camera)
-
-// Controls
-// const controls = new OrbitControls(camera, canvas)
-// controls.enableDamping = true
 
 /**
  * Renderer

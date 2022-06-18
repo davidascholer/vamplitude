@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="./assets/styles/resume.css" rel="stylesheet">
+<title>David Scholer - Demos - icosahedron-dice</title>
+<link rel="apple-touch-icon" sizes="180x180" href="../../../assets/img/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../assets/img/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/icon/favicon-16x16.png">
+<link rel="manifest" href="../../../assets/img/icon/site.webmanifest">
+<link rel="mask-icon" href="../../../assets/img/icon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="../../../assets/img/icon/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="Vamplitude">
+<meta name="application-name" content="Vamplitude">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="../../../assets/img/icon/browserconfig.xml">
+<meta name="theme-color" content="#d5d5d5">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            background-color: #111;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        #container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script>
+        var container = document.getElementById('container');
+        var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        var camera = new THREE.PerspectiveCamera(80, 1, 0.1, 100);
+        var scene = new THREE.Scene();
+
+        scene.add(camera);
+        renderer.setSize(320, 320);
+        renderer.setClearColor(0x000000, 0); // second param is opacity, 0 => transparent
+        container.append(renderer.domElement);
+
+        // Camera
+        camera.position.z = 3;
+
+        const loader = new THREE.TextureLoader();
+        const texture = new THREE.TextureLoader().load("./cube/temp.png");
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.magFilter = THREE.LinearFilter;
+        texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
+        // const materials = new THREE.MeshPhongMaterial({ map: texture });
+        const materials = [
+            new THREE.MeshPhongMaterial({ color: 'blue' }),
+            new THREE.MeshPhongMaterial({ color: 'green' })
+        ];
+
+        const length = 1, width = 1;
+
+        const shape = new THREE.Shape();
+        shape.moveTo(0, 0);
+        shape.lineTo(0, width);
+        shape.lineTo(length, width);
+        shape.lineTo(length, 0);
+        shape.lineTo(0, 0);
+
+        const extrudeSettings = {
+            steps: 1,
+            depth: 1,
+            bevelEnabled: true,
+            bevelThickness: .1,
+            bevelSize: .1,
+            bevelOffset: 0,
+            bevelSegments: 1
+        };
+
+        const geometry = new THREE.ExtrudeGeometry(shape, extrudeSettings);
+        const Ico = new THREE.Mesh(geometry, materials);
+        scene.add(Ico);
+
+
+        var L1 = new THREE.PointLight(0xffffff, 1);
+        L1.position.z = 100;
+        L1.position.y = 100;
+        L1.position.x = 100;
+        scene.add(L1);
+
+        var L2 = new THREE.PointLight(0xffffff, 0.8);
+        L2.position.z = 100;
+        L2.position.y = 50;
+        L2.position.x = -100;
+        scene.add(L2);
+
+        function update() {
+            Ico.rotation.x += .005;
+            Ico.rotation.y += .005;
+        }
+
+        // Render
+        function render() {
+            requestAnimationFrame(render);
+            renderer.render(scene, camera);
+            update();
+        }
+
+        render();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+#about {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+#about iframe {
+  width: 40vw;
+  height: 22.5vw;
+  min-width: 300px;
+  min-height: 168.75px;
+  margin: 2vw;
+}
+
+/*# sourceMappingURL=about.css.map */

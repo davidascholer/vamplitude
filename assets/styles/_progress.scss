@@ -1,0 +1,110 @@
+.progress-wrapper {
+
+    $mainColor: rgba(111, 185, 143,1);
+    $boxShadowColor: rgb(71, 148, 105);
+    // Set width here
+    $width: 25vw;
+    $maxWidth: 350px;
+    $height: calc($width / 5);
+
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .progress-bar {
+        height: $height;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(-20deg) rotateY(-30deg);
+        width: $width;
+
+        .side {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(254, 254, 254, 0.3);
+            position: absolute;
+            top: -0.5 * $height;
+            left: 0;
+            z-index: 99;
+        }
+        .side-bottom {
+            transform: rotateX(90deg);
+            transform-origin: bottom;
+            box-shadow: calc($height/5) calc($height/10) $height calc($height/10) rgba(0, 0, 0, 0.25);
+        }
+        .side-top {
+            transform: rotateX(-90deg);
+            transform-origin: top;
+        }
+        .side-back {
+            transform: translateZ(-1 * $height);
+        }
+
+        .side-left {
+            width: $height;
+            transform: rotateY(90deg);
+            transform-origin: left;
+            background-color: $mainColor;
+        }
+        .side-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2%; //animate here
+            height: 100%;
+            background-color: $mainColor;
+            transition: 0s all linear;
+        }
+
+        .progressbar-text {
+            display: inline-block;
+            position: relative;
+            top: calc(-3.5 * $height/1.5);
+            left: 10%; //animate here 15% to 100%
+            font-size: calc($height/2);
+            padding: calc($height/6);
+            background-color: $mainColor;
+            cursor: pointer;
+            font-family: Arial;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 1px -2px 0px 0px $boxShadowColor, 2px -2px 0px 0px $boxShadowColor,
+                3px -2px 0px 0px $boxShadowColor;
+        }
+        .progressbar-text:last-of-type {
+            margin-right: 0;
+        }
+
+        .progressbar-checker:checked + .progressbar-text {
+            background-color: rgba(0, 139, 139, 1);
+        }
+    }
+
+    // Only for this specific site
+    @media screen and (min-width: 1401px) {
+
+        .progress-bar {
+            height: 70px;
+            width: 350px;
+
+            .side {
+                top: -0.5 * 70px;
+            }
+            .side-bottom {
+                box-shadow: 14px 7px 70px 7px rgba(0, 0, 0, 0.25);
+            }
+            .side-back {
+                transform: translateZ(-70px);
+            }
+            .side-left {
+                width: 70px;
+            }
+            .progressbar-text {
+                top: -163.33px;
+                font-size: 35px;
+                padding: 11.44px;
+            }
+        }
+    }
+}

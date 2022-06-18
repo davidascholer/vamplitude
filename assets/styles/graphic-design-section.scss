@@ -1,0 +1,326 @@
+@use "fonts";
+
+#graphic-design-section {
+    @import "swiss-army-knife";
+
+    $blueBlack: #021c1e;
+    $blueBlackTransparent: rgba(2, 28, 30,.5);
+    $cadetBlue: #004445;
+    $cadetBlueTransparent: rgba(0, 68, 69,.7);
+    $rain: #2c7873;
+    $greenery: #6fb98f;
+    $greeneryFilter: invert(69%) sepia(13%) saturate(1032%) hue-rotate(93deg) brightness(96%) contrast(87%);
+    $textColor: hsl(146, 35%, 85%);
+
+    background-color: $blueBlack;
+    color: $greenery;
+    font-family: advent-medium, Arial, Helvetica, sans-serif;
+    max-width: 100vw;
+    padding-top: 2vh;
+
+    .fullscreen-container{
+        align-items: center;
+        background-color: $cadetBlueTransparent;
+        display:flex;
+        justify-content: center;
+        position: fixed;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        visibility: hidden;
+        z-index: 1000;
+
+        img{
+            object-fit: contain;
+            width:90%;
+            max-height:90%;
+        }
+    }
+    .gd-header {
+        text-align: center;
+        width: 100%;
+
+        * {
+            margin: auto;
+            width: 70%;
+        }
+
+        img {
+            filter: $greeneryFilter;
+            padding: 1vw;
+            width: 10vw;
+
+            @media screen and (min-width: 1401px) {
+                width: 140px;
+            }
+        }
+        h1 {
+            font-size: 3.5vw;
+            font-weight: 900;
+        }
+        p {
+            font-size: 2vw;
+  
+        }
+    }
+
+    .top-container {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: auto;
+        max-width: 1400px;
+
+        .resolution-container {
+            display: flex;
+            flex-direction: column;
+            margin: 15px;
+            width: 320px;
+
+            .resolution-text {
+                font-size: 1.8vw;
+                text-align: center;
+                width: 100%;
+            }
+
+            .resolution-content {
+                background-color: $cadetBlue;
+                height: 320px;
+                position: relative;
+                width: 100%;
+
+                .bad-resolution {
+                    background-color: $cadetBlue;
+                    box-sizing: border-box;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+
+                    span {
+                        bottom: 2%;
+                        color: $greenery;
+                        left: 3%;
+                        position: absolute;
+                        width: 50%;
+                    }
+
+                    img {
+                        height: 90%;
+                        left: 50%;
+                        object-fit: contain;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                .good-resolution {
+                    background-color: $greenery;
+                    box-sizing: border-box;
+                    clip-path: polygon(30% 0, 100% 0%, 100% 100%, 60% 100%);
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+
+                    span {
+                        color: $cadetBlue;
+                        position: absolute;
+                        right: 3%;
+                        text-align: right;
+                        top: 2%;
+                        width: 50%;
+                    }
+
+                    img {
+                        height: 90%;
+                        left: 50%;
+                        object-fit: contain;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+        .sketch-container {
+            display: flex;
+            flex-direction: column;
+
+            .sketch-text {
+                font-size: 1.8vw;
+                text-align: center;
+            }
+
+            .sketch-content {
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .knife-drawing {
+                    margin: 10px;
+                    width: 320px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .swiss-army-knife-outer-container {
+                    width: 320px;
+                    height:320px;
+                    position: relative;
+
+                    .swiss-army-knife-container {
+                        left: 50%;
+                        position: absolute;
+                        top: -20%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-container {
+        margin: auto;
+        max-width: 1400px;
+        padding-bottom: 6vw;
+        position: sticky;
+        top: 0;
+
+        h3 {
+            font-size: 1.8vw;
+            text-align: center;
+            width: 100%;
+        }
+        .gd-row {
+            margin: 2vh 5%;
+            overflow: hidden;
+            width: 65%; //animate 65% to 90%
+
+            h2 {
+            }
+
+            .gd-row-container {
+                background-color: $cadetBlue;
+                position: relative;
+
+                .arrow-container {
+                    background-color: $blueBlackTransparent;
+                    cursor: pointer;
+                    position: absolute;
+                    height: 100%;
+                    width: 7.5vw;
+
+                    .arrow {
+                        border: solid $greenery;
+                        border-width: 0 1vw 1vw 0;
+                        display: inline-block;
+                        padding: 1vw;
+                        position: absolute;
+                        top:35%;
+                        pointer-events: none;
+                        // transform: (-50%,-50%);
+                    }
+
+                    .left {
+                        left:35%;
+                        transform: rotate(135deg);
+                    }
+
+                    .right {
+                        right:35%;
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                .left-arrow-container {
+                    left: 0;
+                    opacity: .2;
+                    pointer-events: none;
+                }
+
+                .right-arrow-container {
+                    right: 0;
+                }
+
+                .image-container {
+
+                    $marginSize: 1.5vw;
+                    $widthSize : 10vw;
+
+                    align-items: center;
+                    display: flex;
+                    margin-left:calc($widthSize/2 + $marginSize);// Subtract 11.5vw (width + margin) to scroll right
+
+                    img {
+                        aspect-ratio: 1;
+                        cursor: pointer;
+                        margin:0 1.5vw;
+                        object-fit: contain;
+                        width: $widthSize;
+
+                        @media screen and (min-width: 1401px) {
+                            width: 140px;
+                        }
+                    }
+                    .loading{
+                        margin:auto;
+                    }
+                }
+            }
+        }
+
+        .progress-wrapper {
+            //Set width in _progress.scss
+            //Set position here
+            bottom: 2%;
+            right: 5%;
+            position: sticky;
+            float: right;
+        }
+
+        @import "gd-background";
+        @import "progress";
+    }
+    .gd-background {
+        display: none;
+        height: 100%;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        user-select: none;
+        width: 100%;
+        z-index: -1000;
+    }
+
+    .gd-grow {
+        animation: gdGrowAnim 250ms linear forwards;
+    }
+
+    @keyframes gdGrowAnim {
+        from {
+            width: 65%;
+        }
+        to {
+            width: 90%;
+        }
+    }
+
+    .gd-shrink {
+        animation: gdShrinkAnim 250ms linear forwards;
+    }
+
+    @keyframes gdShrinkAnim {
+        from {
+            width: 90%;
+        }
+        to {
+            width: 65%;
+        }
+    }
+}

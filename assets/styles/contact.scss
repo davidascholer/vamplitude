@@ -1,0 +1,220 @@
+@use "fonts";
+
+#contact {
+    $backgroundColor: rgb(5, 29, 44);
+    $buttonColor: rgb(2, 123, 195);
+    $textColor: ivory;
+
+    background-color: $backgroundColor;
+    font-family: advent-medium;
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+    padding: 5vw;
+
+    @media screen and (max-width: 700px) {
+        font-size: 3vw;
+    }
+
+    p {
+        margin: auto;
+        padding: 2vw;
+        text-align: center;
+        width: 80%;
+    }
+
+    form {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    div:nth-of-type(1) {
+        display: block;
+        height: 40px;
+        max-width: 600px;
+        position: relative;
+        width: 100%;
+
+        input {
+            background-color: transparent;
+            border: none;
+            border-radius: 4px;
+            color: $textColor;
+            display: block;
+
+            height: 40px;
+            left: 5%;
+            outline: rgb(85, 85, 85) solid 2px;
+            padding: 1px;
+            position: absolute;
+            top: 0px;
+            width: 90%;
+        }
+
+        span {
+            background-color: $backgroundColor;
+            border-radius: 10px;
+            color: $textColor;
+            font-weight: 300;
+            left: 5%;
+            padding: 0px 5px;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-40%);
+        }
+    }
+    div:nth-of-type(2) {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        min-height: 20px;
+        text-align: center;
+    }
+    div:nth-of-type(3) {
+        display: block;
+        height: 40px;
+        max-width: 600px;
+        position: relative;
+        width: 100%;
+
+        input {
+            background-color: transparent;
+            border: none;
+            border-radius: 4px;
+            color: $textColor;
+            display: block;
+            height: 40px;
+            left: 5%;
+            outline: rgb(85, 85, 85) solid 2px;
+            padding: 1px;
+            position: absolute;
+            top: 0px;
+            width: 90%;
+        }
+
+        span {
+            background-color: $backgroundColor;
+            border-radius: 10px;
+            color: $textColor;
+            font-weight: 300;
+            left: 5%;
+            padding: 0px 5px;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-40%);
+        }
+    }
+    div:nth-of-type(4) {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        min-height: 20px;
+        text-align: center;
+    }
+    div:nth-of-type(5) {
+        display: block;
+        position: relative;
+        height: 20vh;
+        max-width: 600px;
+        width: 100%;
+
+        textarea {
+            background-color: transparent;
+            border: none;
+            border-radius: 4px;
+            color: $textColor;
+            display: block;
+            height: 100%;
+            left: 5%;
+            outline: rgb(85, 85, 85) solid 2px;
+            padding: 1px;
+            position: absolute;
+            resize: none;
+            top: 0px;
+            width: 90%;
+        }
+    }
+    button {
+        align-items: center;
+        background-color: $buttonColor;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block;
+        height: 40px;
+        justify-content: center;
+        margin: 20px auto;
+        max-width: 400px;
+        min-height: 40px;
+        width: 60%;
+
+        span {
+            color: #fff;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+    .move-up {
+        animation: moveUp 0.25s linear forwards;
+    }
+    .move-down {
+        animation: moveDown 0.25s linear forwards;
+    }
+
+    @keyframes moveUp {
+        from {
+            font-size: 1.5vw;
+            left: 5%;
+            top: 50%;
+        }
+        to {
+            font-size: 1vw;
+            left: 6%;
+            top: 0%;
+        }
+    }
+    @keyframes moveDown {
+        from {
+            font-size: 1vw;
+            left: 6%;
+            top: 0%;
+        }
+        to {
+            font-size: 1.5vw;
+            left: 5%;
+            top: 50%;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        @keyframes moveUp {
+            from {
+                font-size: 3vw;
+                left: 5%;
+                top: 50%;
+            }
+            to {
+                font-size: 2vw;
+                left: 6%;
+                top: 0%;
+            }
+        }
+        @keyframes moveDown {
+            from {
+                font-size: 2vw;
+                left: 6%;
+                top: 0%;
+            }
+            to {
+                font-size: 3vw;
+                left: 5%;
+                top: 50%;
+            }
+        }
+    }
+    .error {
+        color: red;
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+}

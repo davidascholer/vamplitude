@@ -4,15 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, minimum-scale=1, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta property="og:image" content="https://vamplitude.com/assets/img/icon/vamp.png" />
     <link href="./assets/styles/main.css" rel="stylesheet" type="text/css" />
-    <link href="./assets/styles/oscillate-anim.css" rel="stylesheet" type="text/css" />
     <link href="./assets/styles/logo.css" rel="stylesheet" type="text/css" />
-    <link href="./assets/styles/swiss-army-knife.css" rel="stylesheet" type="text/css" />
-    <link href="./assets/styles/sky.css" rel="stylesheet" type="text/css" />
-    <link href="./assets/styles/space.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/header.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/banner.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/what-i-do.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/security-section.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/data-management.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/native-apps.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/algorithms-section.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/layout-section.css" rel="stylesheet" type="text/css" />
     <link href="./assets/styles/sunset.css" rel="stylesheet" type="text/css" />
-    <link href="./assets/styles/end.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/graphic-design-section.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/styles/resume.css" rel="stylesheet">
+    <link href="./assets/styles/about.css" rel="stylesheet">
+    <link href="./assets/styles/contact.css" rel="stylesheet">
+    <link href="./assets/styles/footer.css" rel="stylesheet" type="text/css" />
     <title>Vamplitude</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/icon/favicon-32x32.png">
@@ -28,184 +38,1918 @@
 </head>
 
 <body>
-    <script src="https://unpkg.com/@google/model-viewer@1.10.1/dist/model-viewer.js" type="module"></script>
+    <!-- <script src="https://unpkg.com/@google/model-viewer@1.10.1/dist/model-viewer.js" type="module"></script> -->
     <!-- section-logo continues to the end of the body -->
-    <div id='section-logo'>
-        <section id='video-container'>
-            <video id='smoke-video' src="assets/video/smoke.mp4" muted playsinline autoplay></video>
+    <div id="main-container">
+        <nav class="header">
+            <div class="header-content header-animation-down">
+                <div class="title-container">
+                    <h2>David&nbsp;Scholer&nbsp;-&nbsp;Full&nbsp;Stack&nbsp;Developer</h2>
+                </div>
+                <div class="text-container">
+                    <h2><a href="#what-i-do">overview</a></h2>
+                    <h2><a href="#data-management-section">database management & security</a></h2>
+                    <h2><a href="#native-apps-section">native & mobile apps</a></h2>
+                    <!-- <h2><a href="#algorithms-section">data structures & algorithms</a></h2> -->
+                    <h2><a href="#sunset-section">cloud services</a></h2>
+                    <h2><a href="#layout-section">responsive & screens</a></h2>
+                    <h2><a href="#graphic-design-section">graphic design</a></h2>
+                    <h2><a href="#resume">resume</a></h2>
+                    <h2><a href="#contact">contact</a></h2>
+                </div>
+            </div>
+            <div class="tooth-container">
+                <span class="tooth"></span>
+                <span class="tooth"></span>
+            </div>
+
+        </nav>
+        <section id="logo-container" onclick="animateToBottom()">
+            <div class="section-logo-background fade-out-delay">
+                <h2>David Scholer<br>Full Stack Developer<br><br>Enjoy the show</h2>
+            </div>
+            <div id='section-logo'>
+                <div id='video-container' class="fade-out">
+                    <video id='smoke-video' src="assets/video/smoke.mp4" muted playsinline autoplay></video>
+                </div>
+                <h1 class='logo-title'>
+                    <span
+                        class="letter-v">V</span><span>a</span><span>m</span><span>p</span><span>l</span><span>i</span><span>t</span><span>u</span><span>d</span><span>e</span>
+                </h1>
+            </div>
         </section>
-        <h1 class='logo-title'>
-            <span>V</span><span>a</span><span>m</span><span>p</span><span>l</span><span>i</span><span>t</span><span>u</span><span>d</span><span>e</span>
-        </h1>
-        <!-- <div class='logo-image-container'>
-            <svg class="vamplitude_image no_teeth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.25 40.75">
-                <path class="oscillate"
-                    d="M75.87,17C75.24,6.1,74.5.56,73.67.56h0c-1,0-1.78,9.25-2.22,17v-.06c-.43,7.74-1.21,17-2.21,17h0c-.82,0-1.61-6.58-2.25-17.46S65.61.56,64.78.56h0c-1,0-1.78,9.25-2.2,17v-.06c-.43,7.74-1.16,17-2.21,17h0c-.83,0-1.57-5.5-2.2-16.44v0C57.54,7.14,56.52.46,55.69.46h0c-1,0-1.78,9.25-2.22,17-.63,10.94-1.37,17-2.2,17h0c-1.05,0-1.78-9.24-2.21-17v.06c-.42-7.73-1.16-17-2.2-17h0C46,.56,45.29,6.1,44.65,17S43.22,34.44,42.4,34.44h0c-1,0-1.78-9.25-2.21-17v.06C39.75,9.81,39,.58,38,.56h0C37.14.56,36.4,6.1,35.77,17s-1.37,17.48-2.2,17.48h0c-1,0-1.78-9.24-2.21-17v.06c-.42-7.73-1.16-17-2.2-17h0C28.33.56,27.59,6.1,27,17S25.52,34.44,24.7,34.44h0c-1,0-1.78-9.19-2.21-16.93h0c-.44-7.7-1.17-16.93-2.22-17h0C19.44.56,18.7,6.1,18.07,17s-1.37,17.48-2.2,17.48h0c-1,0-1.78-9.18-2.21-16.92h0c-.42-7.73-1.16-17-2.2-17h0C10.63.56,9.89,6.1,9.25,17S7.82,34.44,7,34.44H7c-1,0-1.78-9.19-2.21-16.93h0C4.35,9.81,3.62.58,2.57.56h0C1.74.56,1,6.1.37,17" />
-            </svg>
-            <svg class="vamplitude_image teeth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.25 40.75">
-                <path class="oscillate red"
-                    d="M75.87,17C75.24,6,74.5.47,73.67.47h0c-1,0-1.78,9.29-2.22,17v-.06c-.43,7.77-1.21,17.05-2.21,17.05h0c-.82,0-1.61-6.6-2.25-17.53S65.61.47,64.78.47h0c-1,0-1.78,9.29-2.2,17.06v-.06c-.43,7.77-1.16,17.05-2.21,17.05h0c-.83,0-1.57-5.52-2.2-16.51v.17l-.05-.65C57.69,9.76,57,.49,55.91.47h0c-.82,0-1.56,6-2.19,17a30.69,30.69,0,0,1-.92,6.1c-.19,1-.44,2-.65,3a49.29,49.29,0,0,1-1.57,6c-.57,1.61-1.2,3.16-1.81,4.73-.4,1-.82,2.07-1.23,3.09h0a1.81,1.81,0,0,0,.09-.31c.28-1.08.62-2.14.82-3.25a56.26,56.26,0,0,0,.78-9.16V17.5c-.4-7.74-1.13-17-2.18-17h0c-.83,0-1.63,6.75-2.26,17.71V18c-.63,11-1.37,16.51-2.2,16.51h0c-1,0-1.78-9.28-2.21-17.05v.06c-.42-7.77-1.16-17-2.2-17.06h0C37.3.47,36.56,6,35.92,17s-1.43,17.53-2.25,17.53h0c-1,0-1.78-9.28-2.21-17v.06C31,9.76,30.29.49,29.24.47h0C28.41.47,27.67,6,27,17V27.65a57.41,57.41,0,0,0,.79,9.16c.19,1.11.53,2.17.81,3.25l.09.32h-.05l-1.21-3c-.61-1.57-1.24-3.12-1.85-4.73a51.15,51.15,0,0,1-1.56-6c-.22-1-.46-2-.66-3a32.21,32.21,0,0,1-.91-6.1v.06C22.1,9.76,21.37.49,20.32.47h0C19.49.47,18.75,6,18.12,17l-.05,1.12v-.17c-.63,11-1.37,16.51-2.2,16.51h0c-1,0-1.78-9.28-2.21-17v.06c-.42-7.77-1.16-17-2.2-17h0c-.83,0-1.57,5.55-2.21,16.48S7.82,34.39,7,34.39H7c-1,0-1.78-9.28-2.21-17v.06C4.35,9.66,3.62.39,2.57.38h0C1.74.38,1,5.93.37,16.86" />
-            </svg>
-        </div> -->
-        <!-- <div class='logo-loading-container'>
-            <div class='logo-symbols'>
-                <span class='circle small-circle'></span><span class='circle small-circle'></span><span
-                    class='circle small-circle'></span><span class='circle small-circle'></span><span
-                    class='circle big-circle'></span><span class='circle small-circle'></span><span
-                    class='circle small-circle'></span><span class='circle small-circle'></span><span
-                    class='circle small-circle'></span>
+        <section id="what-i-do">
+            <!-- <div class="buffer">&nbsp;</div> -->
+            <div class="content">
+                <div class="content-header-container">
+                    <div class="content-header front-end">
+                        <h2>From Front End</h2>
+                        <div class="img-container">
+                            <img loading="lazy" class="fade-in" src="./assets/img/resume/gui_icons/computer.png" />
+                        </div>
+                    </div>
+                    <div class="content-header back-end">
+                        <span class="style-arrow"></span>
+                        <h2>To Back End</h2>
+                        <div class="img-container">
+                            <img loading="lazy" class="fade-in" src="./assets/img/resume/gui_icons/cloud.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="front-back-container">
+                    <div class="content-items-container front-container">
+                        <div class="three-d content-item">
+                            <span class="title">3D Effects</span>
+                            <div class="three-d-dice-container content-item-inner-content"></div>
+                            <!-- <canvas class='webgl three-d-earth-container'></canvas> -->
+                        </div>
+                        <div class="user-friendly-design content-item">
+                            <span class="title">User Friendly, Scalable, & Responsive</span>
+                            <div class="user-friendly-design-content ui-anim content-item-inner-content">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="content-item banner">
+                            <span class="title">Graphic Design & CSS Animations</span>
+                            <div class="banner-content content-item-inner-content"></div>
+                            <!-- <span class="rotate"></span>
+                            <span class="flip"></span>
+                            <span class="scale"></span>
+                            <span class="move"></span> -->
+
+                        </div>
+                    </div>
+                    <div class="content-items-container back-container">
+                        <div class="content-item cloud-section">
+                            <span class="title">Cloud Storage</span>
+                            <div class="cloud-container content-item-inner-content">
+                                <img loading="lazy" class="fade-in" src="./assets/img/database/storage.png" />
+                                <div class="cloud cloud-1 cloud-anim-1">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="cloud cloud-2 cloud-anim-2">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="cloud cloud-3 cloud-anim-3">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item lock">
+                            <span class="title">Data Security</span>
+                            <div class="lock-content content-item-inner-content lock-fade-anim">
+                                <div class="lock-content-image-container">
+                                    <img loading="lazy" class="hinge lock-down-anim" src="./assets/img/lock/lock_hinge.png" />
+                                    <img loading="lazy" class="base lock-up-anim" src="./assets/img/lock/lock_base.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-item databases">
+                            <span class="title">Relational and Document Databases</span>
+                            <div class="databases-container content-item-inner-content">
+                                <img loading="lazy" src="./assets/img/database/db_sql.png" />
+                                <img loading="lazy" src="./assets/img/database/db_mongo.png" />
+                                <img loading="lazy" src="./assets/img/devices/devices.png" />
+                                <svg class="dash-content" xmlns="http://www.w3.org/2000/svg">
+                                    <!--viewBox="0 0 200 100">-->
+                                    <path class="dash" d="M 70 57 l -30 0 l 0 69" stroke-width="3" fill="none" />
+                                    <path class="dash" d="M 183 57 l 30 0 l 0 68" stroke-width="3" fill="none" />
+                                    <path class="dash" d="M 248 148 l 27 0 l 0 -75" stroke-width="3" fill="none" />
+                                    <path class="dash" d="M 152 148 l -27 0 l 0 -75" stroke-width="3" fill="none" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-container">
+                    <p>it's what I do<br><br>So why choose me for your next project?<br><br>What you're getting when you hire me is much more than a website, web app, or native app. <br>You get the things you didn't know you needed: favicons, ssl certification, meta information... to name a few. <br>You also get all the things you know you need. Scalability tested on dozens of physical devices and virtual machines. Safe and secure data communication. Features such as social media logins, password recovery, and traffic statistics. <br>You also get maintainable, readable code, amongst much else. <br>Scroll down and take a peek for yourself.</p>
+                </div>
             </div>
-            <h2 class='logo-loading'>
-                <span></span><span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span><span></span>
-            </h2>
-        </div> -->
-    </div>
-    <div style="position:absolute;bottom:10vh;left:50vw;transform: translateX(-50%);padding:10px;font-size:16px">
-        <p
-            style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;letter-spacing:.2em;color:white;margin:auto;text-align:center;">
-            Vamplitude is undergoing a major overhaul this week. Please check out my <a
-                style="text-decoration: none;font-weight:900;color:slategrey;"
-                href="./subpages/resume/resume.html">RESUME</a> to see my work.</p>
-    </div>
-
-    <!--Start space to sky-->
-    <!-- <div id='section-space-container'>
-        <div class='star-container'> -->
-    <!-- 1 px stars -->
-    <!-- <span class='star star1' style='top:20vh;left:10vw;'></span>
-            <span class='star star1' style='top:90vh;left:10vw;'></span>
-            <span class='star star1' style='top:45vh;left:20vw;'></span>
-            <span class='star star1' style='top:60vh;left:20vw;'></span>
-            <span class='star star1' style='top:30vh;left:30vw;'></span>
-            <span class='star star1' style='top:50vh;left:30vw;'></span>
-            <span class='star star1' style='top:35vh;left:40vw;'></span>
-            <span class='star star1' style='top:65vh;left:40vw;'></span>
-            <span class='star star1' style='top:10vh;left:50vw;'></span>
-            <span class='star star1' style='top:60vh;left:50vw;'></span>
-            <span class='star star1' style='top:30vh;left:60vw;'></span>
-            <span class='star star1' style='top:40vh;left:60vw;'></span>
-            <span class='star star1' style='top:30vh;left:70vw;'></span>
-            <span class='star star1' style='top:80vh;left:70vw;'></span>
-            <span class='star star1' style='top:75vh;left:80vw;'></span>
-            <span class='star star1' style='top:60vh;left:80vw;'></span>
-            <span class='star star1' style='top:90vh;left:90vw;'></span>
-            <span class='star star1' style='top:30vh;left:90vw;'></span> -->
-    <!-- 3 px stars -->
-    <!-- <span class='star star3' style='top:10vh;left:10vw;'></span>
-            <span class='star star3' style='top:65vh;left:10vw;'></span>
-            <span class='star star3' style='top:45vh;left:20vw;'></span>
-            <span class='star star3' style='top:20vh;left:20vw;'></span>
-            <span class='star star3' style='top:55vh;left:30vw;'></span>
-            <span class='star star3' style='top:85vh;left:30vw;'></span>
-            <span class='star star3' style='top:15vh;left:40vw;'></span>
-            <span class='star star3' style='top:20vh;left:50vw;'></span>
-            <span class='star star3' style='top:50vh;left:50vw;'></span>
-            <span class='star star3' style='top:95vh;left:50vw;'></span>
-            <span class='star star3' style='top:05vh;left:60vw;'></span>
-            <span class='star star3' style='top:65vh;left:60vw;'></span>
-            <span class='star star3' style='top:75vh;left:70vw;'></span>
-            <span class='star star3' style='top:50vh;left:70vw;'></span>
-            <span class='star star3' style='top:10vh;left:80vw;'></span>
-            <span class='star star3' style='top:60vh;left:80vw;'></span>
-            <span class='star star3' style='top:70vh;left:90vw;'></span>
-            <span class='star star3' style='top:30vh;left:90vw;'></span>
-
-            <div class='earth-container'>
-                <div class='aurora'></div> -->
-    <!-- <img class='earth' src='./assets/img/_earth.png' /> -->
-    <!-- <iframe src='https://solarsystem.nasa.gov/gltf_embed/2393' scrolling='no' class='earth' frameborder='0'></iframe> -->
-    <!-- <canvas class='webgl'></canvas> -->
-    </div>
-    </div>
-    </div>
-
-    <!--End space to sky-->
-
-    <!-- <div id='section-sky-container'>
-
-        <div class='black-to-blue'></div> -->
-
-    <!-- <div>
-            <button id='anim'>anim</button>
-            <button id='unanim'>unanim</button>
-        </div> -->
-
-    <!-- <div id='swiss-army-knife-container'>
-            <img class='swiss-army-knife swiss-9' src='./assets/img/swiss-army-knife/swiss-9.png' />
-            <img class='swiss-army-knife swiss-8' src='./assets/img/swiss-army-knife/swiss-8.png' />
-            <img class='swiss-army-knife swiss-7' src='./assets/img/swiss-army-knife/swiss-7.png' />
-            <img class='swiss-army-knife swiss-5' src='./assets/img/swiss-army-knife/swiss-5.png' />
-            <img class='swiss-army-knife swiss-6' src='./assets/img/swiss-army-knife/swiss-6.png' />
-            <img class='swiss-army-knife swiss-handle swiss-inner-3' src='./assets/img/swiss-army-knife/inner.png' />
-            <img class='swiss-army-knife swiss-2' src='./assets/img/swiss-army-knife/swiss-2.png' />
-            <img class='swiss-army-knife swiss-handle swiss-inner-2' src='./assets/img/swiss-army-knife/inner.png' />
-            <img class='swiss-army-knife swiss-3' src='./assets/img/swiss-army-knife/swiss-3.png' />
-            <img class='swiss-army-knife swiss-handle swiss-inner-1' src='./assets/img/swiss-army-knife/inner.png' />
-            <img class='swiss-army-knife swiss-1' src='./assets/img/swiss-army-knife/swiss-1.png' />
-            <img class='swiss-army-knife swiss-4' src='./assets/img/swiss-army-knife/swiss-4.png' />
-            <img class='swiss-army-knife swiss-handle swiss-front'
-                src='./assets/img/swiss-army-knife/swiss-front.png' />
-        </div> -->
-    <!-- <div class='cloud-cluster'>
-            <img class='cloud' src='./assets/img/cloud_256x256.png'/>
-            <img class='cloud' src='./assets/img/cloud_256x256.png'/>
-            <img class='cloud' src='./assets/img/cloud_256x256.png'/>
-            <img class='cloud' src='./assets/img/cloud_256x256.png'/>
-            <img class='cloud' src='./assets/img/cloud_256x256.png'/>
-            <img class='cloud' src='./assets/img/cloud_256x256.png'/>
-        </div>
-    </div>
-
-    <div id='sunset-wrapper'>
-        <div id='sunset-container'>
-            <div id="sun"></div>
-            <div id="sunDay"></div>
-            <div id="sunSet"></div>
-            <div id="sky"></div>
-            <div id="horizon"></div>
-            <div id="horizonNight"></div>
-            <div id="moon"></div>
-            <div id="division"></div>
-            <div id="water"></div>
-            <div id="waterReflectionContainer">
-                <div id="waterReflectionMiddle"></div>
+        </section>
+        <section id="data-management-section">
+            <div class="upper-container">
+                <div class="title-container">
+                    <h2>Database&nbsp;<span class="electric">Management</span></h2>
+                    <h3>Let's&nbsp;take&nbsp;a&nbsp;look&nbsp;<span class="electric">under&nbsp;the&nbsp;hood</span>.
+                    </h3>
+                </div>
+                <p class="header-text">From document to relational databases, the practical option will be chosen to
+                    <span class="electric">create</span>, <span class="electric">read</span>, <span
+                        class="electric">update</span>, and <span class="electric">delete</span> data for optimal speed,
+                    storage, and performance.
+                </p>
             </div>
-            <div id="waterDistance"></div>
-            <div id="darknessOverlaySky"></div>
-            <div id="darknessOverlay"></div>
-            <div id="oceanRippleContainer"></div>
-            <div id="oceanRipple"></div>
-        </div>
+            <div class="lower-container">
+                <div class="under-the-hood-container">
+                    <div class="left-side">
+                        <img loading="lazy" src="./assets/img/database/cart_full.png" />
+                        <div class="cursor blink"></div>
+                        <img loading="lazy" class="empty-cart" src="./assets/img/database/cart_empty.png" />
+                        <div class="cursor blink"></div>
+                        <img loading="lazy" class="loading-gif" src="./assets/img/database/loading_64.gif" />
+                        <img loading="lazy" class="sign-in" src="./assets/img/database/sign_in.png" />
+                        <span class="cursor blink"></span>
+                        <span class="ball"></span>
+                        <span class="ball"></span>
+                        <span class="ball"></span>
+                        <span class="ball"></span>
+                        <span class="ball"></span>
+                        <span class="cursor blink"></span>
+                    </div>
+                    <div class="right-side">
+                        <h3 class="server-text text center one-third">Server</h3>
+                        <h3 class="document-text text left one-third">Document<br>database</h3>
+                        <h3 class="security-text text center one-third">Security<br>Layer</h3>
+                        <h3 class="relational-text text right one-third">Relational<br>database</h3>
+                        <img loading="lazy" class="server-img center one-third" src="./assets/img/database/server.png" />
+                        <img loading="lazy" class="db-left-img left one-third" src="./assets/img/database/database.png" />
+                        <img loading="lazy" class="db-right-img right one-third" src="./assets/img/database/database.png" />
+                        <img loading="lazy" class="document-img left one-third" src="./assets/img/database/document.png" />
+                        <img loading="lazy" class="security-img-blank center one-fifth" src="./assets/img/database/shield_blank.png" />
+                        <img loading="lazy" class="security-img-checked center one-fifth"
+                            src="./assets/img/database/shield_checked.png" />
+                        <img loading="lazy" class="relational-img right one-third" src="./assets/img/database/relational.png" />
+                        <span class="ball top-anim"></span>
+                        <span class="ball top-anim"></span>
+                        <span class="ball top-anim"></span>
+                        <span class="ball top-anim"></span>
+                        <span class="ball top-anim"></span>
+                        <span class="ball left-anim"></span>
+                        <span class="ball left-anim"></span>
+                        <span class="ball left-anim"></span>
+                        <span class="ball left-anim"></span>
+                        <span class="ball left-anim"></span>
+                        <span class="ball center-anim"></span>
+                        <span class="ball center-anim"></span>
+                        <span class="ball center-anim"></span>
+                        <span class="ball center-anim"></span>
+                        <span class="ball center-anim"></span>
+                        <span class="ball right-anim"></span>
+                        <span class="ball right-anim"></span>
+                        <span class="ball right-anim"></span>
+                        <span class="ball right-anim"></span>
+                        <span class="ball right-anim"></span>
+                    </div>
+                </div>
+                <hr style="visibility:hidden;padding:0;margin:0;">
+                <button class="play-anim-button" onclick="dbManagementAnimation()">Replay Animation</button>
+            </div>
+        </section>
+        <section id="security-section">
+            <div class="top-section">
+                <div class="inner-container">
+                    <div class="lock">
+                        <div class="lock-image-container">
+                            <img loading="lazy" class="hinge" src="./assets/img/lock/lock.png" />
+                        </div>
+                    </div>
+                    <h2>Security</h2>
+                    <p>Safe and Secure Programming Practices</p>
+                    <div class="flex">
+                        <div>
+                            <h3>Encryption</h3>
+                            <p>Passwords are encrypted before storing in a database so you and only you ever have access
+                                to your sensitive information.</p>
+                            <h3>Hashes</h3>
+                            <p>Using relevant hashing algorithms and salts to keep your data secure from prying eyes.
+                            </p>
+                            <h3>Cryptography</h3>
+                            <p>Safe data transfer techniques to transform your information in ways
+                                that are hard to decipher keeping your digital signings, confidential data, and
+                                transactions safe.</p>
+                        </div>
+                        <div class="image-container">
+                            <img loading="lazy" src="./assets/img/generic/lock_wet.jpg" />
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="image-container">
+                            <img loading="lazy" src="./assets/img/generic/books.jpg" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div>
+                            <h3>Verification</h3>
+                            <p>Multiple forms of multi-factor authorization and verification to protect user data
+                                privacy.</p>
+                            <h3>Evolving Technology</h3>
+                            <p>Cryptography is always evolving and as computers become faster and the internet more
+                                vast, encryption algorithms become obsolete. Keeping up to date with the latest and
+                                greatest algorithms is imperative and all part of a days work.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-section">
+                <div class="inner-container">
+                    <div class="split-view">
+                        <div class="animation-container">
+                            <h3>Need your web app hosted?</h3>
+                            <p>Using <span class="light-blue bold">AWS</span>, your application will run within its own
+                                <span class="light-blue">isolated environment</span> forbidding it to
+                                interact with other applications or areas of the system for maximum <span
+                                    class="light-blue">security</span>.
+                            </p>
+                            <div class="animation-content">
+                                <span>DDoS&nbsp;Mitigation</span>
+                                <span>Firewalls</span>
+                                <span>Prohibited Port Scanning</span>
+                                <span>Environmental&nbsp;Safeguards</span>
+                                <span>Spoofing&nbsp;Protections</span>
+                            </div>
+                        </div>
+                        <img loading="lazy" src="./assets/img/generic/servers.jpg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="native-apps-section">
+            <div class="section-header">
+                <img loading="lazy" src="./assets/img/devices/iphone_outline.png" alt="iphone outline" />
+                <h1>Native Applications and Mobile Web Apps</h1>
+                <p>Utilizing the power of React and React Native, creating native Android and Iphone application as well
+                    as web apps designed specifically for mobile is easy as 01&nbsp;10&nbsp;11</p>
+            </div>
+            <div class="sticky-container">
+                <div class="phone-icons-container">
+                    <div class="android-clock">
+                        <img loading="lazy" src="./assets/img/android_backgrounds/android-weather.png" />
+                    </div>
+                    <div class="heart-container theme-background-color-2">
+                        <div class="heart">
+                            <div class="heart-left theme-background-color-1"></div>
+                            <div class="heart-right theme-background-color-1"></div>
+                            <span class="heart-text theme-color-1">71<br>BPM</span>
+                        </div>
+                        <div class="gloss"></div>
+                    </div>
+                    <div class="talkbubble-container theme-background-color-1">
+                        <div class="talkbubble theme-background-color-2">
+                            <div class="talkbubble-arrow theme-color-border-right"></div>
+                            <div class="talkbubble-notification theme-background-color-1">
+                                <span class="talkbubble-text theme-background-color-2 theme-color-2">2</span>
+                            </div>
+                        </div>
+                        <div class="gloss"></div>
+                    </div>
+                </div>
+                <div class="phones-container">
+                    <div class="column outer-column">
+                        <div class="phone">
+                            <img loading="lazy" class="screen" src="./assets/img/android_backgrounds/android_bg_1.png" />
+                            <img loading="lazy" class="bezel" src="./assets/img/devices/android_transparent.png" />
+                        </div>
+                    </div>
+                    <div class="column inner-column">
+                        <div class="phone">
+                            <img loading="lazy" class="screen" src="./assets/img/android_backgrounds/android_moto_1.png" />
+                            <div class="android-clock">
+                                <img loading="lazy" src="./assets/img/android_backgrounds/android-weather.png" />
+                            </div>
+                            <img loading="lazy" class="bezel" src="./assets/img/devices/android_transparent.png" />
+                        </div>
+                        <div class="phone">
+                            <img loading="lazy" class="screen" src="./assets/img/android_backgrounds/android_bg_2.png" />
+                            <img loading="lazy" class="bezel" src="./assets/img/devices/android_transparent.png" />
+                        </div>
+                    </div>
+                    <div class="column middle-column">
+                        <div class="phone top-phone invisible">
+                            <img loading="lazy" class="screen" src="./assets/img/android_backgrounds/android_bg_3.png" />
+                            <img loading="lazy" class="bezel" src="./assets/img/devices/android_transparent.png" />
+                        </div>
+                        <div class="phone main-phone">
+                            <img loading="lazy" class="screen bottom-layer"
+                                src="./assets/img/android_backgrounds/android_moto_3.png" />
+                            <img loading="lazy" class="screen middle-layer"
+                                src="./assets/img/android_backgrounds/android_moto_2.png" />
+                            <img loading="lazy" class="screen top-layer" src="./assets/img/android_backgrounds/android_moto_1.png" />
+                            <img loading="lazy" class="bezel" src="./assets/img/devices/android_transparent.png" />
+                        </div>
+                        <div class="phone">
+                            <img loading="lazy" class="screen" src="./assets/img/android_backgrounds/android_bg_4.png" />
+                            <img loading="lazy" class="bezel" src="./assets/img/devices/android_transparent.png" />
+                        </div>
+                    </div>
+                    <div class="column inner-column">
+                        <div class="phone">
+                            <img loading="lazy" class="screen" src="./assets/img/android_backgrounds/android_bg_5.png" />
+                            <img loading="lazy" class="bezel" src="./assets/img/devices/android_transparent.png" />
+                        </div>
+                        <div class="phone">
+                            <img loading="lazy" class="screen" src="./assets/img/android_backgrounds/android_bg_6.png" />
+                            <img loading="lazy" class="bezel" src="./assets/img/devices/android_transparent.png" />
+                        </div>
+                    </div>
+                    <div class="column outer-column">
+                        <div class="phone">
+                            <img loading="lazy" class="screen bottom-layer"
+                                src="./assets/img/android_backgrounds/android_moto_2.png" />
+                            <div class="android-clock">
+                                <img loading="lazy" src="./assets/img/android_backgrounds/android-weather.png" />
+                            </div>
+                            <img loading="lazy" class="bezel" src="./assets/img/devices/android_transparent.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <h1>Mobile Options</h1>
+                <p><br>Web apps for online shopping sites, business websites, or personal media sites<br>-<br>Android
+                    apps on the Android Playstore<br>-<br>Iphone apps on the Apple App Store.</p>
+            </div>
+        </section>
+        <section id="algorithms-section">
+            algorithms
+        </section>
+        <section id="sunset-section">
+            <div class="overlay-container">
+                <div class="cloud-container">
+                    <div class="cloud-content cloud-content-1">
+                        <img loading="lazy" class="cloud" src="./assets/img/cloud/cloud_256x256.png" alt="cloud" />
+                        <p class="sun-text-shadow">Google Cloud Services</p>
+                        <img loading="lazy" class="icon" src="./assets/img/cloud/google-cloud.svg" atl="google cloud icon">
+                    </div>
+                    <div class="cloud-content cloud-content-2">
+                        <img loading="lazy" class="cloud" src="./assets/img/cloud/cloud_256x256.png" alt="cloud" />
+                        <p class="sun-text-shadow">AWS</p>
+                        <img loading="lazy" class="icon" src="./assets/img/cloud/aws.svg" atl="AWS icon">
+                    </div>
+                    <div class="cloud-content cloud-content-3">
+                        <img loading="lazy" class="cloud" src="./assets/img/cloud/cloud_256x256.png" alt="cloud" />
+                        <p class="sun-text-shadow">Stripe API</p>
+                        <img loading="lazy" class="icon" src="./assets/img/cloud/stripe.svg" atl="stripe icon">
+                    </div>
+                    <div class="cloud-content cloud-content-4">
+                        <img loading="lazy" class="cloud" src="./assets/img/cloud/cloud_256x256.png" alt="cloud" />
+                        <p class="sun-text-shadow">APIs</p>
+                        <img loading="lazy" class="icon" src="./assets/img/cloud/api.svg" atl="api icon">
+                    </div>
+                </div>
+                <div class="text-container">
+                    <img loading="lazy" src="./assets/img/cloud/api_cloud.svg" alt="cloud outline"/>
+                    <p>Integrate your applications and websites with APIs and web services for features such as credit card payments, social media sign in, text to speech, data storage, and so much more.</p>
+                </div>
+            </div>
+            <div class='sunset-wrapper'>
+                <div class='sunset-container'>
+                    <div class="sun"></div>
+                    <div class="sunDay"></div>
+                    <div class="sunSet"></div>
+                    <div class="sky"></div>
+                    <div class="horizon"></div>
+                    <div class="horizonNight"></div>
+                    <div class="moon"></div>
+                    <div class="division"></div>
+                    <div class="water"></div>
+                    <div class="waterReflectionContainer">
+                        <div class="waterReflectionMiddle"></div>
+                    </div>
+                    <div class="waterDistance"></div>
+                    <div class="darknessOverlaySky"></div>
+                    <div class="darknessOverlay"></div>
+                    <div class="oceanRippleContainer"></div>
+                    <div class="oceanRipple"></div>
+                </div>
+            </div>
+        </section>
+        <section id="layout-section">
+            <div class="layout-container">
+                <div class="warhol-background mobile-device">
+                    <span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="layout-header"></div>
+                <div class="layout-about">
+                    <img loading="lazy" src="./assets/img//devices/devices.png" alt="multiple devices" />
+                    <p>I design for over 99.9% of the browser and device share. From 8k screens all the way down to the
+                        very first iPhone. Your apps and websites will be
+                        looking sharp on any screen, any device, any size.</p>
+
+                </div>
+                <!--Row 1-->
+                <div class="row">
+
+                    <div class="ipad-container" style="top:calc( 2 * 100vw / 5);left:calc( 2.5 * 100vw / 25);">
+                        <div class="ipad-inner-container">
+                            <div class="ipad-background background">
+                                <img loading="lazy" src="./assets/img/warhol/square/andywarhol2.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/ipad_transparent.png" alt="ipad" />
+                        </div>
+                    </div>
+
+                    <div class="android-container phone-container"
+                        style="top:calc( 2 * 100vw / 5 + 1.75vw);left:calc( 5.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol5.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+                    <div class="iphone-container phone-container"
+                        style="top:calc( 2 * 100vw / 5 + 1.75vw);left:calc( 7.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol6.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+
+                    <div class="macbook-container" style="top:calc( 2 * 100vw / 5);left:calc( 12.5 * 100vw / 25)">
+                        <div class="macbook-inner-container">
+                            <div class="macbook-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol11.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/macbookpro.png" alt="macbook" />
+                        </div>
+                    </div>
+
+                    <div class="iphone-container phone-container"
+                        style="top:calc( 2 * 100vw / 5 + 1.75vw);left:calc( 15.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol7.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+                    <div class="tv-container" style="top:calc( 2 * 100vw / 5);left:calc( 21.5 * 100vw / 25)">
+                        <div class="tv-inner-container">
+                            <div class="tv-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol10.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/samsungtv.png" alt="samsung tv" />
+                        </div>
+                    </div>
+
+                </div>
+                <!--Row 2-->
+                <div class="row">
+
+                    <div class="tv-container" style="top:calc( 3 * 100vw / 5);left:calc( 3.5 * 100vw / 25)">
+                        <div class="tv-inner-container">
+                            <div class="tv-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol14.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/samsungtv.png" alt="samsung tv" />
+                        </div>
+                    </div>
+                    <div class="android-container phone-container"
+                        style="top:calc( 3 * 100vw / 5 + 1.75vw);left:calc( 7.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol15.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+
+                    <div class="ipad-container" style="top:calc( 3 * 100vw / 5);left:calc( 12.5 * 100vw / 25);">
+                        <div class="ipad-inner-container">
+                            <div class="ipad-background background">
+                                <img loading="lazy" src="./assets/img/warhol/square/andywarhol3.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/ipad_transparent.png" alt="ipad" />
+                        </div>
+                    </div>
+
+                    <div class="macbook-container" style="top:calc( 3 * 100vw / 5);left:calc( 17.5 * 100vw / 25)">
+                        <div class="macbook-inner-container">
+                            <div class="macbook-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol16.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/macbookpro.png" alt="macbook" />
+                        </div>
+                    </div>
+
+                    <div class="iphone-container phone-container"
+                        style="top:calc( 3 * 100vw / 5 + 1.75vw);left:calc( 20.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol5.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+                    <div class="android-container phone-container"
+                        style="top:calc( 3 * 100vw / 5 + 1.75vw);left:calc( 22.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol6.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+
+                </div>
+                <!--Row 3-->
+                <div class="row">
+
+                    <div class="ipad-container" style="top:calc( 4 * 100vw / 5);left:calc( 2.5 * 100vw / 25);">
+                        <div class="ipad-inner-container">
+                            <div class="ipad-background background">
+                                <img loading="lazy" src="./assets/img/warhol/square/andywarhol8.png" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/ipad_transparent.png" alt="ipad" />
+                        </div>
+                    </div>
+
+                    <div class="iphone-container phone-container"
+                        style="top:calc( 4 * 100vw / 5 + 1.75vw);left:calc( 5.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol7.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+                    <div class="tv-container" style="top:calc( 4 * 100vw / 5);left:calc( 11.5 * 100vw / 25)">
+                        <div class="tv-inner-container">
+                            <div class="tv-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol17.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/samsungtv.png" alt="samsung tv" />
+                        </div>
+                    </div>
+
+                    <div class="android-container phone-container"
+                        style="top:calc( 4 * 100vw / 5 + 1.75vw);left:calc( 15.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol15.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+                    <div class="iphone-container phone-container"
+                        style="top:calc( 4 * 100vw / 5 + 1.75vw);left:calc( 17.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol5.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+
+                    <div class="macbook-container" style="top:calc( 4 * 100vw / 5);left:calc( 22.5 * 100vw / 25)">
+                        <div class="macbook-inner-container">
+                            <div class="macbook-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol10.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/macbookpro.png" alt="macbook" />
+                        </div>
+                    </div>
+
+                </div>
+                <!--Row 4-->
+                <div class="row">
+
+                    <div class="tv-container" style="top:calc( 5 * 100vw / 5);left:calc( 3.5 * 100vw / 25)">
+                        <div class="tv-inner-container">
+                            <div class="tv-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol11.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/samsungtv.png" alt="samsung tv" />
+                        </div>
+                    </div>
+                    <div class="android-container phone-container"
+                        style="top:calc( 5 * 100vw / 5 + 1.75vw);left:calc( 7.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol6.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+
+                    <div class="macbook-container" style="top:calc( 5 * 100vw / 5);left:calc( 12.5 * 100vw / 25)">
+                        <div class="macbook-inner-container">
+                            <div class="macbook-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol14.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/macbookpro.png" alt="macbook" />
+                        </div>
+                    </div>
+
+                    <div class="iphone-container phone-container"
+                        style="top:calc( 5 * 100vw / 5 + 1.75vw);left:calc( 20.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol7.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+                    <div class="android-container phone-container"
+                        style="top:calc( 5 * 100vw / 5 + 1.75vw);left:calc( 22.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol15.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+
+                    <div class="ipad-container" style="top:calc( 5 * 100vw / 5);left:calc( 17.5 * 100vw / 25);">
+                        <div class="ipad-inner-container">
+                            <div class="ipad-background background">
+                                <img loading="lazy" src="./assets/img/warhol/square/andywarhol9.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/ipad_transparent.png" alt="ipad" />
+                        </div>
+                    </div>
+
+                </div>
+                <!--Row 5-->
+                <div class="row">
+
+                    <div class="macbook-container" style="top:calc( 6 * 100vw / 5);left:calc( 2.5 * 100vw / 25)">
+                        <div class="macbook-inner-container">
+                            <div class="macbook-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol16.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/macbookpro.png" alt="macbook" />
+                        </div>
+                    </div>
+
+                    <div class="ipad-container" style="top:calc( 6 * 100vw / 5);left:calc( 7.5 * 100vw / 25);">
+                        <div class="ipad-inner-container">
+                            <div class="ipad-background background">
+                                <img loading="lazy" src="./assets/img/warhol/square/andywarhol12.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/ipad_transparent.png" alt="ipad" />
+                        </div>
+                    </div>
+
+                    <div class="android-container phone-container middle-top-dummy"
+                        style="top:calc( 6 * 100vw / 5 + 1.75vw);left:calc( 10.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/text/text_any_p.png" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+                    <div class="iphone-container phone-container middle-bottom-dummy"
+                        style="top:calc( 6 * 100vw / 5 + 1.75vw);left:calc( 12.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/text/text_device_p.png" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+
+                    <div class="iphone-container phone-container"
+                        style="top:calc( 6 * 100vw / 5 + 1.75vw);left:calc( 15.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol5.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+                    <div class="tv-container" style="top:calc( 6 * 100vw / 5);left:calc( 21.5 * 100vw / 25)">
+                        <div class="tv-inner-container">
+                            <div class="tv-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol17.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/samsungtv.png" alt="samsung tv" />
+                        </div>
+                    </div>
+
+                </div>
+                <!--Row 6-->
+                <div class="row">
+
+                    <div class="iphone-container phone-container"
+                        style="top:calc( 7 * 100vw / 5 + 1.75vw);left:calc( 0.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol6.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+                    <div class="android-container phone-container"
+                        style="top:calc( 7 * 100vw / 5 + 1.75vw);left:calc( 2.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol7.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+
+                    <div class="tv-container" style="top:calc( 7 * 100vw / 5);left:calc( 8.5 * 100vw / 25)">
+                        <div class="tv-inner-container">
+                            <div class="tv-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol10.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/samsungtv.png" alt="samsung tv" />
+                        </div>
+                    </div>
+                    <div class="android-container phone-container"
+                        style="top:calc( 7 * 100vw / 5 + 1.75vw);left:calc( 12.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol15.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+
+                    <div class="ipad-container" style="top:calc( 7 * 100vw / 5);left:calc( 17.5 * 100vw / 25);">
+                        <div class="ipad-inner-container">
+                            <div class="ipad-background background">
+                                <img loading="lazy" src="./assets/img/warhol/square/andywarhol13.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/ipad_transparent.png" alt="ipad" />
+                        </div>
+                    </div>
+
+                    <div class="macbook-container" style="top:calc( 7 * 100vw / 5);left:calc( 22.5 * 100vw / 25)">
+                        <div class="macbook-inner-container">
+                            <div class="macbook-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol11.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/macbookpro.png" alt="macbook" />
+                        </div>
+                    </div>
+
+                </div>
+                <!--Row 7-->
+                <div class="row">
+
+                    <div class="ipad-container" style="top:calc( 8 * 100vw / 5);left:calc( 2.5 * 100vw / 25);">
+                        <div class="ipad-inner-container">
+                            <div class="ipad-background background">
+                                <img loading="lazy" src="./assets/img/warhol/square/andywarhol2.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/ipad_transparent.png" alt="ipad" />
+                        </div>
+                    </div>
+
+                    <div class="android-container phone-container left-top-dummy"
+                        style="top:calc( 8 * 100vw / 5 + 1.75vw);left:calc( 5.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/text/text_any_p.png" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+                    <div class="iphone-container phone-container left-bottom-dummy"
+                        style="top:calc( 8 * 100vw / 5 + 1.75vw);left:calc( 7.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/text/text_screen_p.png" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+
+                    <div class="macbook-container" style="top:calc( 8 * 100vw / 5);left:calc( 12.5 * 100vw / 25)">
+                        <div class="macbook-inner-container">
+                            <div class="macbook-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol14.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/macbookpro.png" alt="macbook" />
+                        </div>
+                    </div>
+
+                    <div class="iphone-container phone-container"
+                        style="top:calc( 8 * 100vw / 5 + 1.75vw);left:calc( 15.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol5.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+                    <div class="tv-container" style="top:calc( 8 * 100vw / 5);left:calc( 21.5 * 100vw / 25)">
+                        <div class="tv-inner-container">
+                            <div class="tv-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol16.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/samsungtv.png" alt="samsung tv" />
+                        </div>
+                    </div>
+
+                </div>
+                <!--Row 8-->
+                <div class="row">
+
+                    <div class="tv-container" style="top:calc( 9 * 100vw / 5);left:calc( 3.5 * 100vw / 25)">
+                        <div class="tv-inner-container">
+                            <div class="tv-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol17.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/samsungtv.png" alt="samsung tv" />
+                        </div>
+                    </div>
+                    <div class="android-container phone-container"
+                        style="top:calc( 9 * 100vw / 5 + 1.75vw);left:calc( 7.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol6.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+
+                    <div class="ipad-container" style="top:calc( 9 * 100vw / 5);left:calc( 12.5 * 100vw / 25);">
+                        <div class="ipad-inner-container">
+                            <div class="ipad-background background">
+                                <img loading="lazy" src="./assets/img/warhol/square/andywarhol3.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/ipad_transparent.png" alt="ipad" />
+                        </div>
+                    </div>
+
+                    <div class="macbook-container" style="top:calc( 9 * 100vw / 5);left:calc( 17.5 * 100vw / 25)">
+                        <div class="macbook-inner-container">
+                            <div class="macbook-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol10.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/macbookpro.png" alt="macbook" />
+                        </div>
+                    </div>
+
+                    <div class="iphone-container phone-container"
+                        style="top:calc( 9 * 100vw / 5 + 1.75vw);left:calc( 20.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol7.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+                    <div class="android-container phone-container"
+                        style="top:calc( 9 * 100vw / 5 + 1.75vw);left:calc( 22.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol15.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--Row 9-->
+                <div class="row">
+
+                    <div class="ipad-container" style="top:calc( 10 * 100vw / 5);left:calc( 2.5 * 100vw / 25);">
+                        <div class="ipad-inner-container">
+                            <div class="ipad-background background">
+                                <img loading="lazy" src="./assets/img/warhol/square/andywarhol8.png" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/ipad_transparent.png" alt="ipad" />
+                        </div>
+                    </div>
+
+                    <div class="iphone-container phone-container"
+                        style="top:calc( 10 * 100vw / 5 + 1.75vw);left:calc( 5.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol5.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+                    <div class="tv-container" style="top:calc( 10 * 100vw / 5);left:calc( 11.5 * 100vw / 25)">
+                        <div class="tv-inner-container">
+                            <div class="tv-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol11.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/samsungtv.png" alt="samsung tv" />
+                        </div>
+                    </div>
+
+                    <div class="android-container phone-container right-top-dummy"
+                        style="top:calc( 10 * 100vw / 5 + 1.75vw);left:calc( 15.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/text/text_any_p.png" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+                    <div class="iphone-container phone-container right-bottom-dummy"
+                        style="top:calc( 10 * 100vw / 5 + 1.75vw);left:calc( 17.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/text/text_size_p.png" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+
+                    <div class="macbook-container" style="top:calc( 10 * 100vw / 5);left:calc( 22.5 * 100vw / 25)">
+                        <div class="macbook-inner-container">
+                            <div class="macbook-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol14.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/macbookpro.png" alt="macbook" />
+                        </div>
+                    </div>
+
+                </div>
+                <!--Row 10-->
+                <div class="row">
+
+                    <div class="tv-container" style="top:calc( 11 * 100vw / 5);left:calc( 3.5 * 100vw / 25)">
+                        <div class="tv-inner-container">
+                            <div class="tv-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol16.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/samsungtv.png" alt="samsung tv" />
+                        </div>
+                    </div>
+                    <div class="android-container phone-container"
+                        style="top:calc( 11 * 100vw / 5 + 1.75vw);left:calc( 7.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol6.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+
+                    <div class="macbook-container" style="top:calc( 11 * 100vw / 5);left:calc( 12.5 * 100vw / 25)">
+                        <div class="macbook-inner-container">
+                            <div class="macbook-background background">
+                                <img loading="lazy" src="./assets/img/warhol/landscape/andywarhol17.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/macbookpro.png" alt="macbook" />
+                        </div>
+                    </div>
+
+                    <div class="iphone-container phone-container"
+                        style="top:calc( 11 * 100vw / 5 + 1.75vw);left:calc( 20.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol7.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+                    <div class="android-container phone-container"
+                        style="top:calc( 11 * 100vw / 5 + 1.75vw);left:calc( 22.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background">
+                                <img loading="lazy" src="./assets/img/warhol/portrait/andywarhol15.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+
+                    <div class="ipad-container" style="top:calc( 11 * 100vw / 5);left:calc( 17.5 * 100vw / 25);">
+                        <div class="ipad-inner-container">
+                            <div class="ipad-background background">
+                                <img loading="lazy" src="./assets/img/warhol/square/andywarhol9.jpeg" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/ipad_transparent.png" alt="ipad" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row anim-row">
+                    <div class="android-container phone-container left-top-anim" style="left:calc( 5.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background marilyn-tl">
+                                <img loading="lazy" class="top-p" src="./assets/img/warhol/text/text_any_p.png" />
+                                <img loading="lazy" class="top-l" src="./assets/img/warhol/text/text_any_l.png" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+                    <div class="iphone-container phone-container left-bottom-anim" style="left:calc( 7.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background marilyn-bl">
+                                <img loading="lazy" class="bottom-p" src="./assets/img/warhol/text/text_screen_p.png" />
+                                <img loading="lazy" class="bottom-l" src="./assets/img/warhol/text/text_screen_l.png" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+                    <div class="android-container phone-container middle-top-anim"
+                        style="left:calc( 10.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background marilyn-tm">
+                                <img loading="lazy" class="top-p" src="./assets/img/warhol/text/text_any_p.png" />
+                                <img loading="lazy" class="top-l" src="./assets/img/warhol/text/text_any_l.png" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+                    <div class="iphone-container phone-container middle-bottom-anim"
+                        style="left:calc( 12.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background marilyn-bm">
+                                <img loading="lazy" class="bottom-p" src="./assets/img/warhol/text/text_device_p.png" />
+                                <img loading="lazy" class="bottom-l" src="./assets/img/warhol/text/text_device_l.png" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+                    <div class="android-container phone-container right-top-anim" style="left:calc( 15.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="android-background background marilyn-tr">
+                                <img loading="lazy" class="top-p" src="./assets/img/warhol/text/text_any_p.png" />
+                                <img loading="lazy" class="top-l" src="./assets/img/warhol/text/text_any_l.png" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+                    <div class="iphone-container phone-container right-bottom-anim"
+                        style="left:calc( 17.5 * 100vw / 25)">
+                        <div class="phone-inner-container">
+                            <div class="iphone-background background marilyn-br">
+                                <img loading="lazy" class="bottom-p" src="./assets/img/warhol/text/text_size_p.png" />
+                                <img loading="lazy" class="bottom-l" src="./assets/img/warhol/text/text_size_l.png" />
+                            </div>
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-background"></div>
+                <img loading="lazy" class="banana" src="./assets/img/warhol/warhol_banana.png" />
+                <div class="iphone-container phone-container">
+                    <div class="phone-inner-container">
+                        <div class="iphone-background background">
+                            <img loading="lazy" src="./assets/img/warhol/text/text_orientation_l.png" />
+                            <img loading="lazy" src="./assets/img/devices/iphone_transparent.png" alt="iphone" />
+                        </div>
+                    </div>
+                </div>
+                <div class="android-container phone-container">
+                    <div class="phone-inner-container">
+                        <div class="android-background background">
+                            <img loading="lazy" src="./assets/img/warhol/text/text_any_l.png" />
+                            <img loading="lazy" src="./assets/img/devices/android_transparent.png" alt="android phone" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="graphic-design-section">
+            <div class="fullscreen-container" onclick="closeFullscreenContainer()">
+                <img loading="lazy" class="loading" src="./assets/img/generic/loading_64.gif" alt="loading gif" />
+            </div>
+            <div class="gd-header">
+                <img loading="lazy" src="./assets/img/graphic_design/brush-on-screen.png" alt="graphic design icon" />
+                <h1>Graphic Design</h1>
+                <p>While I do not consider myself a graphic designer, what I specialize in is conversion from
+                    raster images to vector images so that your photos scale appropriately. Not only does it give the
+                    images a crisp, clean look but it also requires less data for medium sized images and up for faster
+                    site performance.</p>
+            </div>
+            <div class="top-container">
+                <div class="resolution-container">
+                    <p class="resolution-text">From a fixed sized raster image to a scalable vector image.</p>
+                    <div class="resolution-content">
+                        <div class="bad-resolution">
+                            <img loading="lazy" src="./assets/img/graphic_design/raccoon_48.png" alt="raccoon photo bad quality" />
+                            <span>before</span>
+                        </div>
+                        <div class="good-resolution">
+                            <img loading="lazy" src="./assets/img/art_portfolio/animals/animal_2.svg"
+                                alt="raccoon photo good quality" />
+                            <span>after</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sketch-container">
+                    <p class="sketch-text">Conversion from any raster images, including your own hand<br>sketched
+                        pictures, to aninmatable components bringing life to your photos.</p>
+                    <div class="sketch-content">
+                        <div class="knife-drawing">
+                            <img loading="lazy" src="./assets/img/swiss-army-knife/swiss-army-sketch.png"
+                                alt="rastor swiss army knife photo" />
+                        </div>
+                        <div class="swiss-army-knife-outer-container">
+                            <div class="swiss-army-knife-container">
+                                <img loading="lazy" class='swiss-army-knife swiss-9' src='./assets/img/swiss-army-knife/swiss-9.png' />
+                                <img loading="lazy" class='swiss-army-knife swiss-8-anim-forwards swiss-8'
+                                    src='./assets/img/swiss-army-knife/swiss-8.png' />
+                                <img loading="lazy" class='swiss-army-knife swiss-7-anim-forwards swiss-7'
+                                    src='./assets/img/swiss-army-knife/swiss-7.png' />
+                                <img loading="lazy" class='swiss-army-knife swiss-5-anim-forwards swiss-5'
+                                    src='./assets/img/swiss-army-knife/swiss-5.png' />
+                                <img loading="lazy" class='swiss-army-knife swiss-6-anim-forwards swiss-6'
+                                    src='./assets/img/swiss-army-knife/swiss-6.png' />
+                                <img loading="lazy" class='swiss-army-knife swiss-handle swiss-inner-3'
+                                    src='./assets/img/swiss-army-knife/inner.png' />
+                                <img loading="lazy" class='swiss-army-knife swiss-2-anim-forwards swiss-2'
+                                    src='./assets/img/swiss-army-knife/swiss-2.png' />
+                                <img loading="lazy" class='swiss-army-knife swiss-handle swiss-inner-2'
+                                    src='./assets/img/swiss-army-knife/inner.png' />
+                                <img loading="lazy" class='swiss-army-knife swiss-3-anim-forwards swiss-3'
+                                    src='./assets/img/swiss-army-knife/swiss-3.png' />
+                                <img loading="lazy" class='swiss-army-knife swiss-handle swiss-inner-1'
+                                    src='./assets/img/swiss-army-knife/inner.png' />
+                                <img loading="lazy" class='swiss-army-knife swiss-1-anim-forwards swiss-1'
+                                    src='./assets/img/swiss-army-knife/swiss-1.png' />
+                                <img loading="lazy" class='swiss-army-knife swiss-4-anim-forwards swiss-4'
+                                    src='./assets/img/swiss-army-knife/swiss-4.png' />
+                                <img loading="lazy" class='swiss-army-knife swiss-handle swiss-front'
+                                    src='./assets/img/swiss-army-knife/swiss-front.png' />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-container">
+                <h3>A sample of vector images I created from scratch or have converted from raster images.</h3>
+                <div class="gd-row">
+                    <h2 class="gd-title">
+                        animals
+                    </h2>
+                    <div class="gd-row-container animals">
+                        <div class="left-arrow-container arrow-container"><i class="arrow left"></i></div>
+                        <div class="right-arrow-container arrow-container"><i class="arrow right"></i></div>
+                        <div class="image-container">
+                            <img loading="lazy" class="loading" src="./assets/img/generic/loading_64.gif" alt="loading gif" />
+                        </div>
+                    </div>
+                </div>
+                <div class="gd-row">
+                    <h2 class="gd-title">
+                        emojis
+                    </h2>
+                    <div class="gd-row-container emojis">
+                        <div class="left-arrow-container arrow-container"><i class="arrow left"></i></div>
+                        <div class="right-arrow-container arrow-container"><i class="arrow right"></i></div>
+                        <div class="image-container">
+                            <img loading="lazy" class="loading" src="./assets/img/generic/loading_64.gif" alt="loading gif" />
+                        </div>
+                    </div>
+                </div>
+                <div class="gd-row">
+                    <h2 class="gd-title">
+                        food
+                    </h2>
+                    <div class="gd-row-container food">
+                        <div class="left-arrow-container arrow-container"><i class="arrow left"></i></div>
+                        <div class="right-arrow-container arrow-container"><i class="arrow right"></i></div>
+                        <div class="image-container">
+                            <img loading="lazy" class="loading" src="./assets/img/generic/loading_64.gif" alt="loading gif" />
+                        </div>
+                    </div>
+                </div>
+                <div class="gd-row">
+                    <h2 class="gd-title">
+                        icons
+                    </h2>
+                    <div class="gd-row-container icons">
+                        <div class="left-arrow-container arrow-container"><i class="arrow left"></i></div>
+                        <div class="right-arrow-container arrow-container"><i class="arrow right"></i></div>
+                        <div class="image-container">
+                            <img loading="lazy" class="loading" src="./assets/img/generic/loading_64.gif" alt="loading gif" />
+                        </div>
+                    </div>
+                </div>
+                <div class="gd-row">
+                    <h2 class="gd-title">
+                        logos
+                    </h2>
+                    <div class="gd-row-container logos">
+                        <div class="left-arrow-container arrow-container"><i class="arrow left"></i></div>
+                        <div class="right-arrow-container arrow-container"><i class="arrow right"></i></div>
+                        <div class="image-container">
+                            <img loading="lazy" class="loading" src="./assets/img/generic/loading_64.gif" alt="loading gif" />
+                        </div>
+                    </div>
+                </div>
+                <div class="gd-row">
+                    <h2 class="gd-title">
+                        nature
+                    </h2>
+                    <div class="gd-row-container nature">
+                        <div class="left-arrow-container arrow-container"><i class="arrow left"></i></div>
+                        <div class="right-arrow-container arrow-container"><i class="arrow right"></i></div>
+                        <div class="image-container">
+                            <img loading="lazy" class="loading" src="./assets/img/generic/loading_64.gif" alt="loading gif" />
+                        </div>
+                    </div>
+                </div>
+                <div class="gd-row">
+                    <h2 class="gd-title">
+                        plants
+                    </h2>
+                    <div class="gd-row-container plants">
+                        <div class="left-arrow-container arrow-container"><i class="arrow left"></i></div>
+                        <div class="right-arrow-container arrow-container"><i class="arrow right"></i></div>
+                        <div class="image-container">
+                            <img loading="lazy" class="loading" src="./assets/img/generic/loading_64.gif" alt="loading gif" />
+                        </div>
+                    </div>
+                </div>
+                <div class="gd-row">
+                    <h2 class="gd-title">
+                        space
+                    </h2>
+                    <div class="gd-row-container space">
+                        <div class="left-arrow-container arrow-container"><i class="arrow left"></i></div>
+                        <div class="right-arrow-container arrow-container"><i class="arrow right"></i></div>
+                        <div class="image-container">
+                            <img loading="lazy" class="loading" src="./assets/img/generic/loading_64.gif" alt="loading gif" />
+                        </div>
+                    </div>
+                </div>
+                <div class="gd-row">
+                    <h2 class="gd-title">
+                        transportation
+                    </h2>
+                    <div class="gd-row-container transportation">
+                        <div class="left-arrow-container arrow-container"><i class="arrow left"></i></div>
+                        <div class="right-arrow-container arrow-container"><i class="arrow right"></i></div>
+                        <div class="image-container">
+                            <img loading="lazy" class="loading" src="./assets/img/generic/loading_64.gif" alt="loading gif" />
+                        </div>
+                    </div>
+                </div>
+                <div class="gd-row">
+                    <h2 class="gd-title">
+                        other
+                    </h2>
+                    <div class="gd-row-container other">
+                        <div class="left-arrow-container arrow-container"><i class="arrow left"></i></div>
+                        <div class="right-arrow-container arrow-container"><i class="arrow right"></i></div>
+                        <div class="image-container">
+                            <img loading="lazy" class="loading" src="./assets/img/generic/loading_64.gif" alt="loading gif" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-wrapper">
+                    <div class="progress-bar">
+
+                        <div class="progressbar-checker fifty">
+                            <p class="progressbar-text">0%</p>
+                        </div>
+                        <div class="side side-front">
+                            <div class="side-fill"></div>
+                        </div>
+                        <div class="side side-back">
+                            <div class="side-fill"></div>
+                        </div>
+                        <div class="side side-top">
+                            <div class="side-fill"></div>
+                        </div>
+                        <div class="side side-bottom">
+                            <div class="side-fill"></div>
+                        </div>
+                        <div class="side side-left"></div>
+                    </div>
+                </div>
+                <div class="gd-background"></div>
+            </div>
+        </section>
+        <section id="resume">
+            <div class="resume-page-1">
+                <div class="top-section">
+                    <section class="profile-container">
+                        <span class="profile-name">
+                            <h2>David</h2>
+                            <h1>Scholer</h1>
+                        </span>
+                        <img loading="lazy" src="./assets/img/resume/me.png" />
+                        <span class="profile-title">
+                            <h3>Full</h3>
+                            <h2>Stack</h2>
+                            <h3>Developer</h3>
+                        </span>
+
+                    </section>
+                    <div class="top-left"><span class="long-line"></span><span class="line-across"></span></div>
+                    <div class="left"><span class="circle line"></span><span class="line-across"></span><span
+                            class="line-up"></span><span class="line-down"></span></div>
+                    <div class="middle"><span class="circle line"></span><span class="line-across"></span><span
+                            class="line-down"></span></div>
+                    <div class="right"><span class="circle line"></span><span class="line-across"></span><span
+                            class="line-down"></span></div>
+                    <section class="contact-container">
+                        <div class="contact-content">
+                            <h3 class="contact-title title">CONTACT</h3>
+                            <span class="location">
+                                <h4><a href="https://www.google.com/maps/place/Seattle,+WA/@47.6129432,-122.4821475,11z/data=!3m1!4b1!4m5!3m4!1s0x5490102c93e83355:0x102565466944d59a!8m2!3d47.6062095!4d-122.3320708"
+                                        target="_blank">Seattle, WA</a></h4><img loading="lazy"
+                                    src="./assets/img/resume/contact_icons/location.png" />
+                            </span>
+                            <span class="website">
+                                <h4><a href="https://vamplitude.com/" target="_blank">vamplitude com</a></h4><img loading="lazy"
+                                    src="./assets/img/resume/contact_icons/world-wide-web.png" />
+                            </span>
+                            <span class="github">
+                                <h4><a href="https://github.com/davidascholer" target="_blank">github
+                                        com/davidascholer</a></h4><img loading="lazy"
+                                    src="./assets/img/resume/contact_icons/github-sign.png" />
+                            </span>
+                            <span class="email">
+                                <h4><a href="mailto: davidascholer@gmail.com" target="_blank">davidascholer
+                                        @gmail.com</a></h4><img loading="lazy" src="./assets/img/resume/contact_icons/email.png" />
+                            </span>
+                            <span class="phone-number">
+                                <h4><a href="tel:2069313594">206 931 3594</a></h4><img loading="lazy"
+                                    src="./assets/img/resume/contact_icons/smartphone-call.png" />
+                            </span>
+                        </div>
+                    </section>
+
+                    <section class="about">
+                        <span>
+                            A LIFE'S PASSION TO BUILD, CREATE, & INNOVATE
+                        </span>
+                        <p>
+                            <br>
+                            Creating and building is what gives me joy and purpose in life. Software, electronics,
+                            machines, gizmos,
+                            you name it, but programming is my refuge. I'm
+                            seeking a
+                            job
+                            where I can use my STEM background and decade of acquired programming skills to build
+                            applications
+                            to
+                            help make people's lives easier and more efficient. I have a workshop where I enjoy
+                            fabricating
+                            things
+                            that I'm inspired to make and would love to one day implement my programming knowledge into
+                            physical products. As for now, I'm a developer
+                            with
+                            some solid skills to utilize.
+                            <br> <br>
+                            While I am seeking employment as a junior developer, I believe that I have more to bring to
+                            the
+                            table
+                            than most junior developers: years of experience, excellent communication skills, a
+                            quick
+                            study, a good understanding of data structures and algorithms, the belief in reading
+                            documentation
+                            to grasp and understand an API or framework, but most of all I'm battle tested and
+                            disciplined. I
+                            can
+                            show up to work, focus and work diligently for 8-12 hours straight, and perhaps most
+                            importantly, get the job done. Substantial coffee may be required ☕
+                        </p>
+                    </section>
+                </div>
+
+                <div class="skills-container">
+                    <section class="back-end skills">
+                        <img loading="lazy" class="header-image" src="./assets/img/resume/gui_icons/cloud.png" />
+                        <h3 class="title">BACK-END</h3>
+                        <ul>
+                            <li><span>Node.js</span><img loading="lazy" src="./assets/img/resume/skill_icons/node-js.png" /></li>
+                            <li class="measure node">&nbsp;</li>
+                            <li><span>SQL&nbsp;mySQL&nbsp;PostgreSQL</span><img loading="lazy"
+                                    src="./assets/img/resume/skill_icons/postgre.png" /></li>
+                            <li class="measure sql">&nbsp;</li>
+                            <li><span>MongoDB&nbsp;MariaDB</span><img loading="lazy" src="./assets/img/resume/skill_icons/mongo.png" />
+                            </li>
+                            <li class="measure mongo">&nbsp;</li>
+                            <li><span>Data Security</span><img loading="lazy"
+                                    src="./assets/img/resume/skill_icons/cyber-security.png" />
+                            </li>
+                            <li class="measure data">&nbsp;</li>
+                            <li><span>PHP</span><img loading="lazy" src="./assets/img/resume/skill_icons/php.png" /></li>
+                            <li class="measure php">&nbsp;</li>
+                            <li><span>Java</span><img loading="lazy" src="./assets/img/resume/skill_icons/java.png" /></li>
+                            <li class="measure java">&nbsp;</li>
+                            <li><span>APIs</span><img loading="lazy" src="./assets/img/resume/skill_icons/api.png" /></li>
+                            <li class="measure api">&nbsp;</li>
+                            <li><span>Google Cloud Console</span><img loading="lazy"
+                                    src="./assets/img/resume/skill_icons/google.png" />
+                            </li>
+                            <li class="measure google">&nbsp;</li>
+                        </ul>
+                    </section>
+                    <section class="tech skills">
+                        <h3 class="title">LIBRARIES, FRAMEWORKS, &&nbsp;SOURCE CONTROL</h3>
+                        <img loading="lazy" class="header-image" src="./assets/img/resume/gui_icons/tech.png" />
+                        <ul>
+                            <li><span>Git</span><img loading="lazy" src="./assets/img/resume/skill_icons/git.png" /></li>
+                            <li class="measure git">&nbsp;</li>
+                            <li><span>React</span><img loading="lazy" src="./assets/img/resume/skill_icons/react.png" /></li>
+                            <li class="measure react">&nbsp;</li>
+                            <li><span>React Native</span><img loading="lazy" src="./assets/img/resume/skill_icons/react-native.png" />
+                            </li>
+                            <li class="measure react-native">&nbsp;</li>
+                            <li><span>Visual Studio</span><img loading="lazy"
+                                    src="./assets/img/resume/skill_icons/visual-studio.png" />
+                            </li>
+                            <li class="measure visual-studio">&nbsp;</li>
+                            <li><span>Heroku</span><img loading="lazy" src="./assets/img/resume/skill_icons/heroku.png" /></li>
+                            <li class="measure heroku">&nbsp;</li>
+                            <li><span>Mobile Development</span><img loading="lazy" src="./assets/img/resume/skill_icons/mobile.png" />
+                            </li>
+                            <li class="measure mobile">&nbsp;</li>
+                            <li><span>Responsive Design</span><img loading="lazy"
+                                    src="./assets/img/resume/skill_icons/responsive-design.png" />
+                            </li>
+                            <li class="measure responsive">&nbsp;</li>
+                            <li><span>Docker</span><img loading="lazy" src="./assets/img/resume/skill_icons/docker.png" /></li>
+                            <li class="measure docker">&nbsp;</li>
+                        </ul>
+                    </section>
+                    <section class="front-end skills">
+                        <img loading="lazy" class="header-image" src="./assets/img/resume/gui_icons/computer.png"
+                            style="margin-top:1px" />
+                        <h3 class="title">FRONT-END</h3>
+                        <ul>
+                            <li><span>Javascript&nbsp;ES6</span><img loading="lazy" src="./assets/img/resume/skill_icons/js.png" />
+                            </li>
+                            <li class="measure js">&nbsp;</li>
+                            <li><span>Adobe Illustrator</span><img loading="lazy"
+                                    src="./assets/img/resume/skill_icons/illustrator.png" />
+                            </li>
+                            <li class="measure adobe">&nbsp;</li>
+                            <li><span>CSS</span><img loading="lazy" src="./assets/img/resume/skill_icons/css-3.png" /></li>
+                            <li class="measure css">&nbsp;</li>
+                            <li><span>HTML</span><img loading="lazy" src="./assets/img/resume/skill_icons/html-5.png" /></li>
+                            <li class="measure html">&nbsp;</li>
+                            <li><span>Typescript</span><img loading="lazy" src="./assets/img/resume/skill_icons/typescript.png" /></li>
+                            <li class="measure typescript">&nbsp;</li>
+                            <li><span>SASS</span><img loading="lazy" src="./assets/img/resume/skill_icons/sass.png" /></li>
+                            <li class="measure sass">&nbsp;</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <hr class="page-break">
+            <!-- PAGE 2 -->
+            <div class="resume-page-2">
+                <div class="work-history">
+                    <h1>
+                        work experience
+                    </h1>
+                    <hr>
+                    <section class='work'>
+                        <h2>Full Stack Developer</h2>
+                        <hr>
+                        <h3>Contract work/self employed - Seattle, WA</h3>
+                        <h5>December 2018 - Present</h5>
+                        <p>
+                            For the past 3+ years, I've been building a variety of full-stack applications including:
+                            web
+                            sites, React and React-Native applications, Google Cloud Services projects, mobile websites,
+                            web
+                            scraper tools, productivity and educational apps, implementing various APIs, amongst many
+                            others.
+                            <br> <br>
+                            My baseline development structure typically includes Javascript(ES6) and either React or EJS
+                            with
+                            Sass depending on the
+                            project, Node, SQL, document dbs (Mongo), and Docker hosted on either my Heroku server or my
+                            static
+                            server talking to one of my backend servers, also project dependant. I am also experienced
+                            enough in Photoshop and Illustrator for all of the graphic design work.
+                        </p>
+                    </section>
+                    <section class='work'>
+                        <h2>Mobile Developer</h2>
+                        <hr>
+                        <h3>Contract/self employed - Seattle, WA</h3>
+                        <h5>October 2013 - Present</h5>
+                        <p>
+                            I've worked as a freelance developer on and off again for over a decade now. I've worked on
+                            many
+                            jobs
+                            building websites, apps for iOS, OSX, Windows and Android. I also build apps as a hobby and
+                            for my
+                            own profit on multiple platforms. Nowadays, I stick to doing web apps, RESTful apps, and
+                            CRUD apps
+                            using mostly plain javascript/html/css or React for the front end, Node.js for back end, and
+                            utilize
+                            both document and relational databases for database management. </p>
+                    </section>
+                    <section class='work'>
+                        <h2>Manager</h2>
+                        <hr>
+                        <h3>Caffe Ladro - Seattle, WA</h3>
+                        <h5>December 2016 - January 2019</h5>
+                        <p>
+                            Caffe Ladro is a chain of caffes in Seattle. I ran the location near Seattle Center (the
+                            Space
+                            Needle). While all
+                            of the stores ultimately communicated and collaborated, each store is set up to run
+                            individually.
+                            Being such, I ran every aspect of the store including: hiring, payroll, inventory, quarterly
+                            profit/loss, amongst many other tasks.
+                            <br> <br>
+                            During my tenure, the store kept a steady increase in sales despite half a dozen new coffee
+                            shops
+                            opening up in the area all during the renovation of Climate Pledge Arena, during which many
+                            businesses in the neighborhood went under. My store also saw an overall 24% increase in
+                            profit due
+                            to my organization of product, minimizing waste, and efficient labor scheduling done using
+                            custom
+                            software I wrote personally.
+                        </p>
+                    </section>
+                    <section class='work'>
+                        <h2>Mechanic</h2>
+                        <hr>
+                        <h3>Sears Auto Center - Tacoma, WA</h3>
+                        <h5>January 2005 - January 2008</h5>
+                        <p>
+                            Working as a mechanic, I learned the fundamentals of Automotive Technology which has helped
+                            me a
+                            great deal in my past jobs and current hobbies as well as helping me become a project
+                            manager in the
+                            robotics club in college. It gave me knowledge and hands on experience with electrical
+                            systems,
+                            reading schematics and and an understanding of general mechanics.
+                        </p>
+                    </section>
+                    <section class='work'>
+                        <h2>Manager</h2>
+                        <hr>
+                        <h3>Quiznos - Tacoma, WA</h3>
+                        <h5>Jan 2003 - October 2005</h5>
+                        <p>
+                            Though I was quite young, managing a sandwich shop gave me an introduction into working with
+                            a team,
+                            team management, the importance of communication, as well as how businesses operate.
+                        </p>
+                    </section>
+                </div>
+                <div class="project-history">
+                    <h1>
+                        selected projects
+                    </h1>
+                    <hr>
+                    <section class='project'>
+                        <h2>Deal Dekko</h2>
+                        <a href="https://www.dealdekko.com/" target="_blank">dealdekko.com</a>
+                        <hr>
+                        <p>
+                            This was one of my earlier projects; an experiment with affiliate marketing. The highlight
+                            of this
+                            project is it has worker code that scans the internet once an hour for coupons and deals and
+                            puts
+                            them on a sql database which the site fetches from.
+                        </p>
+                        <ul>
+                            <li>APIs</li>
+                            <li>EJS</li>
+                            <li>Javascript</li>
+                            <li>mySQL</li>
+                            <li>Node</li>
+                            <li>Responsive</li>
+                            <li>RESTful</li>
+                            <li>SASS</li>
+                        </ul>
+                        <hr style="opacity:0">
+                    </section>
+                    <section class='project'>
+                        <h2>VUDU disc to digital</h2>
+                        <a href="https://www.vududisctodigital.com/" target="_blank">vududisctodigital.com</a>
+                        <hr>
+                        <p>
+                            Fetches data from a SQL database and parses to the UI. Also includes a mini app barcode
+                            generator
+                            which I custom built with javascript and css. Used document databases to store user data and
+                            settings. Also has a version built for Android and iOS.
+                        </p>
+                        <ul>
+                            <li>CRUD</li>
+                            <li>Javascript</li>
+                            <li>Mongo</li>
+                            <li>Node</li>
+                            <li>React</li>
+                            <li>React Native</li>
+                            <li>Responsive</li>
+                            <li>RESTful</li>
+                            <li>SQL</li>
+                        </ul>
+                        <hr style="opacity:0">
+                    </section>
+                    <section class='project'>
+                        <h2>Kuekard</h2>
+                        <!-- <a href="http://kuekard.com/" target="_blank">kuekard.com</a> -->
+                        <hr>
+                        <p> A flashcard app. Beautiful UI with customizable features. Uses the Google Text To Speech
+                            API.
+                            Fetches data from a SQL database. Stores user data in a document database. Working on a web
+                            version.
+                        </p>
+                        <ul>
+                            <li>CRUD</li>
+                            <li>Google Cloud API</li>
+                            <li>Javascript</li>
+                            <li>Mongo</li>
+                            <li>Node</li>
+                            <li>React</li>
+                            <!-- <li>React Native</li> -->
+                            <li>Responsive</li>
+                            <li>SQL</li>
+                        </ul>
+                        <hr style="opacity:0">
+                    </section>
+                    <section class='project'>
+                        <h2>BeccaTaberArt</h2>
+                        <a href="https://beccataber.com/art.html?site=epsilon#bookmarks" target="_blank">beccataber.com</a>
+                        <hr>
+                        <p>On the UI side, this is simply an artist website. The cool part of this, however, is the
+                            companion
+                            app that talks to my server to CRUD the photos in Google Cloud buckets. The site grabs from
+                            these buckets to update in real time.</p>
+                        <ul>
+                            <li>EJS</li>
+                            <li>CSS</li>
+                            <li>Google Cloud API</li>
+                            <li>HTML</li>
+                            <li>Node</li>
+                        </ul>
+                        <hr style="opacity:0">
+                    </section>
+                    <!-- <section class='project'>
+                        <h2>VampVid</h2>
+                        <a href="https://vampvid.com/" target="_blank">vampvid.com</a>
+                        <hr>
+                        <p>
+                            A user friendly site/app that integrated the IMDB API and shows previews for horror movies. Will eventually be a data science project in predicting user preferences. Also has a version built for Android and iOS.
+                        </p>
+                        <ul>
+                            <li>APIs</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                            <li>Node</li>
+                            <li>React</li>
+                            <li>React Native</li>
+                            <li>SQL</li>
+                        </ul>
+                        <hr style="opacity:0">
+                    </section> -->
+                    <section class='project'>
+                        <h2>Blood and Moon</h2>
+                        <a href="https://bloodandmoon.com/" target="_blank">bloodandmoon.com</a>
+                        <hr>
+                        <p>
+                            A period tracker that integrates features supplied by NASA to track the moon sequences.
+                            Saves
+                            complex data to a document database. Working on a version built for Android and iOS.
+                        </p>
+                        <ul>
+                            <li>APIs</li>
+                            <li>EJS</li>
+                            <li>Javascript</li>
+                            <li>Mongo</li>
+                            <li>Node</li>
+                        </ul>
+                        <hr style="opacity:0">
+                    </section>
+                    <section class='project'>
+                        <h2>this resume</h2>
+                        <a href="https://vamplitude.com/resume.html"
+                            target="_blank">vamplitude.com/resume</a>
+                        <hr>
+                        <p>
+                            This resume was created entirely in html/sass and is fully responsive.
+                        </p>
+                        <ul>
+                            <li>SASS</li>
+                            <li>Javascript</li>
+                            <li>Responsive</li>
+                        </ul>
+                        <hr style="opacity:0">
+                    </section>
+                    <div class="new-page page-3"></div>
+                    <section class='project page-3'>
+                        <h2>Vamplitude</h2>
+                        <a href="https://vamplitude.com/" target="_blank">vamplitude.com</a>
+                        <hr>
+                        <p>
+                            My site for contractors to look at and see what I can do in greater detail.
+                        </p>
+                        <ul>
+                            <li>CSS/SASS</li>
+                            <li>HTML</li>
+                            <li>Javascript</li>
+                            <li>Responsive</li>
+                        </ul>
+                        <hr style="opacity:0">
+                    </section>
+                </div>
+                    <div class="education-history">
+                    <h1>
+                        education
+                    </h1>
+                    <hr>
+                    <div class="education-history-container">
+                        <section class='school'>
+                            <h2>Seattle Central College</h2>
+                            <h4>Associate of Science - AS</h4>
+                            <hr>
+                            <h4>Project Manager - Robotics Club</h4>
+                            <h4>Dean's List</h4>
+                            <h5>Seattle WA</h5>
+                            <h6>2008 - 2017</h6>
+                            <p>
+                            <h4 class="border-bottom">notes</h4>
+                            While in school, I maintained a
+                            respectable gpa as I studied towards my science degree and engineering transfer degree all
+                            while working 40+ hours a week to pay tuition, rent, and other bills. I am very proud of
+                            that.
+                            </p>
+                        </section>
+                        <section class='school'>
+                            <h2>North Seattle College</h2>
+                            <h4>Associate of Applied Science - AAS</h4>
+                            <hr>
+                            <h4>Dean's List</h4>
+                            <h5>Seattle WA</h5>
+                            <h6>2016 - 2018</h6>
+                            <p>
+                            <h4 class="border-bottom">notes</h4>
+                            Almost identical to the AS degree and only required a few more credits but was required for
+                            the Full Stack Developer
+                            Certification.</p>
+                        </section>
+                        <section class='school'>
+                            <h2>University of Washington</h2>
+                            <h4>Engineering (ongoing)</h4>
+                            <hr>
+                            <h5>Seattle WA</h5>
+                            <h6>2018 - present</h6>
+                            <p>
+                            <h4 class="border-bottom">notes</h5>
+                                I have 5+ cumulative years of college over the last 10+ years. My BA in engineering is
+                                in sight, I just
+                                can't decide on which one.
+                                I was studying electrical engineering, however, my passions have veered more towards the
+                                programming
+                                and mechanical processes of projects.</p>
+                        </section>
+                    </div>
+                </div>
+                <div class="certification-history">
+                    <h1>
+                        certifications
+                    </h1>
+                    <hr>
+                    <div class="certification-history-container">
+
+                        <section class='certificate'>
+                            <h2>Full Stack Developer</h2>
+                            <h4>Certificate of Completion</h4>
+                            <hr>
+                            <h5>North Seattle College</h5>
+                            <h4>Seattle WA</h4>
+                            <h5>2018</h5>
+                        </section>
+
+                        <section class='certificate'>
+                            <h2>ASE Certification</h2>
+                            <h4>Electrical Systems</h4>
+                            <hr>
+                            <h4>Tacoma WA</h4>
+                            <h5>2006</h5>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!-- ABSOLUTE ELEMENTS -->
+            <div class="pdf-button">
+                <a href="./DavidScholer-Resume.pdf" download>download</a>
+            </div>
+        </section>
+        <section id="about">
+            <iframe src="https://www.youtube.com/embed/7XBAJ0f6OkQ" title="David Scholer Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/CFXkMiAbXxk" title="David Scholer Introduction - French" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section id="contact">
+            <p>Feel free to contact me with any questions or comments.<br /><br />If you would like a quote, please give
+                me a quick outline of your project and I'll get right back to you with a rough estimation or further
+                questions and we can go from there.<br>Have a good day 🙂</p>
+            <form action="#">
+                <div class="name-container">
+                    <input name="name" type="name" value="">
+                    <span class="input-empty">Name </span>
+                </div>
+                <div></div>
+                <div class="email-container">
+                    <input name="email" type="email" value="">
+                    <span>Email</span>
+                </div>
+                <div></div>
+                <div class="textarea-container">
+                    <textarea class="text-input" name="message" type="textarea"></textarea>
+                </div>
+                <button type="submit" onclick=handleContactSubmit(event)>
+                    <span>send</span>
+                </button>
+            </form>
+            <span class="error"></span>
+        </section>
+        <section id="footer">
+            <div class="footer-content">
+                <h1><span class="letter-v">V</span>amplitude</h1>
+                <div class="anim-container">
+                    <div class="oscillate-anim-container">
+                        <div class='logo-image-container'>
+                            <svg class="vamplitude_image no_teeth" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 76.25 40.75">
+                                <path class="oscillate"
+                                    d="M75.87,17C75.24,6.1,74.5.56,73.67.56h0c-1,0-1.78,9.25-2.22,17v-.06c-.43,7.74-1.21,17-2.21,17h0c-.82,0-1.61-6.58-2.25-17.46S65.61.56,64.78.56h0c-1,0-1.78,9.25-2.2,17v-.06c-.43,7.74-1.16,17-2.21,17h0c-.83,0-1.57-5.5-2.2-16.44v0C57.54,7.14,56.52.46,55.69.46h0c-1,0-1.78,9.25-2.22,17-.63,10.94-1.37,17-2.2,17h0c-1.05,0-1.78-9.24-2.21-17v.06c-.42-7.73-1.16-17-2.2-17h0C46,.56,45.29,6.1,44.65,17S43.22,34.44,42.4,34.44h0c-1,0-1.78-9.25-2.21-17v.06C39.75,9.81,39,.58,38,.56h0C37.14.56,36.4,6.1,35.77,17s-1.37,17.48-2.2,17.48h0c-1,0-1.78-9.24-2.21-17v.06c-.42-7.73-1.16-17-2.2-17h0C28.33.56,27.59,6.1,27,17S25.52,34.44,24.7,34.44h0c-1,0-1.78-9.19-2.21-16.93h0c-.44-7.7-1.17-16.93-2.22-17h0C19.44.56,18.7,6.1,18.07,17s-1.37,17.48-2.2,17.48h0c-1,0-1.78-9.18-2.21-16.92h0c-.42-7.73-1.16-17-2.2-17h0C10.63.56,9.89,6.1,9.25,17S7.82,34.44,7,34.44H7c-1,0-1.78-9.19-2.21-16.93h0C4.35,9.81,3.62.58,2.57.56h0C1.74.56,1,6.1.37,17" />
+                            </svg>
+                            <svg class="vamplitude_image teeth" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 76.25 40.75">
+                                <path class="oscillate red"
+                                    d="M75.87,17C75.24,6,74.5.47,73.67.47h0c-1,0-1.78,9.29-2.22,17v-.06c-.43,7.77-1.21,17.05-2.21,17.05h0c-.82,0-1.61-6.6-2.25-17.53S65.61.47,64.78.47h0c-1,0-1.78,9.29-2.2,17.06v-.06c-.43,7.77-1.16,17.05-2.21,17.05h0c-.83,0-1.57-5.52-2.2-16.51v.17l-.05-.65C57.69,9.76,57,.49,55.91.47h0c-.82,0-1.56,6-2.19,17a30.69,30.69,0,0,1-.92,6.1c-.19,1-.44,2-.65,3a49.29,49.29,0,0,1-1.57,6c-.57,1.61-1.2,3.16-1.81,4.73-.4,1-.82,2.07-1.23,3.09h0a1.81,1.81,0,0,0,.09-.31c.28-1.08.62-2.14.82-3.25a56.26,56.26,0,0,0,.78-9.16V17.5c-.4-7.74-1.13-17-2.18-17h0c-.83,0-1.63,6.75-2.26,17.71V18c-.63,11-1.37,16.51-2.2,16.51h0c-1,0-1.78-9.28-2.21-17.05v.06c-.42-7.77-1.16-17-2.2-17.06h0C37.3.47,36.56,6,35.92,17s-1.43,17.53-2.25,17.53h0c-1,0-1.78-9.28-2.21-17v.06C31,9.76,30.29.49,29.24.47h0C28.41.47,27.67,6,27,17V27.65a57.41,57.41,0,0,0,.79,9.16c.19,1.11.53,2.17.81,3.25l.09.32h-.05l-1.21-3c-.61-1.57-1.24-3.12-1.85-4.73a51.15,51.15,0,0,1-1.56-6c-.22-1-.46-2-.66-3a32.21,32.21,0,0,1-.91-6.1v.06C22.1,9.76,21.37.49,20.32.47h0C19.49.47,18.75,6,18.12,17l-.05,1.12v-.17c-.63,11-1.37,16.51-2.2,16.51h0c-1,0-1.78-9.28-2.21-17v.06c-.42-7.77-1.16-17-2.2-17h0c-.83,0-1.57,5.55-2.21,16.48S7.82,34.39,7,34.39H7c-1,0-1.78-9.28-2.21-17v.06C4.35,9.66,3.62.39,2.57.38h0C1.74.38,1,5.93.37,16.86" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <p>Et je parle français 🇫🇷<br><br>I also love physics, motorcycles, and horror movies.<br />You've
+                    probably already
+                    noticed.<br /><br /><span class="emoji">🧛🏻</span></p>
+            </div>
+            <div class="footer-margin-bottom"></div>
+        </section>
     </div>
 
-    <div id='section-end'></div> -->
-
-    <!-- <div id=buffer style='height:5000px;background-color: black;'></div> -->
-    <!-- Scripts -->
-    <!-- <script src='./assets/js/end.js'></script>
-    <script src='./assets/js/sunset.js'></script> -->
-    <script src='./assets/js/logoAnim.js'></script>
-    <!-- <script type="module" src='./assets/js/3d.js'></script>
-    <script src='./assets/js/space.js'></script>
-    <script src='./assets/js/swiss-army-knife.js'></script> -->
-    <!-- mainScript Must Go Last-->
-    <script src='./assets/js/mainScript.js'></script>
-    <!-- <script>
-        let isMobile = false; //initiate as false
-        // device detection
-        if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
-            || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0, 4))) {
-            isMobile = true;
-        }
-        if(isMobile)
-        document.querySelector('.logo-title').style.top = '20vh';
-
-    </script> -->
+    <script src='./assets/js/logoAnim.js' defer></script>
+    <script src="https://threejs.org/build/three.js" defer></script>
+    <script src="./assets/js/icosahedron-dice.js" defer></script>
+    <script src="./assets/js/what-i-do.js" defer></script>
+    <script src="./assets/js/banner.js" defer></script>
+    <script src="./assets/js/security-section.js" defer></script>
+    <script src="./assets/js/data-management-section.js" defer></script>
+    <script src="./assets/js/native-apps-section.js" defer></script>
+    <script src="./assets/js/algorithms-section.js" defer></script>
+    <script src="./assets/js/layout-section.js" defer></script>
+    <script src="./assets/js/sunset.js" defer></script>
+    <script src="./assets/js/cloud.js" defer></script>
+    <script src="./assets/js/graphic-design-section.js" defer></script>
+    <script src="./assets/js/contact.js" defer></script>
+    <script src="./assets/js/footer.js" defer></script>
+    <!-- main-script MUST GO LAST -->
+    <script src='./assets/js/main-script.js' defer></script>
     <script>
-        setTimeout(()=>{
-            const vidContainer = document.getElementById('video-container');
-            vidContainer.style.visibility = "hidden";
-        },8000)
+
     </script>
 </body>
 

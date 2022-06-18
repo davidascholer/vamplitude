@@ -1,14 +1,154 @@
-#sunset-wrapper {
+@font-face {
+  font-family: antiqua;
+  src: url("../fonts/ModernAntiqua-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: wind;
+  src: url("../fonts/wind_sans_serif.ttf") format("truetype");
+}
+@font-face {
+  font-family: roboto-light;
+  src: url("../fonts/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: roboto-medium;
+  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: carme;
+  src: url("../fonts/Carme-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: advent-medium;
+  src: url("../fonts/AdventPro-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: advent-light;
+  src: url("../fonts/AdventPro-Light.ttf") format("truetype");
+}
+#sunset-section {
+  position: relative;
+}
+#sunset-section .overlay-container {
+  height: 100vh;
+  margin-top: -100vh;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+#sunset-section .overlay-container .cloud-container {
+  height: 70%;
+  opacity: 0;
+  position: relative;
+}
+#sunset-section .overlay-container .cloud-container .cloud-content {
+  height: 30vw;
+  position: absolute;
+  width: 30vw;
+}
+#sunset-section .overlay-container .cloud-container .cloud-content * {
+  position: absolute;
+}
+#sunset-section .overlay-container .cloud-container .cloud-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2vw;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#sunset-section .overlay-container .cloud-container .cloud-content .cloud {
+  height: 100%;
+  width: 100%;
+}
+#sunset-section .overlay-container .cloud-container .cloud-content .icon {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4vw;
+}
+#sunset-section .overlay-container .cloud-container .cloud-content .moon-text-shadow {
+  text-shadow: 0 0 0 #a0a0a0, -0.05vw 0 0 #969696, -0.1vw 0 0 rgba(139, 139, 139, 0.5), -0.15vw 0 0 rgba(129, 129, 129, 0.5), -0.2vw 0 0 rgba(118, 118, 118, 0.5), -0.25vw 0 0 rgba(107, 107, 107, 0.5), -0.3vw 0 0 rgba(97, 97, 97, 0.5), -0.35vw 0 0 rgba(86, 86, 86, 0.5), -0.4vw 0 0 rgba(75, 75, 75, 0.5), -0.45vw 0 0.4vw rgba(0, 0, 0, 0.69), -0.45vw 0 0.05vw rgba(0, 0, 0, 0.5), 0 0 0.4vw rgba(0, 0, 0, 0.2);
+}
+#sunset-section .overlay-container .cloud-container .cloud-content-1 {
+  left: 0%;
+  top: 20%;
+}
+#sunset-section .overlay-container .cloud-container .cloud-content-1 p {
+  top: 50%;
+}
+#sunset-section .overlay-container .cloud-container .cloud-content-1 .sun-text-shadow {
+  text-shadow: 0 0 0 #a0a0a0, -0.05vw -0.05vw 0 #969696, -0.1vw -0.1vw 0 rgba(139, 139, 139, 0.5), -0.15vw -0.15vw 0 rgba(129, 129, 129, 0.5), -0.2vw -0.2vw 0 rgba(118, 118, 118, 0.5), -0.25vw -0.25vw 0 rgba(107, 107, 107, 0.5), -0.3vw -0.3vw 0 rgba(97, 97, 97, 0.5), -0.35vw -0.35vw 0 rgba(86, 86, 86, 0.5), -0.4vw -0.4vw 0 rgba(75, 75, 75, 0.5), -0.45vw -0.45vw 0.4vw rgba(0, 0, 0, 0.69), -0.45vw -0.45vw 0.05vw rgba(0, 0, 0, 0.5), 0 0 0.4vw rgba(0, 0, 0, 0.2);
+}
+#sunset-section .overlay-container .cloud-container .cloud-content-1 .icon {
+  top: 30%;
+}
+#sunset-section .overlay-container .cloud-container .cloud-content-2 {
+  left: 50%;
+  top: 15%;
+}
+#sunset-section .overlay-container .cloud-container .cloud-content-2 .sun-text-shadow {
+  text-shadow: 0 0 0 #a0a0a0, 0.05vw 0 0 #969696, 0.1vw 0 0 rgba(139, 139, 139, 0.5), 0.15vw 0 0 rgba(129, 129, 129, 0.5), 0.2vw 0 0 rgba(118, 118, 118, 0.5), 0.25vw 0 0 rgba(107, 107, 107, 0.5), 0.3vw 0 0 rgba(97, 97, 97, 0.5), 0.35vw 0 0 rgba(86, 86, 86, 0.5), 0.4vw 0 0 rgba(75, 75, 75, 0.5), 0.45vw 0 0.4vw rgba(0, 0, 0, 0.69), 0.45vw 0 0.05vw rgba(0, 0, 0, 0.5), 0 0 0.4vw rgba(0, 0, 0, 0.2);
+}
+#sunset-section .overlay-container .cloud-container .cloud-content-3 {
+  left: 15%;
+  top: 40%;
+}
+#sunset-section .overlay-container .cloud-container .cloud-content-3 .sun-text-shadow {
+  text-shadow: 0 0 0 #a0a0a0, -0.05vw 0 0 #969696, -0.1vw 0 0 rgba(139, 139, 139, 0.5), -0.15vw 0 0 rgba(129, 129, 129, 0.5), -0.2vw 0 0 rgba(118, 118, 118, 0.5), -0.25vw 0 0 rgba(107, 107, 107, 0.5), -0.3vw 0 0 rgba(97, 97, 97, 0.5), -0.35vw 0 0 rgba(86, 86, 86, 0.5), -0.4vw 0 0 rgba(75, 75, 75, 0.5), -0.45vw 0 0.4vw rgba(0, 0, 0, 0.69), -0.45vw 0 0.05vw rgba(0, 0, 0, 0.5), 0 0 0.4vw rgba(0, 0, 0, 0.2);
+}
+#sunset-section .overlay-container .cloud-container .cloud-content-4 {
+  left: 70%;
+  top: 30%;
+}
+#sunset-section .overlay-container .cloud-container .cloud-content-4 .sun-text-shadow {
+  text-shadow: 0 0 0 #a0a0a0, 0.05vw 0 0 #969696, 0.1vw 0 0 rgba(139, 139, 139, 0.5), 0.15vw 0 0 rgba(129, 129, 129, 0.5), 0.2vw 0 0 rgba(118, 118, 118, 0.5), 0.25vw 0 0 rgba(107, 107, 107, 0.5), 0.3vw 0 0 rgba(97, 97, 97, 0.5), 0.35vw 0 0 rgba(86, 86, 86, 0.5), 0.4vw 0 0 rgba(75, 75, 75, 0.5), 0.45vw 0 0.4vw rgba(0, 0, 0, 0.69), 0.45vw 0 0.05vw rgba(0, 0, 0, 0.5), 0 0 0.4vw rgba(0, 0, 0, 0.2);
+}
+#sunset-section .overlay-container .text-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  justify-content: flex-start;
+  opacity: 0;
+  top: 70vh;
+  width: 100%;
+}
+#sunset-section .overlay-container .text-container img {
+  flex: 1;
+  margin-top: 1vh;
+  object-fit: contain;
+  height: 10%;
+}
+#sunset-section .overlay-container .text-container p {
+  align-items: center;
+  color: #f1f2f2;
+  display: flex;
+  flex: 3;
+  font-family: advent-medium, Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  width: 80%;
+}
+@media screen and (min-width: 1000px) {
+  #sunset-section .overlay-container .text-container p {
+    font-size: 2em;
+  }
+}
+#sunset-section .sunset-wrapper {
   position: relative;
   height: 6000px;
 }
-#sunset-wrapper #sunset-container {
+#sunset-section .sunset-wrapper .sunset-container {
   position: sticky;
   top: 0;
   height: 100vh;
   width: 100vw;
 }
-#sunset-wrapper #sunset-container #sun {
+#sunset-section .sunset-wrapper .sunset-container .sun {
   position: absolute;
   top: 0px;
   left: 0%;
@@ -21,7 +161,7 @@
   z-index: 10;
   opacity: 0.5;
 }
-#sunset-wrapper #sunset-container #sunDay {
+#sunset-section .sunset-wrapper .sunset-container .sunDay {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -34,20 +174,20 @@
   z-index: 999;
   opacity: 0.5;
 }
-#sunset-wrapper #sunset-container #moon {
+#sunset-section .sunset-wrapper .sunset-container .moon {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 70%;
   background-repeat: no-repeat;
-  background: -webkit-radial-gradient(40% 55%, circle, #f9f9fa -1%, #bdfffe 1%, #08314e 1%, #081a38 10%, #04102e 40%, #02080d 70%);
-  background: -moz-radial-gradient(40% 55%, circle, #f9f9fa -1%, #bdfffe 1%, #08314e 1%, #081a38 10%, #04102e 40%, #02080d 70%);
-  background: -ms-radial-gradient(40% 55%, circle, #f9f9fa -1%, #bdfffe 1%, #08314e 1%, #081a38 10%, #04102e 40%, #02080d 70%);
+  background: -webkit-radial-gradient(80% 30%, circle, #f9f9fa 3.5%, #bdfffe 4%, #08314e 4.2%, #081a38 14%, #04102e 20%, #02080d 40%);
+  background: -ms-radial-gradient(80% 30%, circle, #f9f9fa 3.5%, #bdfffe 4%, #08314e 4.2%, #081a38 14%, #04102e 20%, #02080d 40%);
+  background: -moz-radial-gradient(80% 30%, circle, #f9f9fa 3.5%, #bdfffe 4%, #08314e 4.2%, #081a38 14%, #04102e 20%, #02080d 40%);
   z-index: 10001;
   opacity: 0;
 }
-#sunset-wrapper #sunset-container #sunSet {
+#sunset-section .sunset-wrapper .sunset-container .sunSet {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -60,7 +200,7 @@
   z-index: 999;
   opacity: 0.3;
 }
-#sunset-wrapper #sunset-container #sky {
+#sunset-section .sunset-wrapper .sunset-container .sky {
   cursor: pointer;
   position: absolute;
   top: 0px;
@@ -74,7 +214,7 @@
   background: linear-gradient(bottom, #f9fbf0 10%, #d7fdfe 20%, #a7defd 40%, #6eafff 100%);
   opacity: 0.52;
 }
-#sunset-wrapper #sunset-container #horizon {
+#sunset-section .sunset-wrapper .sunset-container .horizon {
   cursor: pointer;
   position: absolute;
   top: 0px;
@@ -89,7 +229,7 @@
   background: linear-gradient(bottom, rgba(212, 87, 43, 0.9) 0%, rgba(246, 149, 52, 0.8) 20%, rgba(24, 75, 106, 0) 100%);
   opacity: 0.99;
 }
-#sunset-wrapper #sunset-container #horizonNight {
+#sunset-section .sunset-wrapper .sunset-container .horizonNight {
   cursor: pointer;
   position: absolute;
   top: 0px;
@@ -104,7 +244,7 @@
   background: linear-gradient(bottom, #39a7ff 0%, #0d62f5 20%, rgba(0, 11, 22, 0.1) 60%);
   opacity: 0;
 }
-#sunset-wrapper #sunset-container #darknessOverlaySky {
+#sunset-section .sunset-wrapper .sunset-container .darknessOverlaySky {
   background-color: #000;
   opacity: 0;
   position: absolute;
@@ -114,7 +254,7 @@
   height: 70%;
   z-index: 9999;
 }
-#sunset-wrapper #sunset-container #darknessOverlay {
+#sunset-section .sunset-wrapper .sunset-container .darknessOverlay {
   cursor: default;
   background-color: #000;
   opacity: 0;
@@ -125,7 +265,7 @@
   height: 30%;
   z-index: 99;
 }
-#sunset-wrapper #sunset-container #waterDistance {
+#sunset-section .sunset-wrapper .sunset-container .waterDistance {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -137,7 +277,7 @@
   background: -ms-linear-gradient(90deg, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.2) 44%, rgba(0, 0, 0, 0.65) 95%, rgba(0, 0, 0, 0.62) 100%);
   z-index: 20;
 }
-#sunset-wrapper #sunset-container #water {
+#sunset-section .sunset-wrapper .sunset-container .water {
   overflow: hidden;
   position: absolute;
   bottom: 0px;
@@ -151,7 +291,7 @@
   background: linear-gradient(bottom, #00192d 0%, #0e4775 35%, #1a7eae 70%, #3ea8dc 100%);
   z-index: 10;
 }
-#sunset-wrapper #sunset-container #waterReflectionContainer {
+#sunset-section .sunset-wrapper .sunset-container .waterReflectionContainer {
   -webkit-perspective: 30;
   perspective: 30;
   -webkit-perspective-origin: 50% -12%;
@@ -164,7 +304,7 @@
   height: 30%;
   z-index: 25;
 }
-#sunset-wrapper #sunset-container #waterReflectionMiddle {
+#sunset-section .sunset-wrapper .sunset-container .waterReflectionMiddle {
   position: absolute;
   top: 0px;
   left: -50%;
@@ -178,7 +318,7 @@
   opacity: 0.7;
   -webkit-transform: rotateX(45deg);
 }
-#sunset-wrapper #sunset-container #waterReflectionMiddleThin {
+#sunset-section .sunset-wrapper .sunset-container .waterReflectionMiddleThin {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -195,7 +335,7 @@
   -ms-transform: rotateX(45deg);
   transform: rotateX(45deg);
 }
-#sunset-wrapper #sunset-container #division {
+#sunset-section .sunset-wrapper .sunset-container .division {
   height: 5px;
   width: 100%;
   position: absolute;
@@ -205,14 +345,14 @@
   z-index: 9999;
   cursor: ns-resize;
 }
-#sunset-wrapper #sunset-container #coor {
+#sunset-section .sunset-wrapper .sunset-container .coor {
   position: absolute;
   left: 0px;
   top: 0px;
   z-index: 999;
   color: #fff;
 }
-#sunset-wrapper #sunset-container #oceanRipple {
+#sunset-section .sunset-wrapper .sunset-container .oceanRipple {
   background-image: repeating-linear-gradient(175deg, rgba(165, 165, 165, 0.08) 43%, rgba(175, 175, 175, 0.08) 45%, rgba(235, 235, 235, 0.08) 49%, rgba(195, 195, 195, 0.08) 50%, rgba(165, 165, 165, 0.08) 54%);
   opacity: 0.5;
   position: absolute;

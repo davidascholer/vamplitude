@@ -1,0 +1,372 @@
+@font-face {
+  font-family: antiqua;
+  src: url("../fonts/ModernAntiqua-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: wind;
+  src: url("../fonts/wind_sans_serif.ttf") format("truetype");
+}
+@font-face {
+  font-family: roboto-light;
+  src: url("../fonts/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: roboto-medium;
+  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: carme;
+  src: url("../fonts/Carme-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: advent-medium;
+  src: url("../fonts/AdventPro-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: advent-light;
+  src: url("../fonts/AdventPro-Light.ttf") format("truetype");
+}
+#layout-section {
+  background-color: yellow;
+  font-family: advent-medium, Arial, Helvetica, sans-serif;
+  position: relative;
+  width: 100%;
+}
+#layout-section .warhol-background {
+  position: absolute;
+  height: 100vh;
+  left: 0;
+  top: calc(6000px - 50vh);
+  width: 100vw;
+}
+#layout-section .warhol-background * {
+  position: absolute;
+}
+#layout-section .not-mobile-device :nth-child(1) {
+  background-color: #ef1d5b;
+  height: 50vh;
+  left: 0;
+  top: 0;
+  width: 33.333vw;
+}
+#layout-section .not-mobile-device :nth-child(2) {
+  background-color: #9ec2d2;
+  height: 50vh;
+  left: 33.333%;
+  top: 0;
+  width: 33.444vw;
+}
+#layout-section .not-mobile-device :nth-child(3) {
+  background-color: #c9845d;
+  height: 50vh;
+  left: 66.667%;
+  top: 0;
+  width: 33.333vw;
+}
+#layout-section .not-mobile-device :nth-child(4) {
+  background-color: #e87824;
+  height: 50vh;
+  left: 0;
+  top: 50%;
+  width: 33.333vw;
+}
+#layout-section .not-mobile-device :nth-child(5) {
+  background-color: #106076;
+  height: 50vh;
+  left: 33.333%;
+  top: 50%;
+  width: 33.444vw;
+}
+#layout-section .not-mobile-device :nth-child(6) {
+  background-color: #f50592;
+  height: 50vh;
+  left: 66.667%;
+  top: 50%;
+  width: 33.333vw;
+}
+#layout-section .mobile-device :nth-child(1) {
+  background-color: #ef1d5b;
+  height: 33.333vh;
+  left: 0;
+  top: 0;
+  width: 50vw;
+}
+#layout-section .mobile-device :nth-child(2) {
+  background-color: #e87824;
+  height: 33.444vh;
+  left: 50%;
+  top: 0;
+  width: 50vw;
+}
+#layout-section .mobile-device :nth-child(3) {
+  background-color: #9ec2d2;
+  height: 33.333vh;
+  left: 0;
+  top: 33.333%;
+  width: 50vw;
+}
+#layout-section .mobile-device :nth-child(4) {
+  background-color: #106076;
+  height: 33.333vh;
+  left: 50%;
+  top: 33.333%;
+  width: 50vw;
+}
+#layout-section .mobile-device :nth-child(5) {
+  background-color: #c9845d;
+  height: 33.444vh;
+  left: 0;
+  top: 66.667%;
+  width: 50vw;
+}
+#layout-section .mobile-device :nth-child(6) {
+  background-color: #f50592;
+  height: 33.333vh;
+  left: 50%;
+  top: 66.667%;
+  width: 50vw;
+}
+#layout-section .layout-header {
+  background-color: black;
+  height: 14.4vw;
+  position: absolute;
+  width: 100%;
+}
+#layout-section .layout-about {
+  color: black;
+  height: 14.4vw;
+  position: absolute;
+  text-align: center;
+  top: 14.4vw;
+  width: 100%;
+}
+#layout-section .layout-about * {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+#layout-section .layout-about img {
+  aspect-ratio: 10/6;
+  height: 40%;
+  top: 10%;
+}
+#layout-section .layout-about p {
+  font-size: 2.5vw;
+  height: 100%;
+  text-align: center;
+  top: 40%;
+  width: 70%;
+}
+#layout-section .layout-container {
+  position: relative;
+  width: 100%;
+  height: 6000px;
+}
+#layout-section .layout-container .row * {
+  position: absolute;
+}
+#layout-section .layout-container .row .tv-container {
+  height: 14vw;
+  transform: translateX(-50%);
+  width: 28vw;
+}
+#layout-section .layout-container .row .tv-container .tv-inner-container {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+#layout-section .layout-container .row .tv-container .tv-background {
+  background-color: #000;
+  height: 88%;
+  left: 2%;
+  top: 2%;
+  width: 96%;
+}
+#layout-section .layout-container .row .tv-container img {
+  height: 100%;
+  width: 100%;
+}
+#layout-section .layout-container .row .ipad-container {
+  height: 17.1428571429vw;
+  transform: translateX(-50%);
+  width: 12vw;
+}
+#layout-section .layout-container .row .ipad-container .ipad-inner-container {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+#layout-section .layout-container .row .ipad-container .ipad-background {
+  background-color: #000;
+  height: 96%;
+  left: 2%;
+  top: 2%;
+  width: 96%;
+}
+#layout-section .layout-container .row .ipad-container img {
+  height: 100%;
+  width: 100%;
+}
+#layout-section .layout-container .row .macbook-container {
+  transform: translateX(-50%);
+  height: 16vw;
+  width: 24vw;
+}
+#layout-section .layout-container .row .macbook-container .macbook-inner-container {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+#layout-section .layout-container .row .macbook-container .macbook-background {
+  background-color: #000;
+  height: 80%;
+  left: 12%;
+  top: 2%;
+  width: 76%;
+}
+#layout-section .layout-container .row .macbook-container img {
+  height: 100%;
+  width: 100%;
+}
+#layout-section .layout-container .row .phone-container {
+  height: 14vw;
+  width: 8vw;
+}
+#layout-section .layout-container .row .phone-container .phone-inner-container {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+#layout-section .layout-container .row .phone-container .iphone-background {
+  height: 94%;
+  left: 4.5%;
+  top: 3%;
+  width: 92%;
+}
+#layout-section .layout-container .row .phone-container .android-background {
+  height: 89.5%;
+  left: 8%;
+  top: 5%;
+  width: 84%;
+}
+#layout-section .layout-container .row .phone-container img {
+  height: 100%;
+  width: 100%;
+}
+#layout-section .layout-container .anim-row {
+  position: sticky;
+  top: 50vh;
+}
+#layout-section .layout-container .anim-row > * {
+  visibility: hidden;
+  z-index: 1;
+}
+#layout-section .layout-container .anim-row .marilyn-tl {
+  background-color: #d50009;
+}
+#layout-section .layout-container .anim-row .marilyn-tl img {
+  filter: invert(31%) sepia(6%) saturate(7415%) hue-rotate(200deg) brightness(92%) contrast(90%);
+}
+#layout-section .layout-container .anim-row .marilyn-bl {
+  background-color: #e2b1bf !important;
+}
+#layout-section .layout-container .anim-row .marilyn-bl img {
+  filter: invert(54%) sepia(31%) saturate(374%) hue-rotate(181deg) brightness(94%) contrast(89%);
+}
+#layout-section .layout-container .anim-row .marilyn-tm {
+  background-color: #c891a7 !important;
+}
+#layout-section .layout-container .anim-row .marilyn-tm img {
+  filter: invert(85%) sepia(62%) saturate(424%) hue-rotate(350deg) brightness(96%) contrast(92%);
+}
+#layout-section .layout-container .anim-row .marilyn-bm {
+  background-color: #ff1875 !important;
+}
+#layout-section .layout-container .anim-row .marilyn-bm img {
+  filter: invert(87%) sepia(14%) saturate(172%) hue-rotate(71deg) brightness(89%) contrast(90%);
+}
+#layout-section .layout-container .anim-row .marilyn-tr {
+  background-color: #92b8a7 !important;
+}
+#layout-section .layout-container .anim-row .marilyn-tr img {
+  filter: invert(59%) sepia(98%) saturate(668%) hue-rotate(356deg) brightness(103%) contrast(98%);
+}
+#layout-section .layout-container .anim-row .marilyn-br {
+  background-color: #e2a3a5 !important;
+}
+#layout-section .layout-container .anim-row .marilyn-br img {
+  filter: invert(23%) sepia(54%) saturate(5043%) hue-rotate(306deg) brightness(84%) contrast(113%);
+}
+#layout-section .layout-container .background {
+  background-color: #f9f4ea;
+  padding: 0;
+  margin: 0;
+}
+#layout-section .layout-container .background img {
+  height: 100%;
+  object-fit: cover;
+  visibility: visible;
+  width: 100%;
+}
+#layout-section .layout-container .background .top-p {
+  opacity: 1;
+}
+#layout-section .layout-container .background .bottom-p {
+  opacity: 1;
+}
+#layout-section .layout-container .background .top-l {
+  opacity: 0;
+}
+#layout-section .layout-container .background .bottom-l {
+  opacity: 0;
+}
+#layout-section .footer {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+#layout-section .footer .footer-background {
+  background-color: #f9f4ea;
+  bottom: 0;
+  position: absolute;
+  height: 50vh;
+  width: 100%;
+}
+#layout-section .footer .banana {
+  left: 5%;
+  max-height: 45%;
+  object-fit: contain;
+  position: absolute;
+  top: 75%;
+  transform: translateY(-50%);
+  width: 30%;
+}
+#layout-section .footer .phone-container {
+  height: 32.4vw;
+  left: 55%;
+  max-height: 324px;
+  position: absolute;
+  transform: rotate(90deg) translateX(-50%);
+  width: 18vw;
+  max-width: 180px;
+}
+#layout-section .footer .phone-container .phone-inner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#layout-section .footer .phone-container .phone-inner-container img {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#layout-section .footer .iphone-container {
+  top: 105%;
+}
+#layout-section .footer .android-container {
+  top: 135%;
+}
+
+/*# sourceMappingURL=layout-section.css.map */

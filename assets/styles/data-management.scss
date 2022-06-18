@@ -1,0 +1,447 @@
+#data-management-section {
+    $deepPlum: #1a0315;
+    $electricLime: #88d317;
+    $shadow: #535353;
+    $violet: #6e3667;
+
+    // Overall animation time will be 2 * dbAnimationTime as one full cycle accounts for the delay.
+    // dbTypingAnimationTime in data-management-section will be .6s accordingly.
+    $dbAnimationTime: 0.5s;
+
+    background-color: $shadow;
+    overflow: visible;
+    padding-top: 10vh;
+    width: 100vw;
+
+    .upper-container {
+        margin: 0 auto;
+        max-width: 1400px;
+        padding: 2vw 0;
+        width: 96%;
+
+        .title-container {
+            align-items: center;
+            aspect-ratio: 3/2;
+            background-image: url("/assets/img/generic/engine.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 10px solid $electricLime;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            max-width: 900px;
+            text-shadow: 0 0 10px black;
+            width: 70vw;
+
+            h2 {
+                padding: 1vw;
+                font-size: 6vw;
+                @media screen and (min-width: 1001px) {
+                    font-size: 48pt;
+                }
+            }
+
+            h3 {
+                font-size: 4vw;
+                @media screen and (min-width: 1001px) {
+                    align-items: center;
+                    display: flex;
+                    flex: 1;
+                    font-size: 33pt;
+                    justify-content: center;
+                }
+            }
+        }
+        .header-text {
+            background-color: $violet;
+            font-size: 3vw;
+            margin: auto;
+            max-width: 1000px;
+            padding: 10px;
+            text-align: center;
+            text-shadow: 0 1px 3px black;
+            width: 80vw;
+
+            @media screen and (min-width: 1001px) {
+                font-size: 25pt;
+            }
+        }
+    }
+
+    .lower-container {
+        background-color: $violet;
+        width: 100%;
+
+        .under-the-hood-container {
+            box-sizing: border-box;
+            margin: auto;
+            max-width: 1000px;
+            padding: 2vw 0;
+            width: 96%;
+
+            > * {
+                height:70vw;
+                margin-bottom:1vw;
+                position: relative;
+                width: 45vw;
+                max-width:450px;
+                max-height:700px;
+            }
+
+            .left-side {
+                float: left;
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+           
+                .loading-gif {
+                    height: 5vw;
+                    left: 50%;
+                    top: 50%;
+                    transform: translateX(-50%);
+                    width: 5vw;
+                }
+
+                // circles & cursors
+                span {
+                    background-color: $shadow;
+                    opacity: 0.8;
+                    position: absolute;
+                    left: 10%;
+                    visibility: hidden;
+                }
+
+                .ball {
+                    border-radius: 50%;
+                    height:1vw;
+                    max-height:15px;
+                    max-width:15px;
+                    top: 24.5%;
+                    width: 1vw;
+                }
+                .cursor {
+                    height: 4%;
+                    width: 0.5%;
+                    position: absolute;
+                }
+                div.cursor:nth-of-type(1) {
+                    background-color: $shadow;
+                    left: 19%;
+                    top: 6%;
+                }
+                div.cursor:nth-of-type(2) {
+                    background-color: $shadow;
+                    left: 19%;
+                    top: 8%;
+                }
+                span.cursor {
+                    top: 23%;
+                }
+                .cursor:nth-of-type(1) {
+                    left: 6%;
+                    visibility: visible;
+                }
+                .ball:nth-of-type(2) {
+                    left: 6%;
+                }
+                .ball:nth-of-type(3) {
+                    left: 10%;
+                }
+                .ball:nth-of-type(4) {
+                    left: 14%;
+                }
+                .ball:nth-of-type(5) {
+                    left: 18%;
+                }
+                .ball:nth-of-type(6) {
+                    left: 22%;
+                }
+                .cursor:nth-of-type(7) {
+                    left: 26%;
+                }
+            }
+
+            .right-side {
+                background-color: $shadow;
+                float: right;
+
+                > * {
+                    position: absolute;
+                }
+
+                // layouts
+                .left {
+                    left: 2%;
+                }
+                .center {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                .right {
+                    right: 2%;
+                }
+                .one-third {
+                    width: 33%;
+                }
+                .one-fifth {
+                    width: 20%;
+                }
+                // texts
+                .text {
+                    color: $violet;
+                    font-size: 2vw;
+                    text-align: center;
+                    text-shadow: 0 1px 1px #000;
+
+                    @media screen and (min-width: 1001px) {
+                        font-size: 20pt;
+                    }
+                }
+                .server-text {
+                    top: 0;
+                }
+                .document-text {
+                    bottom: 0;
+                }
+                .security-text {
+                    bottom: 5%;
+                }
+                .relational-text {
+                    bottom: 0;
+                }
+                // images
+                .server-img {
+                    top: 10%;
+                }
+                .document-img {
+                    bottom: 12%;
+                }
+                .security-img-blank {
+                    bottom: 18%;
+                }
+                .security-img-checked {
+                    bottom: 18%;
+                    opacity: 0;
+                }
+                .relational-img {
+                    bottom: 12%;
+                }
+                .db-left-img {
+                    bottom: 12%;
+                    opacity: 0.3;
+                }
+                .db-right-img {
+                    bottom: 12%;
+                    opacity: 0.3;
+                }
+                // circles
+                .ball {
+                    background-color: black;
+                    border-radius: 50%;
+                    height:1vw;
+                    max-height:15px;
+                    max-width:15px;
+                    opacity: 0;
+                    position: absolute;
+                    width: 1vw;
+                }
+                // top
+                .top-anim {
+                    top: 20%;
+                }
+                .top-anim:nth-of-type(1) {
+                    left: 4%;
+                }
+                .top-anim:nth-of-type(2) {
+                    left: 10%;
+                }
+                .top-anim:nth-of-type(3) {
+                    left: 16%;
+                }
+                .top-anim:nth-of-type(4) {
+                    left: 22%;
+                }
+                .top-anim:nth-of-type(5) {
+                    left: 28%;
+                }
+                // left
+                .left-anim {
+                    color: red;
+                }
+                .left-anim:nth-of-type(6) {
+                    left: 38%;
+                    top: 38%;
+                }
+                .left-anim:nth-of-type(7) {
+                    left: 33%;
+                    top: 43%;
+                }
+                .left-anim:nth-of-type(8) {
+                    left: 28%;
+                    top: 48%;
+                }
+                .left-anim:nth-of-type(9) {
+                    left: 23%;
+                    top: 53%;
+                }
+                .left-anim:nth-of-type(10) {
+                    left: 18%;
+                    top: 58%;
+                }
+                // center
+                .center-anim {
+                    color: blue;
+                }
+                .center-anim:nth-of-type(11) {
+                    left: 48%;
+                    top: 38%;
+                }
+                .center-anim:nth-of-type(12) {
+                    left: 48%;
+                    top: 44%;
+                }
+                .center-anim:nth-of-type(13) {
+                    left: 48%;
+                    top: 50%;
+                }
+                .center-anim:nth-of-type(14) {
+                    left: 48%;
+                    top: 56%;
+                }
+                .center-anim:nth-of-type(15) {
+                    left: 48%;
+                    top: 62%;
+                }
+                // right
+                .right-anim {
+                    color: yellow;
+                }
+                .right-anim:nth-of-type(16) {
+                    left: 58%;
+                    top: 38%;
+                }
+                .right-anim:nth-of-type(17) {
+                    left: 63%;
+                    top: 43%;
+                }
+                .right-anim:nth-of-type(18) {
+                    left: 68%;
+                    top: 48%;
+                }
+                .right-anim:nth-of-type(19) {
+                    left: 73%;
+                    top: 53%;
+                }
+                .right-anim:nth-of-type(20) {
+                    left: 78%;
+                    top: 58%;
+                }
+            }
+        }
+        .play-anim-button {
+            background-color: $shadow;
+            border-radius: 10px;
+            color: $electricLime;
+            cursor: pointer;
+            display: block;
+            font-size: 4vw;
+            margin: auto;
+            padding: 1vw 2vw;
+            text-shadow: 0 1px 1px #000;
+
+            @media screen and (min-width: 1001px) {
+                font-size: 20pt;
+                padding: 10px 20px;
+            }
+        }
+    }
+    .electric {
+        color: $electricLime;
+    }
+
+    .grow {
+        animation: growAnim 1s linear forwards;
+    }
+    @keyframes growAnim {
+        from {
+            max-width: 900px;
+            width: 70vw;
+        }
+        to {
+            max-width: 1000px;
+            width: 80vw;
+        }
+    }
+
+    .circle-fade-1 {
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+        animation: circleFade $dbAnimationTime ease-in-out $dbAnimationTime * 0.2 3 forwards;
+    }
+    .circle-fade-2 {
+        animation: circleFade $dbAnimationTime ease-in-out $dbAnimationTime * 0.4 3 forwards;
+    }
+    .circle-fade-3 {
+        animation: circleFade $dbAnimationTime ease-in-out $dbAnimationTime * 0.6 3 forwards;
+    }
+    .circle-fade-4 {
+        animation: circleFade $dbAnimationTime ease-in-out $dbAnimationTime * 0.8 3 forwards;
+    }
+    .circle-fade-5 {
+        animation: circleFade $dbAnimationTime ease-in-out $dbAnimationTime * 1 3 forwards;
+    }
+    .circle-fade-1-reverse {
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+        animation: circleFade $dbAnimationTime ease-in-out $dbAnimationTime * 1 3 forwards;
+    }
+    .circle-fade-2-reverse {
+        animation: circleFade $dbAnimationTime ease-in-out $dbAnimationTime * 0.8 3 forwards;
+    }
+    .circle-fade-3-reverse {
+        animation: circleFade $dbAnimationTime ease-in-out $dbAnimationTime * 0.6 3 forwards;
+    }
+    .circle-fade-4-reverse {
+        animation: circleFade $dbAnimationTime ease-in-out $dbAnimationTime * 0.4 3 forwards;
+    }
+    .circle-fade-5-reverse {
+        animation: circleFade $dbAnimationTime ease-in-out $dbAnimationTime * 0.2 3 forwards;
+    }
+    @keyframes circleFade {
+        0% {
+            opacity: 0;
+        }
+        25% {
+            opacity: 0.1;
+        }
+        50% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 0.1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .blink {
+        animation: dataMangementBlinkAnim 0.5s alternate linear infinite;
+    }
+    @keyframes dataMangementBlinkAnim {
+        0% {
+            opacity: 0;
+        }
+        49% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.8;
+        }
+        100% {
+            opacity: 0.8;
+        }
+    }
+}

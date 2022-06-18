@@ -1,3 +1,0 @@
-const scrollToNextPage = () => {
-    alert('k')
-}

@@ -1,199 +1,175 @@
-#section-logo {
-    background: #000;
-    left: 50%;
-    font-size: 4vw;
-    height:15vw;
-    position: relative;
-    transform: translateX(-50%);
+@use "fonts";
+
+#logo-container {
+    background-color: #000;
+    position: initial;
     width: 100vw;
+    z-index: 1;
 
-    #video-container {
-        background: #000;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        
-        video {
-            background: #000;
-            object-fit: contain;
-            position: absolute;
-            top:0;
-            width: 100%;
-        }
-    }
-
-      section:before {
-        // background:linear-gradient(to right,#f00,#fff);//As cool as this effect is, it only works in Opera/Firefox/Chrome
-        content: "";
-        background-color: black;
-        height: 100%;
-        left: 0;
-        mix-blend-mode: color;
-        pointer-events: none;
-        position: absolute;
-        top: 0;
-        width: 100%;
-      }
-
-    @keyframes animate {
-        0% {
-            opacity: 0;
-            transform: rotateY(90deg);
-            filter: blur(10px);
-        }
-        100% {
-            opacity: 1;
-            transform: rotateY(0deg);
-            filter: blur(0);
-        }
-    }
-
-    .logo-title {
-        color: white;
-        display: inline-block;
-        font-family: antiqua, wind, Helvetica, sans-serif;
-        position: absolute;
-        text-align: center;
-        top: 15vw;
-        width: 100%;
-        z-index: 1;
-
-        span {
-            display: inline-block;
-            opacity: 0;
-        }
-
-        .anim-title {
-            animation: animate 1s linear forwards;
-        }
-
-        :nth-child(1) {
-            animation-delay: 1s;
-            position: relative;
-            top: 4px;
-        }
-        :nth-child(2) {
-            animation-delay: 1.2s;
-        }
-        :nth-child(3) {
-            animation-delay: 1.4s;
-        }
-        :nth-child(4) {
-            animation-delay: 2s;
-        }
-        :nth-child(5) {
-            animation-delay: 2.3s;
-        }
-        :nth-child(6) {
-            animation-delay: 2.6s;
-        }
-        :nth-child(7) {
-            animation-delay: 2.5s;
-        }
-        :nth-child(8) {
-            animation-delay: 2.8s;
-        }
-        :nth-child(9) {
-            animation-delay: 2.9s;
-        }
-        :nth-child(10) {
-            animation-delay: 3.1s;
-        }
-    }
-    // .logo-image-container {
-    //     position: fixed;
-    //     left: 50%;
-    //     top: 40vh;
-    //     width: 50%;
-    //     max-width: 350px;
-    //     transform: translateX(-50%);
-    // }
-
-    .logo-loading-container {
-        display: flex;
-        flex-direction: column;
+    .section-logo-background {
+        background-color: #000;
+        height: 120vh;
         position: fixed;
-        justify-content: space-between;
-        left: 50%;
-        top: 60vh;
-        transform: translateX(-50%);
-        width: 300px;
+        top: -20vh;
+        user-select: none;
+        width: 100vw;
         z-index: 1;
 
-        .logo-loading {
-            align-items: center;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            position: relative;
+        h2 {
+            bottom: 5%;
+            font-family: antiqua, wind, Helvetica, sans-serif;
+            position: absolute;
+            text-align: center;
             width: 100%;
+            z-index: 2;
+        }
+    }
+
+    #section-logo {
+        left: 50%;
+        font-size: 4vw;
+        height: 15vw;
+        min-height: 50vw;
+        position: relative;
+        transform: translateX(-50%);
+        width: 100vw;
+        z-index: 1;
+
+        #video-container {
+            background: #000;
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            video {
+                background: #000;
+                object-fit: contain;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
         }
 
-        .logo-symbols {
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-            margin-top: 1vh;
-            width: 100%;
+        @keyframes animate {
+            0% {
+                opacity: 0;
+                transform: rotateY(90deg);
+                filter: blur(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: rotateY(0deg);
+                filter: blur(0);
+            }
+        }
 
-            .circle {
-                background-color: red;
-                border-radius: 50%;
+        .logo-title {
+            color: ivory;
+            display: inline-block;
+            font-family: antiqua, wind, Helvetica, sans-serif;
+            font-size: 10vw;
+            position: absolute;
+            text-align: center;
+            top: 15vw;
+            left: 50vw;
+            white-space: nowrap;
+
+            transform: translateX(-50%);
+            z-index: 1;
+
+            span {
                 display: inline-block;
-                // position: relative;
+                opacity: 0;
             }
 
-            .big-circle {
-                // animation: whiteToRed 1s linear 4s forwards;
-                background-color: white;
-                color: red;
-                // font-size: 30em;
-                height: 20px;
-                text-align: "center";
-                width: 20px;
+            .anim-title {
+                animation: animate 1s linear forwards;
             }
 
-            .small-circle {
-                height: 10px;
-                width: 10px;
-                animation: redToWhite 1s ease forwards;
+            :nth-child(1) {
+                animation-delay: 1s;
+                position: relative;
+                top: 8px;
             }
-
             :nth-child(2) {
-                animation-delay: 1s;
-            }
-            :nth-child(8) {
-                animation-delay: 1s;
+                animation-delay: 1.2s;
             }
             :nth-child(3) {
-                animation-delay: 2s;
-            }
-            :nth-child(7) {
-                animation-delay: 2s;
+                animation-delay: 1.4s;
             }
             :nth-child(4) {
-                animation-delay: 3s;
+                animation-delay: 2s;
+            }
+            :nth-child(5) {
+                animation-delay: 2.3s;
             }
             :nth-child(6) {
-                animation-delay: 3s;
+                animation-delay: 2.6s;
+            }
+            :nth-child(7) {
+                animation-delay: 2.5s;
+            }
+            :nth-child(8) {
+                animation-delay: 2.8s;
+            }
+            :nth-child(9) {
+                animation-delay: 2.9s;
+            }
+            :nth-child(10) {
+                animation-delay: 3.1s;
             }
         }
 
-        @keyframes redToWhite {
-            from {
-                background-color: red;
-            }
-            to {
-                background-color: white;
-            }
+        .logo-loading-container {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            justify-content: space-between;
+            left: 50%;
+            top: 60vh;
+            transform: translateX(-50%);
+            width: 300px;
+            z-index: 1;
         }
-        @keyframes whiteToRed {
-            from {
-                background-color: white;
-            }
-            to {
-                background-color: red;
-            }
+    }
+    .animate-to-bottom{
+        cursor: pointer;
+        font-size:1vw;
+        text-align: center;
+        width:100%;
+        h3{
+            font-family: antiqua, wind, Helvetica, sans-serif;
+            margin:0;
+        }
+    }
+
+    .fade-out {
+        animation: fadeOut 6s forwards;
+    }
+    @keyframes fadeOut {
+        0% {
+            opacity: 0.9;
+        }
+        50% {
+            opacity: 0.8;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    .fade-out-delay {
+        animation: fadeOutDelay 1s 5s forwards;
+    }
+    @keyframes fadeOutDelay {
+        0% {
+            opacity: 1;
+        }
+        99% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+            z-index: -1;
         }
     }
 }

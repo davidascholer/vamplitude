@@ -1,0 +1,265 @@
+#native-apps-section {
+  background-color: #eae3ea;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  z-index: -1;
+}
+#native-apps-section .theme-background-color-1 {
+  background-color: #b4dbc0;
+}
+#native-apps-section .theme-background-color-2 {
+  background-color: #b56357;
+}
+#native-apps-section .theme-color-1 {
+  color: #b56357;
+}
+#native-apps-section .theme-color-2 {
+  color: #eae3ea;
+}
+#native-apps-section .theme-color-border-right {
+  border-right-color: #b56357;
+}
+#native-apps-section .section-header {
+  color: rgba(0, 0, 0, 0.4);
+  margin: auto;
+  opacity: 1;
+  padding: 2vw;
+  text-align: center;
+  width: 70%;
+}
+#native-apps-section .section-header img {
+  display: block;
+  filter: invert(50%) sepia(24%) saturate(854%) hue-rotate(320deg) brightness(87%) contrast(103%);
+  margin: auto;
+  width: 10%;
+}
+#native-apps-section .section-header h1 {
+  margin: auto;
+  font-size: 3.5vw;
+  font-weight: 900;
+  text-align: center;
+  width: 100%;
+}
+#native-apps-section .section-header p {
+  margin: auto;
+  font-size: 1.5vw;
+  text-align: center;
+  width: 80%;
+}
+#native-apps-section .sticky-container {
+  height: calc(5000px + 110vw);
+}
+#native-apps-section .sticky-container .phone-icons-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 167vw;
+  position: sticky;
+  top: calc(70vh - 16.5vw);
+  width: 100%;
+  z-index: 1;
+}
+#native-apps-section .sticky-container .phone-icons-container .gloss {
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05), transparent);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#native-apps-section .sticky-container .phone-icons-container .android-clock {
+  background-color: rgba(181, 99, 87, 0.9);
+  border-radius: 1.2vw;
+  margin-left: -5vw;
+  position: relative;
+  width: 33.33vw;
+  height: 11.11vw;
+}
+#native-apps-section .sticky-container .phone-icons-container .android-clock img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 27%;
+}
+#native-apps-section .sticky-container .phone-icons-container .heart-container {
+  border-radius: 50%;
+  box-shadow: 0 0 0.3vw 0.05vw rgba(0, 0, 0, 0.2);
+  display: block;
+  height: 18vw;
+  margin-left: 35vw;
+  margin-top: 5vw;
+  position: relative;
+  transform: rotate(35deg);
+  width: 18vw;
+}
+#native-apps-section .sticky-container .phone-icons-container .heart-container .heart {
+  height: 75%;
+  left: 5%;
+  position: relative;
+  top: 2%;
+  width: 90%;
+}
+#native-apps-section .sticky-container .phone-icons-container .heart-container .heart-left,
+#native-apps-section .sticky-container .phone-icons-container .heart-container .heart-right {
+  border-radius: 50% 50% 0 0;
+  content: "";
+  height: 78%;
+  left: 50%;
+  position: absolute;
+  top: 30%;
+  transform: rotate(-55deg);
+  transform-origin: 0 100%;
+  width: 50%;
+}
+#native-apps-section .sticky-container .phone-icons-container .heart-container .heart-right {
+  left: 0;
+  transform: rotate(55deg);
+  transform-origin: 100% 100%;
+}
+#native-apps-section .sticky-container .phone-icons-container .heart-container .heart-text {
+  text-shadow: 0 0 0.01vw rgba(0, 0, 0, 0.1), 0.05vw 0.05vw 0.01vw rgba(0, 0, 0, 0.1), -0.05vw -0.05vw 0.01vw rgba(0, 0, 0, 0.1), 0.05vw -0.05vw 0.01vw rgba(0, 0, 0, 0.1), -0.05vw 0.05vw 0.01vw rgba(0, 0, 0, 0.1);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 3vw;
+  font-weight: 500;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  top: 57%;
+  transform: translate(-50%, -40%);
+  z-index: 1;
+}
+#native-apps-section .sticky-container .phone-icons-container .heart-container .gloss {
+  border-radius: 50%;
+}
+#native-apps-section .sticky-container .phone-icons-container .talkbubble-container {
+  border-radius: 20%;
+  box-shadow: 0 0 0.3vw 0.05vw rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-right: 38vw;
+  position: relative;
+  transform: rotate(-15deg);
+  width: 15vw;
+  height: 15vw;
+}
+#native-apps-section .sticky-container .phone-icons-container .talkbubble-container .talkbubble {
+  border-radius: 1vw;
+  height: 50%;
+  left: 20%;
+  position: relative;
+  top: 25%;
+  width: 65%;
+}
+#native-apps-section .sticky-container .phone-icons-container .talkbubble-container .talkbubble-arrow {
+  border-bottom: 1vw solid transparent;
+  border-right-width: 2.1vw;
+  border-right-style: solid;
+  border-top: 1vw solid transparent;
+  height: 0;
+  left: -2vw;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+}
+#native-apps-section .sticky-container .phone-icons-container .talkbubble-container .talkbubble-notification {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 3%;
+  position: absolute;
+  right: -20%;
+  top: -20%;
+  width: 50%;
+}
+#native-apps-section .sticky-container .phone-icons-container .talkbubble-container .talkbubble-notification .talkbubble-text {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  font-size: 3vw;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+#native-apps-section .sticky-container .phone-icons-container .talkbubble-container .gloss {
+  border-radius: 20%;
+}
+#native-apps-section .sticky-container .phones-container {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  position: sticky;
+  overflow: hidden;
+  top: 0vh;
+  transform: translateY(-50%);
+}
+#native-apps-section .sticky-container .phones-container .column {
+  flex: 1;
+}
+#native-apps-section .sticky-container .phones-container .column .phone {
+  position: relative;
+  margin: 400vw;
+  width: 60vw;
+  height: 90vw;
+}
+#native-apps-section .sticky-container .phones-container .column .phone img {
+  position: absolute;
+  object-fit: contain;
+  height: 90%;
+  width: 90%;
+}
+#native-apps-section .sticky-container .phones-container .column .phone .android-clock {
+  aspect-ratio: 3;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 1.2vw;
+  left: 45%;
+  position: absolute;
+  top: 10%;
+  transform: translateX(-50%);
+  width: 70%;
+}
+#native-apps-section .sticky-container .phones-container .column .phone .android-clock img {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 27%;
+}
+#native-apps-section .sticky-container .phones-container .column .phone .top-layer {
+  opacity: 1;
+}
+#native-apps-section .sticky-container .phones-container .column .phone .middle-layer {
+  opacity: 1;
+}
+#native-apps-section .sticky-container .phones-container .outer-column {
+  padding-bottom: 40vw;
+}
+#native-apps-section .sticky-container .phones-container .inner-column {
+  padding-bottom: 20vw;
+}
+#native-apps-section .sticky-container .phones-container .middle-column .invisible {
+  visibility: hidden;
+}
+#native-apps-section .section-footer {
+  color: rgba(0, 0, 0, 0.4);
+  margin: auto;
+  margin-top: -50vw;
+  padding: 2vw;
+  padding-bottom: 3vh;
+  text-align: center;
+  width: 70%;
+}
+#native-apps-section .section-footer h1 {
+  margin: auto;
+  font-size: 3.5vw;
+  font-weight: 900;
+  text-align: center;
+  width: 100%;
+}
+#native-apps-section .section-footer p {
+  margin: auto;
+  font-size: 1.5vw;
+  text-align: center;
+  width: 80%;
+}
+
+/*# sourceMappingURL=native-apps.css.map */

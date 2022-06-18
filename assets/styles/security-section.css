@@ -1,0 +1,286 @@
+#security-section {
+  background-color: hwb(308 21% 57%);
+  color: #cf6766;
+  font-size: 3vw;
+}
+@media screen and (min-width: 701px) {
+  #security-section {
+    font-size: 2vw;
+  }
+}
+@media screen and (min-width: 1201px) {
+  #security-section {
+    font-size: 20pt;
+  }
+}
+#security-section .inner-container {
+  margin: 0 auto;
+  width: 100%;
+}
+#security-section h2,
+#security-section h3 {
+  text-shadow: 0 1px 1px #000000;
+}
+#security-section p,
+#security-section span {
+  text-shadow: 0 0.5px #000000;
+}
+#security-section .top-section {
+  overflow: hidden;
+  padding: 50px 0;
+  width: 100%;
+}
+#security-section .top-section h2 {
+  font-weight: 900;
+  margin: 5px;
+  letter-spacing: 0.5vw;
+  text-align: center;
+  text-shadow: 0 1px #000000;
+  width: 100%;
+}
+#security-section .top-section p {
+  color: #031424;
+  margin: 5px;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 100%;
+}
+#security-section .top-section .lock {
+  align-items: center;
+  background-color: #30415d;
+  border-radius: 50% 50% 70% 70%/15% 15% 100% 100%;
+  display: flex;
+  flex-direction: column;
+  height: 10vw;
+  margin: auto;
+  padding: 1vw;
+  position: relative;
+  width: 8vw;
+}
+#security-section .top-section .lock .lock-image-container {
+  height: 100%;
+  width: 100%;
+}
+#security-section .top-section .lock .lock-image-container img {
+  filter: invert(99%) sepia(3%) saturate(38%) hue-rotate(225deg) brightness(110%) contrast(100%);
+  object-fit: contain;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
+  width: 50%;
+}
+#security-section .top-section .lock .lock-image-container .base {
+  bottom: 0;
+}
+#security-section .top-section .lock .lock-image-container .hinge {
+  bottom: 35%;
+}
+#security-section .top-section .flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 95%;
+}
+#security-section .top-section .flex > * {
+  aspect-ratio: 2/3;
+  min-width: 280px;
+  flex: 1;
+}
+#security-section .top-section .flex .image-container {
+  position: relative;
+  height: 60vw;
+  margin-top: 2vw;
+}
+#security-section .top-section .flex .image-container img {
+  height: 60vw;
+  position: absolute;
+  object-fit: contain;
+  width: 40vw;
+}
+#security-section .top-section .flex .image-container .image-overlay {
+  background: #8eaebd;
+  height: 60vw;
+  position: absolute;
+  top: 0;
+  width: 40vw;
+}
+#security-section .top-section .flex .image-container .image-overlay:first {
+  background: hwb(308 21% 57%);
+}
+#security-section .top-section .flex div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#security-section .top-section .flex div h3 {
+  letter-spacing: 0.75vw;
+}
+#security-section .top-section .flex div p {
+  max-width: 300px;
+  padding: 5px;
+}
+#security-section .bottom-section {
+  background-color: #cf6766;
+  padding: 50px 0;
+}
+#security-section .bottom-section .split-view {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  margin: auto;
+  max-width: 1500px;
+  width: 96vw;
+}
+#security-section .bottom-section .split-view > * {
+  flex: 1;
+  min-width: 250px;
+}
+#security-section .bottom-section .split-view .light-blue {
+  color: #8eaebd;
+}
+#security-section .bottom-section .split-view .bold {
+  font-weight: 900;
+}
+#security-section .bottom-section .split-view img {
+  object-fit: fill;
+}
+#security-section .bottom-section .split-view .animation-container {
+  background-color: #30415d;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+#security-section .bottom-section .split-view .animation-container img {
+  height: 72vw;
+}
+#security-section .bottom-section .split-view .animation-container h3 {
+  color: #8eaebd;
+}
+#security-section .bottom-section .split-view .animation-container p {
+  color: #cf6766;
+}
+#security-section .bottom-section .split-view .animation-container .animation-content {
+  font-size: 1.5vw;
+  position: relative;
+  overflow: hidden;
+  min-height: 20vw;
+  width: 100%;
+  min-width: 250px;
+}
+@media screen and (min-width: 1501px) {
+  #security-section .bottom-section .split-view .animation-container .animation-content {
+    font-size: 25pt;
+  }
+}
+#security-section .bottom-section .split-view .animation-container .animation-content span {
+  background-color: #8eaebd;
+  border-radius: 15px;
+  color: #cf6766;
+  overflow: hidden;
+  padding: 0.75vw;
+  position: absolute;
+}
+#security-section .bottom-section .split-view .animation-container .animation-content span:nth-child(1) {
+  color: #031424;
+  left: -100%;
+  top: 0%;
+}
+#security-section .bottom-section .split-view .animation-container .animation-content span:nth-child(2) {
+  color: #031424;
+  left: 10%;
+  top: 150%;
+}
+#security-section .bottom-section .split-view .animation-container .animation-content span:nth-child(3) {
+  left: 60%;
+  opacity: 0;
+  top: 40%;
+}
+#security-section .bottom-section .split-view .animation-container .animation-content span:nth-child(4) {
+  color: #031424;
+  left: 0%;
+  max-width: 0%;
+  opacity: 0;
+  overflow: hidden;
+  top: 60%;
+}
+#security-section .bottom-section .split-view .animation-container .animation-content span:nth-child(5) {
+  left: 150%;
+  top: 80%;
+}
+#security-section .roll-up {
+  animation: rollUp 0.75s linear forwards;
+}
+@keyframes rollUp {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+#security-section .scroll-in-left {
+  animation: scrollInLeft 1s ease-in forwards;
+}
+@keyframes scrollInLeft {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 40%;
+  }
+}
+#security-section .scroll-in-bottom {
+  animation: scrollInBottom 1s ease-in forwards;
+}
+@keyframes scrollInBottom {
+  from {
+    top: 150%;
+  }
+  to {
+    top: 20%;
+  }
+}
+#security-section .fade-in {
+  animation: fadeIn 2s ease-in 0.25s forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#security-section .expand {
+  animation: expandAnim 1s linear 1s forwards;
+}
+@keyframes expandAnim {
+  0% {
+    max-width: 0%;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    max-width: 100%;
+    opacity: 1;
+  }
+}
+#security-section .scroll-in-right {
+  animation: scrollInRight 1s ease-in 0.75s forwards;
+}
+@keyframes scrollInRight {
+  from {
+    left: 150%;
+  }
+  to {
+    left: 40%;
+  }
+}
+
+/*# sourceMappingURL=security-section.css.map */
