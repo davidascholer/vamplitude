@@ -397,7 +397,7 @@ body .resume-page-1 .about p {
   color: #c2dfe3;
   font-family: roboto-light;
   font-size: 1.5vw;
-  overflow: scroll;
+  overflow: hidden;
   padding: 0 20px 20px 20px;
   z-index: -1;
 }

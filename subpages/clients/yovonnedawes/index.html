@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./assets/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./assets/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!-- styles -->
+    <link href="./assets/styles/form.css" rel="stylesheet" />
+    <link href="./assets/styles/index.css" rel="stylesheet" />
+    <title>Yovonne Dawes</title>
+</head>
+
+<body>
+    <div class="fullscreen-container" onclick="closeFullscreenContainer()">
+        <img src="./assets/img/welcome.svg" alt="welcome" style="padding:25%;opacity: 1;" />
+    </div>
+    <div class="body-inner-container amatic">
+        <div class="page-title-container">
+            <img loading="lazy" src="./assets/img/signature.svg" alt="Yovonne Dawes Signature">
+            <form id="form1" class="contact-form" onsubmit="handlePasswordSubmit(event)">
+                <div class="form-container">
+                    <div class="password-container">
+                        <input name="password" type="password" value="">
+                        <span class="input-empty">Enter Password</span>
+                    </div>
+                    <span class="error">Password: 'password'<br><br>This site is for viewing only.<br>Please note: The password and contact information have been changed to protect the client's work. The images and videos are stock images/videos and have no affiliation with the artist or vice-verca.</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/fullscreen-image-anim.js"></script>
+</body>
+
+</html>
